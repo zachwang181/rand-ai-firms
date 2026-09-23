@@ -96,6 +96,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 .fin-a{margin-top:5px;font-size:11px;color:var(--mute)}
 .peer{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:12.5px}
 .pg{font-size:11px;color:var(--mute);margin-bottom:3px}
+.pdx{display:block;color:var(--mute);font-size:12px;line-height:1.5;margin-top:1px}
 .pr{margin-bottom:2px;line-height:1.7}
 .pl{all:unset;cursor:pointer;color:var(--us);border-bottom:1px dotted currentColor}
 .pl:hover{border-bottom-style:solid}
@@ -105,7 +106,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 @media (max-width:720px){.cols{grid-template-columns:1fr}}
 </style></head><body><div class="wrap">
 <h1>中美 1,181 家 AI 開發企業全名單</h1>
-<p class="lead">名單原樣取自 <a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener">RAND 報告 RR-A5043-1</a> 的附件（Annex）：美國 743 家、中國 438 家。附件只有公司名和國家，下面的行業分組是我按公司主營業務粗分的，不是 RAND 的原始標籤。每家公司名下有一行簡介；點公司名會彈出小卡片，補充產品和進展，點別處或按 Esc 關閉；搜尋框也能搜簡介裡的詞。1,181 家裡有 870 家寫了簡介；其餘公開信息太少的沒寫，避免編造。</p>
+<p class="lead">名單原樣取自 <a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener">RAND 報告 RR-A5043-1</a> 的附件（Annex）：美國 743 家、中國 438 家。附件只有公司名和國家，下面的行業分組是我按公司主營業務粗分的，不是 RAND 的原始標籤。每家公司名下有一行簡介；點公司名會彈出小卡片，補充產品說明與進展，上市公司附股票代碼、市值、員工數與年度營收獲利，卡片底部列出同類的中美對標公司、點名字可直接跳過去。點別處或按 Esc 關閉；搜尋框也能搜簡介裡的詞與股票代碼。1,181 家裡有 870 家寫了簡介；其餘公開信息太少的沒寫，避免編造。</p>
 <div class="bar">
  <div class="controls">
   <input type="search" id="q" placeholder="搜尋公司名，例如 Unitree、DeepSeek、寧德" aria-label="搜尋公司名">
@@ -210,7 +211,7 @@ function showCard(b){
  closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
  pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
  let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
- if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
+ if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}${p.pd?`<span class="pdx">${esc(p.pd)}</span>`:''}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
  else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
  h+=finBlock(id);
  h+=peerBlock(id);
