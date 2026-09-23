@@ -2,8 +2,9 @@
 <html lang="zh-TW" data-theme="light"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RAND 數據集：中美 1,181 家 AI 開發企業全名單</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+<!-- 字型非阻塞載入：Google Fonts 在部分地區不可達，載不到就用系統字型，頁面不會卡住 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap"></noscript>
 <!-- 統計：Umami Cloud。上報層 T() 會自動偵測 window.umami，換服務只要換這一行。 -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="9360ca08-9c8c-4b91-b978-be3562ea2a8f"></script>
 <!-- 其他選項（擇一取消註釋，並移除上面那行）：
@@ -17,9 +18,9 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161c;--panel:#18212a;--ink:#e4eaef;--mute:#93a0ac;--line:#34414d;--us:#5aa6d6;--cn:#ef6f5e}}
 :root[data-theme="dark"]{--bg:#10161c;--panel:#18212a;--ink:#e4eaef;--mute:#93a0ac;--line:#34414d;--us:#5aa6d6;--cn:#ef6f5e}
 *,*::before,*::after{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.55}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","PingFang SC","Microsoft JhengHei","Microsoft YaHei","Noto Sans CJK TC","Source Han Sans SC",system-ui,sans-serif;line-height:1.55}
 .wrap{max-width:1180px;margin:0 auto;padding:26px 18px 60px}
-h1{font-family:"Noto Serif TC","Songti TC",serif;font-weight:900;font-size:clamp(24px,4vw,38px);line-height:1.2;margin:0 0 8px}
+h1{font-family:"Noto Serif TC","Songti TC","Songti SC","STSong","Noto Serif CJK TC",serif;font-weight:900;font-size:clamp(24px,4vw,38px);line-height:1.2;margin:0 0 8px}
 .lead{color:var(--mute);margin:0;max-width:74ch;font-size:15px}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0 10px;margin-top:14px;border-bottom:1px solid var(--line)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
