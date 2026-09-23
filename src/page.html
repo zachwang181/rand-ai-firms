@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RAND 數據集：中美 1,181 家 AI 開發企業全名單</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+<!-- ===== 統計服務：三選一，取消註釋即可；都不選則事件靜默丟棄 =====
+  A) Plausible（付費，cookieless）
+<script defer data-domain="你的域名.com" src="https://plausible.io/js/script.tagged-events.js"></script>
+  B) Umami Cloud / 自建（有免費額度）
+<script defer src="https://cloud.umami.is/script.js" data-website-id="你的-website-id"></script>
+  C) Google Analytics 4（免費，歐盟需 cookie 同意）
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXX')</script>
+  D) 自建端點（Cloudflare Pages Function / 任意 API），填 URL 即可
+<script>window.__TRACK_ENDPOINT__='/api/e'</script>
+=============================================================== -->
+<style>
+:root{--bg:#e9edf0;--panel:#f7f9fa;--ink:#15202b;--mute:#5b6773;--line:#c3ccd4;--us:#1d5c86;--cn:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161c;--panel:#18212a;--ink:#e4eaef;--mute:#93a0ac;--line:#34414d;--us:#5aa6d6;--cn:#ef6f5e}}
+:root[data-theme="dark"]{--bg:#10161c;--panel:#18212a;--ink:#e4eaef;--mute:#93a0ac;--line:#34414d;--us:#5aa6d6;--cn:#ef6f5e}
+*,*::before,*::after{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding:26px 18px 60px}
+h1{font-family:"Noto Serif TC","Songti TC",serif;font-weight:900;font-size:clamp(24px,4vw,38px);line-height:1.2;margin:0 0 8px}
+.lead{color:var(--mute);margin:0;max-width:74ch;font-size:15px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0 10px;margin-top:14px;border-bottom:1px solid var(--line)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type=search]{flex:1 1 240px;font:inherit;padding:9px 12px;border:1.5px solid var(--line);border-radius:5px;background:var(--panel);color:var(--ink)}
+input:focus-visible,button:focus-visible{outline:3px solid var(--us);outline-offset:1px}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:5px;overflow:hidden}
+.seg button{all:unset;cursor:pointer;padding:8px 14px;font-size:14px;background:var(--panel)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.count{font-size:13px;color:var(--mute);margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips button{all:unset;cursor:pointer;font-size:13px;padding:4px 10px;border:1.5px solid var(--line);border-radius:3px;background:var(--panel)}
+.chips button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.cat{margin-top:26px}
+.cat h2{font-size:18px;margin:0 0 10px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cat h2 .nums{font-size:13px;font-weight:500;color:var(--mute)}
+.nums b.u{color:var(--us)} .nums b.c{color:var(--cn)}
+.ratio{height:6px;display:flex;border-radius:3px;overflow:hidden;margin-bottom:12px;max-width:420px}
+.ratio i{display:block}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.col{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:4px;padding:10px 12px}
+.col h3{margin:0 0 6px;font-size:13px;font-weight:500;color:var(--mute)}
+.col ul{list-style:none;margin:0;padding:0;columns:2 260px;column-gap:20px;font-size:14px}
+.col li .nm{display:block;font-weight:500}
+.col li .ds{display:block;font-size:12.5px;color:var(--mute);line-height:1.45;font-weight:400}
+.col li button:hover .ds{text-decoration:none}
+.col li button{all:unset;cursor:pointer;display:block;width:100%}
+.col li button:hover .nm{color:var(--us);text-decoration:underline}
+.col li button:focus-visible{outline:2px solid var(--us)}
+.col li button.none{color:var(--mute)}
+.col li button[aria-expanded="true"] .nm{color:var(--us);font-weight:700}
+.pop{position:absolute;z-index:20;width:min(320px,calc(100vw - 24px));background:var(--panel);color:var(--ink);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.22);padding:10px 12px;font-size:13px;line-height:1.5}
+.pop[hidden]{display:none}
+.pop h4{margin:0 0 2px;font-size:14px}
+.pop .m{color:var(--mute);font-size:12px;margin-bottom:6px}
+.pop p{margin:0 0 4px}
+.pop .k{color:var(--mute)}
+.col li{break-inside:avoid;padding:2px 0;border-bottom:1px dotted color-mix(in srgb,var(--line) 60%,transparent)}
+.col.empty ul{columns:1;color:var(--mute)}
+mark{background:#f3d36b;color:#15202b;border-radius:2px}
+.cols.one{grid-template-columns:1fr}
+.col li button{all:unset;cursor:pointer;display:block;width:100%}
+.col li button:hover .nm{color:var(--us);text-decoration:underline}
+.col li button:focus-visible{outline:2px solid var(--us)}
+.col li button.none{color:var(--mute)}
+dialog{border:none;padding:0;border-radius:8px;max-width:640px;width:calc(100% - 28px);background:var(--panel);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(10,16,22,.55)}
+.dh{padding:18px 22px 12px;border-bottom:1px solid var(--line);border-top:5px solid var(--c)}
+.dh h2{margin:0;font-size:22px;line-height:1.3}
+.dh .meta{font-size:13px;color:var(--mute);margin-top:4px}
+.db{padding:14px 22px 18px;max-height:62vh;overflow:auto}
+.db dl{margin:0;display:grid;grid-template-columns:84px 1fr;gap:10px 14px;font-size:15px}
+.db dt{color:var(--mute);font-size:13px;padding-top:2px}
+.db dd{margin:0}
+.db ul{margin:0;padding-left:18px}
+.conf{display:inline-block;font-size:12px;padding:1px 8px;border-radius:3px;border:1px solid var(--line)}
+.conf.low{background:#f3d36b;color:#15202b;border-color:#f3d36b}
+.df{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:12px 22px;border-top:1px solid var(--line);font-size:12px;color:var(--mute)}
+.df button{font:inherit;font-size:14px;padding:6px 14px;border-radius:4px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.df .gen{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.status{color:var(--mute);font-size:15px}
+.db a{color:var(--us)}
+.note{margin-top:36px;font-size:14px;color:var(--mute);max-width:80ch;border-top:1px solid var(--line);padding-top:14px}
+.note b{color:var(--ink)}
+.note a{color:var(--us)}
+.lead a{color:var(--us)}
+@media (max-width:720px){.cols{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<h1>中美 1,181 家 AI 開發企業全名單</h1>
+<p class="lead">名單原樣取自 <a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener">RAND 報告 RR-A5043-1</a> 的附件（Annex）：美國 743 家、中國 438 家。附件只有公司名和國家，下面的行業分組是我按公司主營業務粗分的，不是 RAND 的原始標籤。每家公司名下有一行簡介；點公司名會彈出小卡片，補充產品和進展，點別處或按 Esc 關閉；搜尋框也能搜簡介裡的詞。1,181 家裡有 870 家寫了簡介；其餘公開信息太少的沒寫，避免編造。</p>
+<div class="bar">
+ <div class="controls">
+  <input type="search" id="q" placeholder="搜尋公司名，例如 Unitree、DeepSeek、寧德" aria-label="搜尋公司名">
+  <div class="seg" role="group" aria-label="國家">
+   <button data-c="all" aria-pressed="true">全部</button><button data-c="us" aria-pressed="false">美國</button><button data-c="cn" aria-pressed="false">中國</button>
+  </div>
+ </div>
+ <div class="chips" id="chips"></div>
+ <div class="count" id="count"></div>
+</div>
+<div id="list"></div>
+<div class="pop" id="pop" role="dialog" aria-live="polite" hidden></div>
+
+<p class="note"><b>資料出處：</b>Jon Schmid、Prateek Puri、Vitor Melo、Anthony Hakim，<a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener"><i>AI Development in the United States and China: Evidence from a New Dataset of AI Developer Firms</i></a>，RAND Corporation，RR-A5043-1，2026 年 8 月 17 日。本頁僅整理其附件名單，報告全文與分析請見 RAND 官方頁面。</p>
+<p class="note"><b>怎麼讀這份分組：</b>每家公司只放進一個主類。很多公司橫跨多個領域，比如比亞迪同時做汽車和機器人、特斯拉同時做汽車和人形機器人，這裡只按最主要的業務歸類。"企業與垂直 AI 軟件（含其他）"是兜底類，放的是通用企業軟件、語音視覺服務，以及僅憑名字無法確定主業的公司。名單中的拼寫和重複項（例如 Tempus 與 Tempus AI 分別列出）照附件原樣保留。</p>
+</div>
+<script>
+/* ===== 事件上報層：自動適配上面啟用的任一服務，換服務只改這裡 ===== */
+const T=(name,props)=>{try{
+  if(window.plausible)window.plausible(name,{props:props});
+  else if(window.umami&&window.umami.track)window.umami.track(name,props);
+  else if(window.gtag)window.gtag('event',name,props);
+  else if(window.__TRACK_ENDPOINT__&&navigator.sendBeacon)
+    navigator.sendBeacon(window.__TRACK_ENDPOINT__,new Blob([JSON.stringify({name:name,props:props,path:location.pathname,ref:document.referrer,t:Date.now()})],{type:'application/json'}));
+}catch(_){}};
+const D=__DATA_D__;
+const order=['fm','big','hum','rob','av','air','med','fin','def','ind','chip','cons','gen','soft'];
+let country='all',cat='all',q='',_lastTotal=0;
+const chips=document.getElementById('chips');
+function mk(k,label){const b=document.createElement('button');b.textContent=label;b.dataset.k=k;b.setAttribute('aria-pressed',k===cat?'true':'false');b.onclick=()=>{cat=k;render();T('filter_industry',{industry:label})};chips.appendChild(b)}
+mk('all','全部行業');order.forEach(k=>mk(k,D.cats[k]));
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{country=b.dataset.c;T('filter_country',{country:country});document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));render()});
+let _st;
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();render();
+ clearTimeout(_st);const cur=q;if(cur.length<2)return;
+ _st=setTimeout(()=>{if(q===cur)T('search',{q:cur.slice(0,60),hits:_lastTotal})},1200)});
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function hl(n){const e=esc(n);if(!q)return e;const i=n.toLowerCase().indexOf(q);if(i<0)return e;return esc(n.slice(0,i))+'<mark>'+esc(n.slice(i,i+q.length))+'</mark>'+esc(n.slice(i+q.length))}
+function hl2(t){const e=esc(t);if(!q)return e;const i=t.toLowerCase().indexOf(q);if(i<0)return e;return esc(t.slice(0,i))+'<mark>'+esc(t.slice(i,i+q.length))+'</mark>'+esc(t.slice(i+q.length))}
+function render(){
+ if(typeof closePop==='function')closePop();
+ chips.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===cat?'true':'false'));
+ const f=(arr)=>arr.filter(([n,c,id])=>{if(cat!=='all'&&c!==cat)return false;if(!q)return true;const p=PROF[id];return (n+' '+(p?[p.w,p.l,p.p].join(' '):'')).toLowerCase().includes(q)});
+ const U=f(D.firms.us),C=f(D.firms.cn);let total=0,h='';
+ order.forEach(k=>{
+  if(cat!=='all'&&k!==cat)return;
+  const u=U.filter(x=>x[1]===k),c=C.filter(x=>x[1]===k);
+  const shownU=country!=='cn',shownC=country!=='us';
+  const n=(shownU?u.length:0)+(shownC?c.length:0);if(!n)return;total+=n;
+  const au=D.firms.us.filter(x=>x[1]===k).length,ac=D.firms.cn.filter(x=>x[1]===k).length;
+  const pu=au/743*100,pc=ac/438*100;
+  h+=`<section class="cat"><h2>${D.cats[k]}<span class="nums">美國 <b class="u">${au}</b> 家（${pu.toFixed(1)}%）· 中國 <b class="c">${ac}</b> 家（${pc.toFixed(1)}%）</span></h2>`;
+  h+=`<div class="cols ${country==='all'?'':'one'}">`;
+  const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
+  if(shownU)h+=col('美國',u,'us');if(shownC)h+=col('中國',c,'cn');
+  h+=`</div></section>`;
+ });
+ document.getElementById('list').innerHTML=h||'<p class="count">沒有符合的公司。換個關鍵詞，或切回"全部行業"。</p>';
+ _lastTotal=total;
+ document.getElementById('count').textContent=`目前顯示 ${total} 家`+(q?`（搜尋「${q}」）`:'');
+}
+
+const PROF=__DATA_PROF__;
+const idx={};['us','cn'].forEach(k=>D.firms[k].forEach(x=>idx[x[2]]={name:x[0],cat:x[1],country:k}));
+const pop=document.getElementById('pop');let openBtn=null;
+function closePop(){pop.hidden=true;if(openBtn){openBtn.setAttribute('aria-expanded','false');openBtn=null}}
+document.getElementById('list').addEventListener('click',e=>{
+ const b=e.target.closest('button[data-id]');if(!b)return;e.stopPropagation();
+ if(openBtn===b){closePop();return}
+ closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
+ pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
+ let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
+ if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
+ else h+=`<p class="k">公開信息太少，未寫簡介。</p>`;
+ pop.innerHTML=h;pop.hidden=false;
+ const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
+ let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));
+ let top=r.bottom+window.scrollY+6;if(r.bottom+ph+12>window.innerHeight&&r.top-ph-6>0)top=r.top+window.scrollY-ph-6;
+ pop.style.left=left+'px';pop.style.top=top+'px';
+ b.setAttribute('aria-expanded','true');openBtn=b;
+ T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
+});
+document.addEventListener('click',e=>{if(!pop.hidden&&!pop.contains(e.target))closePop()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()});
+window.addEventListener('resize',closePop);
+render();
+</script></body></html>
