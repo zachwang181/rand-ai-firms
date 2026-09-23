@@ -87,6 +87,13 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 .db a{color:var(--us)}
 .note{margin-top:36px;font-size:14px;color:var(--mute);max-width:80ch;border-top:1px solid var(--line);padding-top:14px}
 .note b{color:var(--ink)}
+.tk{display:inline-block;margin-left:6px;font-size:10.5px;font-weight:500;letter-spacing:.02em;padding:0 4px;border:1px solid var(--line);border-radius:2px;color:var(--mute);vertical-align:1px}
+.col li button:hover .tk{border-color:var(--us);color:var(--us)}
+.fin{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
+.fin-g{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12.5px}
+.fin .fk{color:var(--mute)}
+.fin .fv{font-variant-numeric:tabular-nums}
+.fin-a{margin-top:5px;font-size:11px;color:var(--mute)}
 .note a{color:var(--us)}
 .lead a{color:var(--us)}
 @media (max-width:720px){.cols{grid-template-columns:1fr}}
@@ -135,7 +142,7 @@ function hl2(t){const e=esc(t);if(!q)return e;const i=t.toLowerCase().indexOf(q)
 function render(){
  if(typeof closePop==='function')closePop();
  chips.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===cat?'true':'false'));
- const f=(arr)=>arr.filter(([n,c,id])=>{if(cat!=='all'&&c!==cat)return false;if(!q)return true;const p=PROF[id];return (n+' '+(p?[p.w,p.l,p.p].join(' '):'')).toLowerCase().includes(q)});
+ const f=(arr)=>arr.filter(([n,c,id])=>{if(cat!=='all'&&c!==cat)return false;if(!q)return true;const p=PROF[id];const m=MKT[id];return (n+' '+(p?[p.w,p.l,p.p].join(' '):'')+' '+(m?m.t:'')).toLowerCase().includes(q)});
  const U=f(D.firms.us),C=f(D.firms.cn);let total=0,h='';
  order.forEach(k=>{
   if(cat!=='all'&&k!==cat)return;
@@ -146,7 +153,7 @@ function render(){
   const pu=au/743*100,pc=ac/438*100;
   h+=`<section class="cat"><h2>${D.cats[k]}<span class="nums">美國 <b class="u">${au}</b> 家（${pu.toFixed(1)}%）· 中國 <b class="c">${ac}</b> 家（${pc.toFixed(1)}%）</span></h2>`;
   h+=`<div class="cols ${country==='all'?'':'one'}">`;
-  const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
+  const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';const mk=MKT[x[2]];return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}${mk?`<span class="tk">${esc(mk.t)}</span>`:''}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
   if(shownU)h+=col('美國',u,'us');if(shownC)h+=col('中國',c,'cn');
   h+=`</div></section>`;
  });
@@ -156,6 +163,25 @@ function render(){
 }
 
 const PROF=__DATA_PROF__;
+const MKT=__DATA_MKT__,MKT_ASOF=__DATA_ASOF__;
+const CUR={USD:'美元',CNY:'人民幣',HKD:'港元',TWD:'新台幣',EUR:'歐元',JPY:'日圓',GBP:'英鎊',SGD:'新加坡元'};
+function money(v,cur){
+ if(v==null)return '';
+ const neg=v<0,a=Math.abs(v),c=CUR[cur]||cur||'';let s;
+ if(a>=1e12)s=(a/1e12).toFixed(2)+' 兆';
+ else if(a>=1e8)s=(a/1e8).toFixed(a>=1e10?0:1)+' 億';
+ else if(a>=1e4)s=Math.round(a/1e4)+' 萬';
+ else s=String(Math.round(a));
+ return (neg?'-':'')+s+c}
+function finBlock(id){
+ const m=MKT[id];if(!m)return '';
+ const rows=[];
+ if(m.mc!=null)rows.push(['市值',money(m.mc,m.qcur||m.cur)]);
+ if(m.em!=null)rows.push(['員工數',m.em.toLocaleString('en-US')+' 人']);
+ if(m.rv!=null)rows.push(['年營收',money(m.rv,m.cur)]);
+ if(m.ni!=null)rows.push(['年淨利',m.ni<0?'虧損 '+money(-m.ni,m.cur):money(m.ni,m.cur)]);
+ if(!rows.length)return '';
+ return `<div class="fin"><div class="fin-g">${rows.map(([k,v])=>`<span class="fk">${k}</span><span class="fv">${v}</span>`).join('')}</div><div class="fin-a">資料截至 ${MKT_ASOF}</div></div>`}
 const idx={};['us','cn'].forEach(k=>D.firms[k].forEach(x=>idx[x[2]]={name:x[0],cat:x[1],country:k}));
 const pop=document.getElementById('pop');let openBtn=null;
 function closePop(){pop.hidden=true;if(openBtn){openBtn.setAttribute('aria-expanded','false');openBtn=null}}
@@ -166,7 +192,8 @@ document.getElementById('list').addEventListener('click',e=>{
  pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
  let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
  if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
- else h+=`<p class="k">公開信息太少，未寫簡介。</p>`;
+ else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
+ h+=finBlock(id);
  pop.innerHTML=h;pop.hidden=false;
  const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));

@@ -1,0 +1,1594 @@
+[
+ {
+  "id": "us_5",
+  "name": "Absci",
+  "ticker": "ABSI",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：Absci 投資人關係頁與 SEC 申報，Nasdaq: ABSI，生成式 AI 藥物設計公司"
+ },
+ {
+  "id": "us_10",
+  "name": "Adobe",
+  "ticker": "ADBE",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_15",
+  "name": "AEye",
+  "ticker": "LIDR",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：investors.aeye.ai 與 Nasdaq 報價頁，AEye, Inc. Class A 普通股代碼 LIDR"
+ },
+ {
+  "id": "us_17",
+  "name": "AGCO Corp",
+  "ticker": "AGCO",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司（農機製造商）"
+ },
+ {
+  "id": "us_30",
+  "name": "Alphabet Inc",
+  "ticker": "GOOGL",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_31",
+  "name": "Amazon",
+  "ticker": "AMZN",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_34",
+  "name": "AMD",
+  "ticker": "AMD",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_43",
+  "name": "Apple",
+  "ticker": "AAPL",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_48",
+  "name": "Archer Aviation",
+  "ticker": "ACHR",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知上市公司，eVTOL 廠商，2021 年 SPAC 上市"
+ },
+ {
+  "id": "us_66",
+  "name": "Aurora",
+  "ticker": "AUR",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "名單分類為 av（自動駕駛），對應 Aurora Innovation, Inc.；查證來源：ir.aurora.tech 與 Nasdaq 報價，代碼 AUR"
+ },
+ {
+  "id": "us_69",
+  "name": "Autodesk",
+  "ticker": "ADSK",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_96",
+  "name": "Booz Allen Hamilton",
+  "ticker": "BAH",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司（政府顧問服務）"
+ },
+ {
+  "id": "us_99",
+  "name": "Boston Scientific",
+  "ticker": "BSX",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_111",
+  "name": "Capital One",
+  "ticker": "COF",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_120",
+  "name": "Cerebras",
+  "ticker": "CBRS",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：Cerebras 官方新聞稿與 CNBC 報導，2026/5/14 於 Nasdaq 掛牌，代碼 CBRS"
+ },
+ {
+  "id": "us_122",
+  "name": "Cerence AI",
+  "ticker": "CRNC",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：investors.cerence.com，法人名稱 Cerence Inc.（品牌為 Cerence AI），Nasdaq: CRNC"
+ },
+ {
+  "id": "us_129",
+  "name": "Chegg Inc",
+  "ticker": "CHGG",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "查證來源：2026/7 NYSE 最低股價合規通知新聞稿，目前仍在 NYSE 掛牌交易"
+ },
+ {
+  "id": "us_130",
+  "name": "Chewy",
+  "ticker": "CHWY",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知上市公司，2019 年 IPO"
+ },
+ {
+  "id": "us_131",
+  "name": "Cisco",
+  "ticker": "CSCO",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_139",
+  "name": "Cognex Corp",
+  "ticker": "CGNX",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司（機器視覺）"
+ },
+ {
+  "id": "us_141",
+  "name": "Cognizant Technology Solutions",
+  "ticker": "CTSH",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_142",
+  "name": "ColdQuanta",
+  "ticker": "INFQ",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "ColdQuanta 於 2022 年更名 Infleqtion（同一公司）；查證來源：ir.infleqtion.com 新聞稿，2026/2/17 完成與 Churchill Capital Corp X 合併並於 NYSE 以 INFQ 交易"
+ },
+ {
+  "id": "us_151",
+  "name": "Corteva Agriscience",
+  "ticker": "CTVA",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司；Corteva Agriscience 即 Corteva, Inc. 的營運品牌，NYSE: CTVA 現仍交易（2026 Q4 才分拆為 Vylor 與 New Corteva）"
+ },
+ {
+  "id": "us_161",
+  "name": "Cyngn",
+  "ticker": "CYN",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：stockanalysis.com / CNBC / SEC EDGAR CIK 1874097，Cyngn Inc.（Mountain View 自駕軟體）於 Nasdaq 以 CYN 交易，2026 年仍有財報新聞"
+ },
+ {
+  "id": "us_165",
+  "name": "Datadog",
+  "ticker": "DDOG",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_223",
+  "name": "EXL Service Holdings Inc",
+  "ticker": "EXLS",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司，公司全名即 ExlService Holdings, Inc."
+ },
+ {
+  "id": "us_231",
+  "name": "FICO",
+  "ticker": "FICO",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，Fair Isaac Corporation"
+ },
+ {
+  "id": "us_260",
+  "name": "General Electric",
+  "ticker": "GE",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司；General Electric Company 現營運名為 GE Aerospace，代碼仍為 GE"
+ },
+ {
+  "id": "us_267",
+  "name": "Ginkgo Bioworks Inc",
+  "ticker": "DNA",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "查證來源：stockanalysis.com / StockTitan，Ginkgo Bioworks Holdings 2026 年仍以 NYSE: DNA 交易並發布 Q1/Q2 2026 財報"
+ },
+ {
+  "id": "us_294",
+  "name": "Honeywell",
+  "ticker": "HON",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Honeywell 投資人關係頁，分拆 Solstice（2025/10）與 Aerospace（2026/06）後，存續自動化公司 Honeywell Technologies 仍以 Nasdaq: HON 交易"
+ },
+ {
+  "id": "us_301",
+  "name": "Huntington Ingalls (HII)",
+  "ticker": "HII",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司（美國最大軍艦造船商，NYSE: HII）"
+ },
+ {
+  "id": "us_304",
+  "name": "IBM",
+  "ticker": "IBM",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_308",
+  "name": "Illumina",
+  "ticker": "ILMN",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司（基因定序）"
+ },
+ {
+  "id": "us_321",
+  "name": "Insmed Incorporated",
+  "ticker": "INSM",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市生技公司，公司全名與名單完全相符"
+ },
+ {
+  "id": "us_323",
+  "name": "Insulet Corp",
+  "ticker": "PODD",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市醫材公司（Omnipod），公司全名相符"
+ },
+ {
+  "id": "us_324",
+  "name": "Intel Corp",
+  "ticker": "INTC",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_327",
+  "name": "InterDigital Inc",
+  "ticker": "IDCC",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司，公司全名相符"
+ },
+ {
+  "id": "us_329",
+  "name": "Intuitive Surgical Operations Inc",
+  "ticker": "ISRG",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "Intuitive Surgical Operations 為 Intuitive Surgical 的營運法人實體名稱，屬同一家公司而非獨立子公司事業"
+ },
+ {
+  "id": "us_339",
+  "name": "Joby Aviation",
+  "ticker": "JOBY",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知上市公司（eVTOL）"
+ },
+ {
+  "id": "us_340",
+  "name": "John Deere",
+  "ticker": "DE",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，掛牌實體為 Deere & Company"
+ },
+ {
+  "id": "us_352",
+  "name": "Kodiak",
+  "ticker": "KDK",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：Nasdaq／SEC 424B3 公開資料，Kodiak AI, Inc.（原 Kodiak Robotics，自駕卡車）以 KDK 在 Nasdaq 掛牌；名單語境為 AI 自駕公司，非 Kodiak Gas Services 或 Kodiak Sciences"
+ },
+ {
+  "id": "us_373",
+  "name": "Lockheed Martin",
+  "ticker": "LMT",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_397",
+  "name": "Meta",
+  "ticker": "META",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_402",
+  "name": "Microsoft",
+  "ticker": "MSFT",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_414",
+  "name": "MongoDB",
+  "ticker": "MDB",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司"
+ },
+ {
+  "id": "us_424",
+  "name": "Natera",
+  "ticker": "NTRA",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司（基因檢測）"
+ },
+ {
+  "id": "us_425",
+  "name": "Nauticus Robotics",
+  "ticker": "KITT",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證來源：Nasdaq 合規公告與市場報價，2026 年 4 月確認仍符合 Nasdaq Capital Market 上市規定（惟在監管觀察期）"
+ },
+ {
+  "id": "us_429",
+  "name": "Netflix",
+  "ticker": "NFLX",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_442",
+  "name": "NielsenIQ",
+  "ticker": "NIQ",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "查證來源：NIQ 官方新聞稿，NIQ Global Intelligence plc 於 2025-07-23 在 NYSE 以 NIQ 掛牌；此為 NielsenIQ 本體，非尼爾森控股（Nielsen Holdings 已私有化）"
+ },
+ {
+  "id": "us_443",
+  "name": "Nike",
+  "ticker": "NKE",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_459",
+  "name": "NVIDIA",
+  "ticker": "NVDA",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_465",
+  "name": "Oceaneering",
+  "ticker": "OII",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "Oceaneering International，已知上市的海底機器人/工程公司"
+ },
+ {
+  "id": "us_483",
+  "name": "Ouster",
+  "ticker": "OUST",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Ouster 投資人關係頁，2024/12 由 NYSE 轉至 Nasdaq，代碼 OUST"
+ },
+ {
+  "id": "us_486",
+  "name": "Palladyne AI",
+  "ticker": "PDYN",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Nasdaq／SEC 8-K，原 Sarcos Technology and Robotics（STRC）於 2024/4 更名改碼為 PDYN"
+ },
+ {
+  "id": "us_513",
+  "name": "Pinterest",
+  "ticker": "PINS",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_521",
+  "name": "Pony.ai",
+  "ticker": "PONY",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Yahoo Finance，Pony AI Inc. 2024 年於 Nasdaq 上市"
+ },
+ {
+  "id": "us_530",
+  "name": "Qualcomm",
+  "ticker": "QCOM",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_541",
+  "name": "Raytheon",
+  "ticker": "RTX",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "Raytheon Company 經合併更名為 Raytheon Technologies 再改為 RTX Corporation，RTX 為法律上的延續實體；但今日 Raytheon 亦是 RTX 旗下事業部名稱，故標 medium"
+ },
+ {
+  "id": "us_546",
+  "name": "Recursion",
+  "ticker": "RXRX",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "Recursion Pharmaceuticals，已知上市的 AI 藥物發現公司"
+ },
+ {
+  "id": "us_561",
+  "name": "Richtech Robotics",
+  "ticker": "RR",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Nasdaq 個股頁，Richtech Robotics Inc. Class B Common Stock，代碼 RR"
+ },
+ {
+  "id": "us_566",
+  "name": "Rivian",
+  "ticker": "RIVN",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_568",
+  "name": "Roadzen",
+  "ticker": "RDZN",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：SEC EDGAR 8-K（CIK 1868640）與 CNN Markets，Roadzen Inc. 於 Nasdaq 交易"
+ },
+ {
+  "id": "us_569",
+  "name": "Roblox",
+  "ticker": "RBLX",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_578",
+  "name": "Salesforce",
+  "ticker": "CRM",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司"
+ },
+ {
+  "id": "us_583",
+  "name": "Satellogic",
+  "ticker": "SATL",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Nasdaq 新聞稿與 Simply Wall St，Satellogic Inc. 代碼 SATL"
+ },
+ {
+  "id": "us_591",
+  "name": "Serve Robotics",
+  "ticker": "SERV",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Nasdaq／Google Finance，Serve Robotics Inc. 代碼 SERV"
+ },
+ {
+  "id": "us_592",
+  "name": "ServiceNow",
+  "ticker": "NOW",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NYSE: NOW"
+ },
+ {
+  "id": "us_593",
+  "name": "SES AI",
+  "ticker": "SES",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "查證來源：SES AI Corporation 投資人關係頁與多家行情站，NYSE: SES"
+ },
+ {
+  "id": "us_598",
+  "name": "Simulations Plus Inc",
+  "ticker": "SLP",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Nasdaq 行情頁，NASDAQ: SLP（2026 年有 Altaris 收購協議但目前仍在交易）"
+ },
+ {
+  "id": "us_607",
+  "name": "SLB",
+  "ticker": "SLB",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，Schlumberger 更名為 SLB，NYSE: SLB"
+ },
+ {
+  "id": "us_610",
+  "name": "Snap Inc",
+  "ticker": "SNAP",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NYSE: SNAP"
+ },
+ {
+  "id": "us_611",
+  "name": "Snowflake",
+  "ticker": "SNOW",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NYSE: SNOW"
+ },
+ {
+  "id": "us_618",
+  "name": "Sound Hound Ai Ip LLC",
+  "ticker": "SOUN",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "此為 SoundHound AI, Inc. 的專利持有法人名稱（IP holding entity），非獨立營運子公司；母體 SoundHound AI 於 NASDAQ: SOUN 上市"
+ },
+ {
+  "id": "us_645",
+  "name": "Talkspace",
+  "ticker": "TALK",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司，NASDAQ: TALK"
+ },
+ {
+  "id": "us_652",
+  "name": "Tempus AI",
+  "ticker": "TEM",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司，2024 年 IPO，NASDAQ: TEM"
+ },
+ {
+  "id": "us_658",
+  "name": "Tesla",
+  "ticker": "TSLA",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NASDAQ: TSLA"
+ },
+ {
+  "id": "us_685",
+  "name": "UiPath",
+  "ticker": "PATH",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知上市公司，NYSE: PATH"
+ },
+ {
+  "id": "us_692",
+  "name": "Unity",
+  "ticker": "U",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "查證來源：Unity Software Inc. 行情頁，NYSE: U；名單語境為遊戲引擎/模擬 AI，判定即 Unity Technologies"
+ },
+ {
+  "id": "us_707",
+  "name": "VIAVI Solutions",
+  "ticker": "VIAV",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司，NASDAQ: VIAV"
+ },
+ {
+  "id": "us_713",
+  "name": "Visa Int Service Association",
+  "ticker": "V",
+  "exchange": "NYSE",
+  "confidence": "medium",
+  "basis": "Visa International Service Association 為 Visa Inc. 的主要營運法人與專利登記名稱，非獨立事業體；Visa Inc. 於 NYSE: V 上市"
+ },
+ {
+  "id": "us_718",
+  "name": "Walmart",
+  "ticker": "WMT",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NYSE: WMT"
+ },
+ {
+  "id": "us_719",
+  "name": "Walt Disney Co",
+  "ticker": "DIS",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司，NYSE: DIS"
+ },
+ {
+  "id": "us_738",
+  "name": "Zillow",
+  "ticker": "Z",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "查證來源：Zillow Group 投資人關係頁，NASDAQ: Z（C 股，流動性主體）與 ZG（A 股）"
+ },
+ {
+  "id": "us_740",
+  "name": "Zoom",
+  "ticker": "ZM",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司 Zoom Communications"
+ },
+ {
+  "id": "cn_1",
+  "name": "4Paradigm (第四範式)",
+  "ticker": "6682.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "查證來源：4Paradigm 2023 年於港交所主板上市，代號 6682"
+ },
+ {
+  "id": "cn_5",
+  "name": "Alibaba Group",
+  "ticker": "BABA",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司（另有 9988.HK 雙重上市）"
+ },
+ {
+  "id": "cn_6",
+  "name": "Aluminum Corp of China Ltd",
+  "ticker": "601600.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "中國鋁業股份有限公司，名稱含 Ltd 即上市主體（另有 2600.HK）"
+ },
+ {
+  "id": "cn_7",
+  "name": "Anhui Efort Robot (安徽埃夫特)",
+  "ticker": "688165.SS",
+  "exchange": "SSE STAR",
+  "confidence": "medium",
+  "basis": "查證：安徽埃夫特智能裝備 2016 年更名埃夫特智能裝備股份有限公司，2020/7/15 科創板上市，代碼 688165"
+ },
+ {
+  "id": "cn_16",
+  "name": "Autohome Inc",
+  "ticker": "ATHM",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "查證：2026 年仍於 NYSE 交易（另有 2518.HK）"
+ },
+ {
+  "id": "cn_18",
+  "name": "AVIC UAV (中航無人機)",
+  "ticker": "688297.SS",
+  "exchange": "SSE STAR",
+  "confidence": "medium",
+  "basis": "查證：中航（成都）無人機系統股份有限公司，科創板 688297，2026 年仍在交易"
+ },
+ {
+  "id": "cn_19",
+  "name": "Axera Semiconductor Co Ltd",
+  "ticker": "0600.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證：愛芯元智半導體 2026/2/10 於港交所主板掛牌，股份代號 600（hkexnews 招股文件）"
+ },
+ {
+  "id": "cn_21",
+  "name": "Baidu Inc",
+  "ticker": "BIDU",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司（另有 9888.HK）"
+ },
+ {
+  "id": "cn_24",
+  "name": "Baoshan Iron Steel Co Ltd",
+  "ticker": "600019.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司 寶山鋼鐵股份有限公司"
+ },
+ {
+  "id": "cn_27",
+  "name": "Beijing Chehejia Automobile Technology",
+  "ticker": "LI",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "北京車和家為理想汽車 Li Auto 的中國營運主體；上市主體為 Li Auto Inc（另有 2015.HK）。若採嚴格「僅本體上市」標準可略過"
+ },
+ {
+  "id": "cn_38",
+  "name": "Beijing Jingwei Hirain Technology Co Ltd",
+  "ticker": "688326.SS",
+  "exchange": "SSE STAR",
+  "confidence": "medium",
+  "basis": "查證：北京經緯恆潤科技股份有限公司 2022/4/19 科創板上市，代碼 688326"
+ },
+ {
+  "id": "cn_41",
+  "name": "Beijing Kunlun Tech Co Ltd",
+  "ticker": "300418.SZ",
+  "exchange": "SZSE ChiNext",
+  "confidence": "high",
+  "basis": "崑崙萬維科技股份有限公司，創業板 300418"
+ },
+ {
+  "id": "cn_46",
+  "name": "Beijing NavInfo Co Ltd",
+  "ticker": "002405.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：北京四維圖新科技股份有限公司（NavInfo），2010 年深交所上市，代碼 002405"
+ },
+ {
+  "id": "cn_57",
+  "name": "Beijing SuperMap Software Co Ltd",
+  "ticker": "300036.SZ",
+  "exchange": "SZSE ChiNext",
+  "confidence": "medium",
+  "basis": "查證：北京超圖軟件股份有限公司，創業板 300036"
+ },
+ {
+  "id": "cn_64",
+  "name": "Beijing Wanji Technology Co Ltd",
+  "ticker": "300552.SZ",
+  "exchange": "SZSE ChiNext",
+  "confidence": "medium",
+  "basis": "查證：北京萬集科技股份有限公司，創業板 300552"
+ },
+ {
+  "id": "cn_70",
+  "name": "Beijing Yunji Technology Co Ltd",
+  "ticker": "2670.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證：北京雲迹科技 2025/10/18 港交所主板掛牌，代號 2670（Yahoo Finance 有 2670.HK）"
+ },
+ {
+  "id": "cn_74",
+  "name": "BGI Shenzhen Co Ltd",
+  "ticker": "300676.SZ",
+  "exchange": "SZSE ChiNext",
+  "confidence": "medium",
+  "basis": "查證：深圳華大基因股份有限公司（BGI Genomics Co., Ltd.）2017 年創業板上市，代碼 300676；注意名單寫法也可能指未上市的華大基因研究院"
+ },
+ {
+  "id": "cn_76",
+  "name": "Black Sesame Technologies (黑芝麻智能)",
+  "ticker": "2533.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "查證：2024/8/8 港交所上市，代號 2533"
+ },
+ {
+  "id": "cn_78",
+  "name": "BYD",
+  "ticker": "002594.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司（另有 1211.HK）"
+ },
+ {
+  "id": "cn_86",
+  "name": "CCCC (China Communications Construction Co) Ltd",
+  "ticker": "601800.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "名稱明指中國交通建設股份有限公司（上市主體），另有 1800.HK"
+ },
+ {
+  "id": "cn_92",
+  "name": "Cheetah Mobile",
+  "ticker": "CMCM",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "查證：2026 年 9 月仍於 NYSE 交易"
+ },
+ {
+  "id": "cn_99",
+  "name": "China CITIC Bank",
+  "ticker": "601998.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "中信銀行股份有限公司為上市主體（另有 0998.HK）"
+ },
+ {
+  "id": "cn_105",
+  "name": "China Merchants Bank",
+  "ticker": "600036.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "招商銀行股份有限公司（另有 3968.HK）"
+ },
+ {
+  "id": "cn_106",
+  "name": "China Mobile",
+  "ticker": "0941.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "China Mobile Limited 為上市主體（另有 600941.SS）"
+ },
+ {
+  "id": "cn_111",
+  "name": "China Postal Savings Bank Co Ltd",
+  "ticker": "601658.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "中國郵政儲蓄銀行股份有限公司（另有 1658.HK）"
+ },
+ {
+  "id": "cn_118",
+  "name": "China Telecom Corp Ltd",
+  "ticker": "0728.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "名稱明指 China Telecom Corporation Limited（另有 601728.SS）"
+ },
+ {
+  "id": "cn_119",
+  "name": "China Unicom",
+  "ticker": "0762.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "China Unicom (Hong Kong) Limited 為同名上市主體；A 股對應 600050.SS 中國聯通"
+ },
+ {
+  "id": "cn_122",
+  "name": "Chongqing Changan Automobile Co Ltd",
+  "ticker": "000625.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "重慶長安汽車股份有限公司，深交所 000625"
+ },
+ {
+  "id": "cn_126",
+  "name": "CloudWalk Technology (雲從科技)",
+  "ticker": "688327.SS",
+  "exchange": "SSE STAR",
+  "confidence": "medium",
+  "basis": "查證：雲從科技集團股份有限公司，科創板 688327"
+ },
+ {
+  "id": "cn_135",
+  "name": "DeepGlint",
+  "ticker": "688207.SS",
+  "exchange": "SSE STAR",
+  "confidence": "medium",
+  "basis": "查證：北京格靈深瞳信息技術股份有限公司，科創板 688207"
+ },
+ {
+  "id": "cn_145",
+  "name": "DOBOT (越疆科技)",
+  "ticker": "2432.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證來源：HKEX/etnet、金杜律所公告，深圳市越疆科技 2024/12/23 以 18C 章上市，代號 2432"
+ },
+ {
+  "id": "cn_149",
+  "name": "Ecovacs Robotics (科沃斯機器人)",
+  "ticker": "603486.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：科沃斯機器人股份有限公司，上交所主板 603486"
+ },
+ {
+  "id": "cn_153",
+  "name": "EVE Energy Co Ltd",
+  "ticker": "300014.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：惠州億緯鋰能，深交所創業板 300014"
+ },
+ {
+  "id": "cn_159",
+  "name": "Foxconn Industrial Internet",
+  "ticker": "601138.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：工業富聯，上交所主板 601138"
+ },
+ {
+  "id": "cn_162",
+  "name": "Geek+ PopPick (極智嘉PopPick)",
+  "ticker": "2590.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證來源：新浪財經/搜狐，北京極智嘉科技 2025/7/9 於港交所主板上市代號 2590；PopPick 為其產品線，主體即極智嘉本身"
+ },
+ {
+  "id": "cn_163",
+  "name": "Geely",
+  "ticker": "0175.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：吉利汽車控股，港交所 00175"
+ },
+ {
+  "id": "cn_170",
+  "name": "Glodon Co Ltd",
+  "ticker": "002410.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：廣聯達科技，深交所 002410"
+ },
+ {
+  "id": "cn_173",
+  "name": "Great Wall Motor Co Ltd",
+  "ticker": "601633.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：長城汽車 A 股 601633（另有 H 股 2333.HK）"
+ },
+ {
+  "id": "cn_176",
+  "name": "Guangzhou Automobile Group Co Ltd",
+  "ticker": "601238.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：廣汽集團 A 股 601238（另有 H 股 2238.HK）"
+ },
+ {
+  "id": "cn_188",
+  "name": "Haier Smart Home Co Ltd",
+  "ticker": "600690.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：海爾智家 A 股 600690"
+ },
+ {
+  "id": "cn_189",
+  "name": "Hangcha Group Co Ltd",
+  "ticker": "603298.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：杭叉集團，上交所主板 603298"
+ },
+ {
+  "id": "cn_190",
+  "name": "Hangzhou Arcvideo Tech Co Ltd",
+  "ticker": "688039.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：公司投資人關係頁 arcvideo.cn 與科創板資料，杭州當虹科技 688039，2019/12 科創板上市"
+ },
+ {
+  "id": "cn_203",
+  "name": "Horizon Robotics",
+  "ticker": "9660.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：地平線機器人-W，港交所 09660，2024/10 上市"
+ },
+ {
+  "id": "cn_212",
+  "name": "iFLYTEK Co Ltd",
+  "ticker": "002230.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：科大訊飛，深交所 002230"
+ },
+ {
+  "id": "cn_214",
+  "name": "Industrial and Commercial Bank of China",
+  "ticker": "601398.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：工商銀行 A 股 601398（另有 H 股 1398.HK）"
+ },
+ {
+  "id": "cn_218",
+  "name": "INTELLIFUSION",
+  "ticker": "688343.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：上交所公告與公司半年報，深圳雲天勵飛技術 688343，2023/4 科創板上市"
+ },
+ {
+  "id": "cn_220",
+  "name": "iSoftStone",
+  "ticker": "301236.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證來源：公司公告與交易所資料，軟通動力信息技術（集團）2022/3 創業板上市，代碼 301236"
+ },
+ {
+  "id": "cn_221",
+  "name": "Jack Technology Inc",
+  "ticker": "603337.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：Yahoo Finance 與公司年報，杰克科技股份有限公司，上交所 603337"
+ },
+ {
+  "id": "cn_224",
+  "name": "JD.COM",
+  "ticker": "JD",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司：京東集團，NASDAQ: JD（另有 9618.HK）"
+ },
+ {
+  "id": "cn_234",
+  "name": "Kuaishou Technology",
+  "ticker": "1024.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：快手-W，港交所 01024"
+ },
+ {
+  "id": "cn_236",
+  "name": "Lenovo",
+  "ticker": "0992.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：聯想集團，港交所 00992"
+ },
+ {
+  "id": "cn_237",
+  "name": "Li Auto",
+  "ticker": "LI",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司：理想汽車，NASDAQ: LI（另有 2015.HK）"
+ },
+ {
+  "id": "cn_240",
+  "name": "Maxvision Technology Co Ltd",
+  "ticker": "002990.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證來源：公司英文投資人頁 en.maxvision.com.cn/investor 與交易所資料，盛視科技股份有限公司，深交所 002990"
+ },
+ {
+  "id": "cn_244",
+  "name": "Meitu Inc",
+  "ticker": "1357.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：美圖公司，港交所 01357"
+ },
+ {
+  "id": "cn_245",
+  "name": "Meituan",
+  "ticker": "3690.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：美團-W，港交所 03690"
+ },
+ {
+  "id": "cn_247",
+  "name": "MicroPort MedBot (微創醫療機器人)",
+  "ticker": "2252.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "已知上市公司：微創醫療機器人-B，港交所 02252，2021/11 上市"
+ },
+ {
+  "id": "cn_248",
+  "name": "Midea Group",
+  "ticker": "000333.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：美的集團 A 股 000333（另有 0300.HK）"
+ },
+ {
+  "id": "cn_251",
+  "name": "MINIEYE (小覓智能)",
+  "ticker": "2431.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證來源：新浪港股 02431 公司資料，深圳佑駕創新科技（MINIEYE）2024/12/27 港交所主板上市"
+ },
+ {
+  "id": "cn_252",
+  "name": "MiniMax",
+  "ticker": "0100.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證來源：澎湃新聞、動點科技、上海市國資委網站，稀宇科技（MiniMax）2026/1/9 港交所上市，代號 0100"
+ },
+ {
+  "id": "cn_253",
+  "name": "Mobvoi",
+  "ticker": "2438.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證來源：HKEXnews 招股文件（股份代號 2438），出門問問有限公司 2024/4 港交所主板上市"
+ },
+ {
+  "id": "cn_263",
+  "name": "NetEase",
+  "ticker": "NTES",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司：網易，NASDAQ: NTES（另有 9999.HK）"
+ },
+ {
+  "id": "cn_268",
+  "name": "NIO",
+  "ticker": "NIO",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知上市公司：蔚來汽車，NYSE: NIO（另有 9866.HK）"
+ },
+ {
+  "id": "cn_270",
+  "name": "NSFOCUS Technology Group Co Ltd",
+  "ticker": "300369.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "已知上市公司：綠盟科技集團，深交所創業板 300369"
+ },
+ {
+  "id": "cn_275",
+  "name": "Orbbec",
+  "ticker": "688322.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：公司投資人關係頁與上交所上市公告書，奧比中光科技集團 2022/7 科創板上市 688322"
+ },
+ {
+  "id": "cn_277",
+  "name": "Pci Technology Group Co Ltd",
+  "ticker": "600728.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：Yahoo Finance 公司檔案（PCI Technology Group Co., Ltd. 600728.SS），佳都科技集團，上交所 600728"
+ },
+ {
+  "id": "cn_279",
+  "name": "Petrochina Co Ltd",
+  "ticker": "601857.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：中國石油天然氣股份 A 股 601857（ADR 已於 2022 年自 NYSE 下市，另有 0857.HK）"
+ },
+ {
+  "id": "cn_280",
+  "name": "Ping An",
+  "ticker": "601318.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：中國平安保險（集團）A 股 601318（另有 2318.HK）"
+ },
+ {
+  "id": "cn_285",
+  "name": "Qi An Xin Technology Group Inc",
+  "ticker": "688561.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證來源：上交所上市公告書，奇安信科技集團 2020/7 科創板上市 688561"
+ },
+ {
+  "id": "cn_286",
+  "name": "Qihoo 360",
+  "ticker": "601360.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：三六零安全科技（360），上交所 601360（美股 QIHU 已於 2016 年私有化下市）"
+ },
+ {
+  "id": "cn_288",
+  "name": "Qimingxingchen Information Technology Co",
+  "ticker": "002439.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證來源：新浪/同花順 F10 資料，啟明星辰信息技術集團股份有限公司（Venustech），深交所 002439"
+ },
+ {
+  "id": "cn_294",
+  "name": "Roborock (石頭科技)",
+  "ticker": "688169.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：北京石頭世紀科技，科創板 688169，查證確認"
+ },
+ {
+  "id": "cn_295",
+  "name": "RoboSense (速騰聚創)",
+  "ticker": "2498.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "查證港交所年報：RoboSense Technology Co., Ltd 股份代號 2498，2024/1/5 上市"
+ },
+ {
+  "id": "cn_298",
+  "name": "ROKAE (珞石機器人)",
+  "ticker": "3752.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證：珞石機器人 2026/7/9 於港交所主板上市，代號 03752"
+ },
+ {
+  "id": "cn_299",
+  "name": "Roobo / Unisound (儒博/雲知聲)",
+  "ticker": "9678.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "雲知聲 Unisound AI Technology 2025/6/30 於港交所上市，代號 09678；此條目合併兩家公司，上市者為雲知聲"
+ },
+ {
+  "id": "cn_300",
+  "name": "Runjian Co Ltd",
+  "ticker": "002929.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：潤建股份有限公司，深交所 002929，名稱完全對應"
+ },
+ {
+  "id": "cn_302",
+  "name": "Sangfor Technology Co Ltd",
+  "ticker": "300454.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：深信服科技股份有限公司，創業板 300454"
+ },
+ {
+  "id": "cn_304",
+  "name": "SenseTime (商湯科技)",
+  "ticker": "0020.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知大型上市公司：商湯集團，港交所 0020"
+ },
+ {
+  "id": "cn_307",
+  "name": "Shanghai Bilibili Technology Co Ltd",
+  "ticker": "BILI",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "上海嗶哩嗶哩科技為 Bilibili Inc 的境內營運主體（VIE 架構），集團本身於 NASDAQ 上市"
+ },
+ {
+  "id": "cn_309",
+  "name": "Shanghai Electric Group Co Ltd",
+  "ticker": "601727.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：上海電氣集團股份有限公司，上交所 601727"
+ },
+ {
+  "id": "cn_312",
+  "name": "Shanghai Intsig Information Co Ltd",
+  "ticker": "688615.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "查證：上海合合信息科技股份有限公司（Intsig），科創板 688615，2024/9/26 上市"
+ },
+ {
+  "id": "cn_319",
+  "name": "Shanghai Suiyuan Technology Co Ltd",
+  "ticker": "688801.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證：上海燧原科技（Enflame）2026/9/11 於科創板上市，代號 688801"
+ },
+ {
+  "id": "cn_320",
+  "name": "Shanghai Tunnel Eng Co Ltd",
+  "ticker": "600820.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證：上海隧道工程股份有限公司（隧道股份），上交所 600820，名稱直接對應上市主體"
+ },
+ {
+  "id": "cn_340",
+  "name": "Shenzhen Skyverse Technology Co Ltd",
+  "ticker": "688361.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證：深圳中科飛測科技股份有限公司 Skyverse Technology Co., Ltd.，科創板 688361"
+ },
+ {
+  "id": "cn_341",
+  "name": "Shenzhen Topstar Robot (深圳拓斯達)",
+  "ticker": "300607.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知上市公司：拓斯達科技，創業板 300607"
+ },
+ {
+  "id": "cn_342",
+  "name": "Shenzhen Ugreen Group Ltd",
+  "ticker": "301606.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：深圳市綠聯科技股份有限公司 2024/7/26 創業板上市，代號 301606"
+ },
+ {
+  "id": "cn_344",
+  "name": "Shenzhen Urban Transport Planning Design",
+  "ticker": "301091.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：深圳市城市交通規劃設計研究中心股份有限公司（深城交），創業板 301091"
+ },
+ {
+  "id": "cn_352",
+  "name": "Supcon Technology Co Ltd",
+  "ticker": "688777.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "查證：浙江中控技術股份有限公司，科創板 688777（另有 H 股 2359.HK，此處採 A 股主掛牌）"
+ },
+ {
+  "id": "cn_355",
+  "name": "Synthesis Electronic Technology Co Ltd",
+  "ticker": "300479.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：神思電子技術股份有限公司 Synthesis Electronic Technology Co., Ltd.，深交所 300479"
+ },
+ {
+  "id": "cn_357",
+  "name": "TAL Education Group",
+  "ticker": "TAL",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：好未來教育，NYSE: TAL"
+ },
+ {
+  "id": "cn_358",
+  "name": "TCL",
+  "ticker": "000100.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "TCL 集團旗艦上市主體為 TCL 科技集團（深交所 000100）；註：集團另有 TCL 電子 1070.HK，名單僅寫「TCL」故採母體 A 股"
+ },
+ {
+  "id": "cn_359",
+  "name": "Tencent",
+  "ticker": "0700.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知大型上市公司：騰訊控股，港交所 0700"
+ },
+ {
+  "id": "cn_366",
+  "name": "Transwarp",
+  "ticker": "688031.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證：星環信息科技（上海）股份有限公司 Transwarp，科創板 688031"
+ },
+ {
+  "id": "cn_367",
+  "name": "Trip.com Group",
+  "ticker": "TCOM",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知大型上市公司：攜程集團，NASDAQ: TCOM"
+ },
+ {
+  "id": "cn_368",
+  "name": "Troy Information Technology Co Ltd",
+  "ticker": "300366.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證 Yahoo Finance：Troy Information Technology Co., Ltd. (300366.SZ)，成都，名稱完全對應"
+ },
+ {
+  "id": "cn_370",
+  "name": "UBTECH Robotics",
+  "ticker": "9880.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知上市公司：優必選科技，港交所 9880"
+ },
+ {
+  "id": "cn_371",
+  "name": "UISEE (馭勢科技)",
+  "ticker": "1511.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證：馭勢科技 2026/5/20 於港交所主板上市，代號 1511"
+ },
+ {
+  "id": "cn_374",
+  "name": "United Imaging Healthcare",
+  "ticker": "688271.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：上海聯影醫療科技，科創板 688271"
+ },
+ {
+  "id": "cn_375",
+  "name": "Unitree Robotics",
+  "ticker": "688836.SS",
+  "exchange": "SSE",
+  "confidence": "medium",
+  "basis": "查證：宇樹科技 2026/8/19 於科創板上市，代號 688836"
+ },
+ {
+  "id": "cn_376",
+  "name": "Verisilicon Microelectronics Shanghai Co",
+  "ticker": "688521.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：芯原微電子（上海）股份有限公司，科創板 688521，名稱即上市主體"
+ },
+ {
+  "id": "cn_381",
+  "name": "WeRide",
+  "ticker": "WRD",
+  "exchange": "NASDAQ",
+  "confidence": "high",
+  "basis": "已知上市公司：文遠知行，NASDAQ: WRD"
+ },
+ {
+  "id": "cn_386",
+  "name": "Winning Health Technology Group Co Ltd",
+  "ticker": "300253.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：衛寧健康科技集團股份有限公司，深交所 300253"
+ },
+ {
+  "id": "cn_388",
+  "name": "Wonders Information Co Ltd",
+  "ticker": "300168.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：萬達信息股份有限公司 Wonders Information，深交所 300168"
+ },
+ {
+  "id": "cn_389",
+  "name": "Wondershare Technology Hunan Co Ltd",
+  "ticker": "300624.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：萬興科技集團股份有限公司（湖南長沙），深交所 300624"
+ },
+ {
+  "id": "cn_405",
+  "name": "Xiao-i",
+  "ticker": "AIXI",
+  "exchange": "NASDAQ",
+  "confidence": "medium",
+  "basis": "查證：Xiao-I Corporation（小i機器人）NASDAQ: AIXI，2026/6 仍維持上市地位"
+ },
+ {
+  "id": "cn_406",
+  "name": "Xiaomi Technology",
+  "ticker": "1810.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "已知大型上市公司：小米集團，港交所 1810"
+ },
+ {
+  "id": "cn_407",
+  "name": "XPENG",
+  "ticker": "XPEV",
+  "exchange": "NYSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：小鵬汽車，NYSE: XPEV（另有 9868.HK）"
+ },
+ {
+  "id": "cn_408",
+  "name": "XtalPi Inc",
+  "ticker": "2228.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "查證 Yahoo Finance：XtalPi Holdings Limited (2228.HK)"
+ },
+ {
+  "id": "cn_410",
+  "name": "Yidu Tech",
+  "ticker": "2158.HK",
+  "exchange": "HKEX",
+  "confidence": "high",
+  "basis": "查證港交所文件：Yidu Tech Inc. 醫渡科技有限公司，股份代號 2158"
+ },
+ {
+  "id": "cn_413",
+  "name": "Yonyou Network Technology",
+  "ticker": "600588.SS",
+  "exchange": "SSE",
+  "confidence": "high",
+  "basis": "已知上市公司：用友網絡科技股份有限公司，上交所 600588"
+ },
+ {
+  "id": "cn_418",
+  "name": "Yunnan Baiyao Group Co Ltd",
+  "ticker": "000538.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：雲南白藥集團，深交所 000538"
+ },
+ {
+  "id": "cn_419",
+  "name": "Z.ai",
+  "ticker": "2513.HK",
+  "exchange": "HKEX",
+  "confidence": "medium",
+  "basis": "查證：智譜（Z.ai 品牌）2026/1/8 於港交所上市，代號 2513；A 股科創板申請另案進行中"
+ },
+ {
+  "id": "cn_423",
+  "name": "Zhejiang Dahua Technology Co Ltd",
+  "ticker": "002236.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：浙江大華技術股份有限公司，深交所 002236"
+ },
+ {
+  "id": "cn_435",
+  "name": "Zkteco Co Ltd",
+  "ticker": "301330.SZ",
+  "exchange": "SZSE",
+  "confidence": "medium",
+  "basis": "查證：熵基科技股份有限公司 ZKTECO CO., LTD.，2022/8/17 創業板上市，代號 301330"
+ },
+ {
+  "id": "cn_436",
+  "name": "Zoomlion Heavy Ind Sci Technology",
+  "ticker": "000157.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：中聯重科，深交所 000157（另有 1157.HK）"
+ },
+ {
+  "id": "cn_437",
+  "name": "ZTE Corp",
+  "ticker": "000063.SZ",
+  "exchange": "SZSE",
+  "confidence": "high",
+  "basis": "已知大型上市公司：中興通訊，深交所 000063（另有 0763.HK）"
+ }
+]
