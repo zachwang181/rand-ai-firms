@@ -132,6 +132,27 @@ const T=(name,props)=>{try{
   else if(window.__TRACK_ENDPOINT__&&navigator.sendBeacon)
     navigator.sendBeacon(window.__TRACK_ENDPOINT__,new Blob([JSON.stringify({name:name,props:props,path:location.pathname,ref:document.referrer,t:Date.now()})],{type:'application/json'}));
 }catch(_){}};
+/* ===== 停留時間與使用深度：只計「分頁可見且使用者未閒置」的時間 ===== */
+let _eng=0,_t0=0,_act=0,_cards=0,_srch=0;
+const _MILES=[10,30,60,120,300,600],_hit=new Set(),_IDLE=120000;
+const _now=()=>Date.now();
+const _resume=()=>{if(!_t0)_t0=_now()};
+const _pause=()=>{if(_t0){_eng+=_now()-_t0;_t0=0}};
+function _tick(){
+ if(_t0&&_now()-_act>_IDLE)_pause();
+ const s=Math.round((_eng+(_t0?_now()-_t0:0))/1000);
+ for(const m of _MILES)if(s>=m&&!_hit.has(m)){_hit.add(m);T('engaged',{seconds:String(m)})}}
+const _bucket=s=>s<10?'0-10s':s<30?'10-30s':s<60?'30-60s':s<120?'1-2m':s<300?'2-5m':s<600?'5-10m':'10m+';
+function _end(){
+ _pause();const s=Math.round(_eng/1000);
+ if(s<3){_eng=0;return}
+ T('dwell',{bucket:_bucket(s),seconds:s,cards:String(_cards),searches:String(_srch),used:(_cards||_srch)?'yes':'no'});
+ _eng=0;_hit.clear()}
+['mousedown','keydown','scroll','touchstart','pointermove'].forEach(e=>
+ addEventListener(e,()=>{_act=_now();_resume()},{passive:true}));
+document.addEventListener('visibilitychange',()=>{document.hidden?_end():(_act=_now(),_resume())});
+addEventListener('pagehide',_end);
+_act=_now();_resume();setInterval(_tick,5000);
 const D=__DATA_D__;
 const order=['fm','big','hum','rob','av','air','med','fin','def','ind','chip','cons','gen','soft'];
 let country='all',cat='all',q='',_lastTotal=0;
@@ -142,6 +163,7 @@ document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{country=b.dat
 let _st;
 document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();render();
  clearTimeout(_st);const cur=q;if(cur.length<2)return;
+ _srch++;
  _st=setTimeout(()=>{if(q===cur)T('search',{q:cur.slice(0,60),hits:_lastTotal})},1200)});
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function hl(n){const e=esc(n);if(!q)return e;const i=n.toLowerCase().indexOf(q);if(i<0)return e;return esc(n.slice(0,i))+'<mark>'+esc(n.slice(i,i+q.length))+'</mark>'+esc(n.slice(i+q.length))}
@@ -221,6 +243,7 @@ function showCard(b){
  let top=r.bottom+window.scrollY+6;if(r.bottom+ph+12>window.innerHeight&&r.top-ph-6>0)top=r.top+window.scrollY-ph-6;
  pop.style.left=left+'px';pop.style.top=top+'px';
  b.setAttribute('aria-expanded','true');openBtn=b;
+ _cards++;
  T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
 }
 function jumpTo(id){

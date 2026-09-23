@@ -43,8 +43,12 @@ node build.js
 | `peer_jump` | `from`、`to` |
 | `filter_industry` | `industry` |
 | `filter_country` | `country` |
+| `engaged` | `seconds`（10/30/60/120/300/600 里程碑） |
+| `dwell` | `bucket`、`seconds`、`cards`、`searches`、`used` |
 
 搜尋事件做了 1.2 秒 debounce，且只在輸入 ≥2 字時上報。
+
+停留時間只計「分頁可見且使用者未閒置」的秒數，閒置逾 2 分鐘自動暫停，避免把開著沒看的分頁算進去。`engaged` 里程碑在達到各秒數時各送一次，除了給出留存曲線，也讓統計服務能算出有意義的工作階段時長（單頁網站只有一次 pageview，否則時長會是 0）。`dwell` 在分頁隱藏時送出，是盡力而為 —— 瀏覽器不保證此時的請求送得出去，所以里程碑才是可靠的那一半。
 
 ## 資料品質原則
 
