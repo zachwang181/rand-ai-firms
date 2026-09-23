@@ -94,6 +94,12 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 .fin .fk{color:var(--mute)}
 .fin .fv{font-variant-numeric:tabular-nums}
 .fin-a{margin-top:5px;font-size:11px;color:var(--mute)}
+.peer{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:12.5px}
+.pg{font-size:11px;color:var(--mute);margin-bottom:3px}
+.pr{margin-bottom:2px;line-height:1.7}
+.pl{all:unset;cursor:pointer;color:var(--us);border-bottom:1px dotted currentColor}
+.pl:hover{border-bottom-style:solid}
+.pl:focus-visible{outline:2px solid var(--us)}
 .note a{color:var(--us)}
 .lead a{color:var(--us)}
 @media (max-width:720px){.cols{grid-template-columns:1fr}}
@@ -185,15 +191,29 @@ function finBlock(id){
 const idx={};['us','cn'].forEach(k=>D.firms[k].forEach(x=>idx[x[2]]={name:x[0],cat:x[1],country:k}));
 const pop=document.getElementById('pop');let openBtn=null;
 function closePop(){pop.hidden=true;if(openBtn){openBtn.setAttribute('aria-expanded','false');openBtn=null}}
-document.getElementById('list').addEventListener('click',e=>{
- const b=e.target.closest('button[data-id]');if(!b)return;e.stopPropagation();
- if(openBtn===b){closePop();return}
+const GROUPS=[],PEERS={};
+const GMAP={};GROUPS.forEach(g=>GMAP[g.key]={label:g.label,us:[],cn:[]});
+Object.keys(PEERS).forEach(id=>{const g=GMAP[PEERS[id]];if(g&&idx[id])g[idx[id].country].push(id)});
+const PEER_MAX=8;
+function peerBlock(id){
+ const gk=PEERS[id],g=GMAP[gk];if(!g||gk==='other')return '';
+ const me=idx[id];
+ const line=(lab,ids)=>{const list=ids.filter(x=>x!==id);if(!list.length)return '';
+  const show=list.slice(0,PEER_MAX).map(x=>`<button class="pl" data-go="${x}">${esc(idx[x].name)}</button>`).join('、');
+  const more=list.length>PEER_MAX?`<span class="k"> 等 ${list.length} 家</span>`:'';
+  return `<div class="pr"><span class="k">${lab}</span>${show}${more}</div>`};
+ const cross=me.country==='us'?line('中國對標：',g.cn):line('美國對標：',g.us);
+ const same=line(me.country==='us'?'同類美國公司：':'同類中國公司：',me.country==='us'?g.us:g.cn);
+ if(!cross&&!same)return '';
+ return `<div class="peer"><div class="pg">${esc(g.label)}</div>${cross}${same}</div>`}
+function showCard(b){
  closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
  pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
  let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
  if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
  else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
  h+=finBlock(id);
+ h+=peerBlock(id);
  pop.innerHTML=h;pop.hidden=false;
  const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));
@@ -201,6 +221,22 @@ document.getElementById('list').addEventListener('click',e=>{
  pop.style.left=left+'px';pop.style.top=top+'px';
  b.setAttribute('aria-expanded','true');openBtn=b;
  T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
+}
+function jumpTo(id){
+ const from=openBtn&&idx[openBtn.dataset.id]?idx[openBtn.dataset.id].name:'';
+ q='';document.getElementById('q').value='';cat='all';country='all';
+ document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.c==='all'?'true':'false'));
+ render();
+ const b=document.querySelector(`#list button[data-id="${id}"]`);
+ if(!b)return;
+ b.scrollIntoView({block:'center',behavior:'smooth'});showCard(b);
+ T('peer_jump',{from:from,to:idx[id].name});
+}
+pop.addEventListener('click',e=>{const t=e.target.closest('button[data-go]');if(!t)return;e.stopPropagation();jumpTo(t.dataset.go)});
+document.getElementById('list').addEventListener('click',e=>{
+ const b=e.target.closest('button[data-id]');if(!b)return;e.stopPropagation();
+ if(openBtn===b){closePop();return}
+ showCard(b);
 });
 document.addEventListener('click',e=>{if(!pop.hidden&&!pop.contains(e.target))closePop()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()});
