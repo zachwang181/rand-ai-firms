@@ -42,9 +42,11 @@ input:focus-visible,button:focus-visible{outline:3px solid var(--us);outline-off
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .col{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:4px;padding:10px 12px}
 .col h3{margin:0 0 6px;font-size:13px;font-weight:500;color:var(--mute)}
-.col ul{list-style:none;margin:0;padding:0;columns:2 260px;column-gap:20px;font-size:14px}
+.col ul{list-style:none;margin:0;padding:0;columns:2 330px;column-gap:22px;font-size:14px}
 .col li .nm{display:block;font-weight:500}
-.col li .ds{display:block;font-size:12.5px;color:var(--mute);line-height:1.45;font-weight:400}
+.col li .ds{display:block;font-size:12px;color:var(--mute);line-height:1.4;font-weight:400}
+.col li .sv{display:block;font-size:12.5px;line-height:1.5;font-weight:400;color:color-mix(in srgb,var(--ink) 74%,transparent);margin-top:1px}
+.col li button:hover .sv{color:var(--ink)}
 .col li button:hover .ds{text-decoration:none}
 .col li button{all:unset;cursor:pointer;display:block;width:100%}
 .col li button:hover .nm{color:var(--us);text-decoration:underline}
@@ -57,7 +59,7 @@ input:focus-visible,button:focus-visible{outline:3px solid var(--us);outline-off
 .pop .m{color:var(--mute);font-size:12px;margin-bottom:6px}
 .pop p{margin:0 0 4px}
 .pop .k{color:var(--mute)}
-.col li{break-inside:avoid;padding:2px 0;border-bottom:1px dotted color-mix(in srgb,var(--line) 60%,transparent)}
+.col li{break-inside:avoid;padding:5px 0;border-bottom:1px dotted color-mix(in srgb,var(--line) 60%,transparent)}
 .col.empty ul{columns:1;color:var(--mute)}
 mark{background:#f3d36b;color:#15202b;border-radius:2px}
 .cols.one{grid-template-columns:1fr}
@@ -212,7 +214,7 @@ function hl2(t){const e=esc(t);if(!q)return e;const i=t.toLowerCase().indexOf(q)
 function render(){
  if(typeof closePop==='function')closePop();
  chips.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===cat?'true':'false'));
- const f=(arr)=>arr.filter(([n,c,id])=>{if(cat!=='all'&&c!==cat)return false;if(!q)return true;const p=PROF[id];const m=MKT[id];return (n+' '+(p?[p.w,p.l,p.p].join(' '):'')+' '+(m?m.t:'')).toLowerCase().includes(q)});
+ const f=(arr)=>arr.filter(([n,c,id])=>{if(cat!=='all'&&c!==cat)return false;if(!q)return true;const p=PROF[id];const m=MKT[id];return (n+' '+(p?[p.w,p.l,p.p,p.s,p.pd,p.b].join(' '):'')+' '+(m?m.t:'')).toLowerCase().includes(q)});
  const U=f(D.firms.us),C=f(D.firms.cn);let total=0,h='';
  order.forEach(k=>{
   if(cat!=='all'&&k!==cat)return;
@@ -223,7 +225,7 @@ function render(){
   const pu=au/743*100,pc=ac/438*100;
   h+=`<section class="cat"><h2>${D.cats[k]}<span class="nums">美國 <b class="u">${au}</b> 家（${pu.toFixed(1)}%）· 中國 <b class="c">${ac}</b> 家（${pc.toFixed(1)}%）</span>${GCAT.has(k)?`<button class="gbtn" data-graph="${k}">關係圖</button>`:''}</h2>`;
   h+=`<div class="cols ${country==='all'?'':'one'}">`;
-  const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';const mk=MKT[x[2]];return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}${mk?`<span class="tk">${esc(mk.t)}</span>`:''}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
+  const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';const mk=MKT[x[2]];return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}${mk?`<span class="tk">${esc(mk.t)}</span>`:''}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}${p&&p.s?`<span class="sv">${hl2(p.s)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
   if(shownU)h+=col('美國',u,'us');if(shownC)h+=col('中國',c,'cn');
   h+=`</div></section>`;
  });
