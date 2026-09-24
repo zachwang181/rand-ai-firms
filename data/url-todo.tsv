@@ -1,0 +1,870 @@
+cn_0	中國	01.AI	李開復創辦的大模型公司，做基礎模型與企業應用	零一萬物，早期做 Yi 系列通用模型，後轉向為企業做行業大模型解決方案和私有化部署。	Yi 系列模型；萬知
+cn_1	中國	4Paradigm (第四範式)	企業級 AI 決策平台，服務金融、零售、製造	賣企業 AI 決策平台，幫銀行、零售、製造企業做精準營銷、風控和供應鏈預測，按項目與訂閱收費。	先知 AI 平台；式說大模型
+cn_10	中國	Anhui Zhongke Xingchi Autonomous Driving	中科星馳，自動駕駛		
+cn_100	中國	China Coal Res Inst Co Ltd	煤炭科學研究總院		
+cn_101	中國	China Datang Corp Sci Technology Research	大唐集團科研院，發電央企		電力智能運維
+cn_103	中國	China Electronic Technology Group Corp	中國電子科技集團（中國電科），國防電子央企		雷達、電子系統
+cn_105	中國	China Merchants Bank	招商銀行，零售銀行，自研金融 AI		招行 AI 客服與風控
+cn_106	中國	China Mobile	中國移動，電信運營商，自研九天大模型		九天大模型
+cn_107	中國	China National Petroleum Corp	中國石油集團，油氣央企		崑崙大模型
+cn_108	中國	China North Vehicle Res Institute	中國北方車輛研究所，兵器集團		
+cn_109	中國	China Nuclear Power Technology Res Institute	中廣核研究院		
+cn_11	中國	Ant Group	支付寶母公司，金融科技，自研百靈大模型	螞蟻集團，支付寶母公司，收入來自數字支付、信貸科技、理財和保險科技；AI 用於風控和支付寶智能體。	百靈（Ling）大模型；支付寶 AI 助手
+cn_110	中國	China Petro Chem Corp	中國石化，煉化央企		長城大模型
+cn_111	中國	China Postal Savings Bank Co Ltd	郵儲銀行		
+cn_114	中國	China Railway Tunnel Group Co Ltd	中鐵隧道局		
+cn_116	中國	China South Ind Group Ordnance Equipment	兵器裝備集團，軍工央企		
+cn_117	中國	China State Constr Eng Corp	中國建築，建築業央企		建築智能化
+cn_118	中國	China Telecom Corp Ltd	中國電信，自研星辰大模型		星辰（TeleChat）大模型
+cn_119	中國	China Unicom	中國聯通，自研元景大模型		元景大模型
+cn_121	中國	CHN Energy Investment Group Co Ltd	國家能源集團，煤電央企		擎源電力大模型
+cn_122	中國	Chongqing Changan Automobile Co Ltd	長安汽車，整車與智駕		深藍、阿維塔；天樞智駕
+cn_123	中國	Chongqing Sailisi New Energy Vehicle	賽力斯，問界汽車製造商		問界系列
+cn_124	中國	CISDI Information Technology Co Ltd	中冶賽迪信息技術		
+cn_125	中國	CloudMinds (達闥科技)	雲端機器人與人形機器人		Cloud Ginger 人形機器人；海睿大模型
+cn_126	中國	CloudWalk Technology (雲從科技)	計算機視覺與人機協同	為銀行、公安、機場提供人臉識別與人機協同系統，近年推出從容大模型做政企項目。	從容大模型；人臉識別
+cn_127	中國	COMAC	中國商飛，民用客機制造		C919
+cn_128	中國	CRCC Zhongtie Robot (中鐵機器人)	中國鐵建機器人業務		
+cn_129	中國	CRRC Times Robot (中車時代機器人)	中車旗下，軌道交通巡檢機器人		巡檢機器人
+cn_13	中國	Aqrose Technology (阿丘科技)	工業 AI 視覺檢測		AIDI 平台
+cn_130	中國	CSSC Zhihai Innovation Res Inst Co Ltd	中國船舶集團智能創新研究院		
+cn_131	中國	Cyborg Robotics (賽博機器人)	機器人初創		
+cn_132	中國	Dataa Robotics (達達機器人)	疑為達闥科技相關實體，雲端機器人		
+cn_133	中國	DataMesh (數邁科技)	數字孿生與混合現實		DataMesh Director
+cn_134	中國	DeepBlue Technology	深蘭科技，AI 機器人與自動駕駛小車		熊貓智能公交；服務機器人
+cn_135	中國	DeepGlint	格靈深瞳，計算機視覺		人臉識別；視頻分析
+cn_136	中國	DeepMirror	深度鏡像類計算機視覺企業		
+cn_137	中國	DeepRobotics	雲深處科技，四足與人形機器人	雲深處，賣四足機器人給電力巡檢、應急救援等工業場景，也在做人形機器人。	絕影系列四足機器人
+cn_138	中國	DeepRoute.ai	元戎啟行，城市智駕方案	元戎啟行，為車企提供無高精地圖的城市智駕方案，與長城等車企量產合作。	DeepRoute IO 智駕系統
+cn_139	中國	DeepSeek	深度求索，幻方量化孵化，基礎大模型	訓練並開放權重的通用大模型，同時通過 API 按調用量收費；另有免費的對話 App。背後由量化基金幻方出資，不依賴外部融資。	DeepSeek-V3/V4、R1 推理模型
+cn_14	中國	Athena Eyes Technology Co Ltd	雅典娜/金融身份認證視覺 AI		
+cn_140	中國	DeepWay (深向科技)	百度孵化，電動智能重卡		星辰重卡
+cn_141	中國	DexForce (力策科技)	3D 視覺與具身智能		
+cn_142	中國	DiDi	滴滴出行，網約車平台，佈局自動駕駛		滴滴自動駕駛 Robotaxi
+cn_143	中國	Digital China	神州數碼，IT 分銷與雲服務		神州問學 AI 平台
+cn_144	中國	DJI	大疆，消費與行業無人機全球龍頭	大疆，消費無人機全球龍頭，另賣行業無人機（農業、測繪、巡檢）、手持雲台和運動相機。	Mavic、Mini 系列；卓馭智駕（原大疆車載）
+cn_145	中國	DOBOT (越疆科技)	協作機器人與人形機器人		CR 協作機器人；Atom 人形
+cn_146	中國	Dongfeng Autonomous (東風自動駕駛)	東風汽車旗下自動駕駛業務		自動駕駛卡車與乘用車
+cn_147	中國	Dreame Technology (追覓科技)	掃地機器人與高速電機		掃地機器人
+cn_148	中國	DroidUp	人形機器人初創公司		
+cn_149	中國	Ecovacs Robotics (科沃斯機器人)	掃地機器人龍頭	賣掃地機器人（科沃斯）和廚房小家電（添可）。	地寶掃地機器人
+cn_15	中國	Autel Robotics Co Ltd	道通智能，消費及工業無人機		EVO 系列無人機
+cn_150	中國	Emotibot (竹間智能)	情感計算與企業對話 AI		Bot Factory
+cn_151	中國	EngineAI	眾擎機器人，人形機器人		SE01、PM01 人形機器人
+cn_152	中國	Envision Energy	遠景能源，風電與儲能，AI 用於能源管理	遠景能源，賣風機和儲能系統，並提供能源物聯網平台 EnOS。	EnOS 智能物聯平台；風機
+cn_153	中國	EVE Energy Co Ltd	億緯鋰能，鋰電池製造		動力與儲能電池
+cn_154	中國	FABU Technology (法布科技)	自動駕駛與港口無人運輸		
+cn_155	中國	FAW Nanjing Technology Dev Co Ltd	一汽南京研發中心，智能網聯		智能座艙與智駕
+cn_158	中國	ForwardX Robotics (前向啟創)	倉儲物流 AMR 機器人		Flex 系列 AMR
+cn_159	中國	Foxconn Industrial Internet	工業富聯，電子製造與 AI 服務器	工業富聯，富士康旗下，代工 AI 服務器和網絡設備，是英偉達服務器主要供應商。	AI 服務器；燈塔工廠
+cn_16	中國	Autohome Inc	汽車之家，汽車資訊與交易平台		汽車之家大模型應用
+cn_160	中國	Galbot	銀河通用，通用具身機器人	銀河通用，研發用合成數據訓練的通用具身機器人，場景是零售貨架取貨和工廠搬運。	Galbot G1
+cn_161	中國	Gaussian Robotics	高仙機器人，商用清潔機器人		清潔機器人
+cn_162	中國	Geek+ PopPick (極智嘉PopPick)	極智嘉，倉儲物流機器人	賣倉儲物流機器人系統（貨到人揀選），客戶是電商、零售和製造企業倉庫。	PopPick 貨箱到人系統
+cn_163	中國	Geely	吉利汽車集團，整車與智駕		千里浩瀚智駕；星睿大模型
+cn_164	中國	Geely Automobile Res Inst Ningbo Co Ltd	吉利汽車研究院		
+cn_165	中國	Geostar Information Technology Co Ltd	吉奧信息，GIS		
+cn_166	中國	Geovis Digital Earth Hefei Co Ltd	中科星圖數字地球		
+cn_167	中國	Geovis Weitianxin Technology Co Ltd	中科星圖相關		
+cn_168	中國	Gientech Digital Technology Group Co Ltd	中電金信，金融科技		源啟平台
+cn_169	中國	Global Tone Communication Technology Qin	中譯語通，機器翻譯		
+cn_17	中國	AutoX	L4 級 Robotaxi 自動駕駛公司		AutoX Gen5 自動駕駛系統
+cn_170	中國	Glodon Co Ltd	廣聯達，建築數字化軟件		AecGPT 建築大模型
+cn_171	中國	GoLaxy Data Technology Inc	中科天璣，大數據輿情		
+cn_173	中國	Great Wall Motor Co Ltd	長城汽車，整車與智駕		Coffee Pilot 智駕
+cn_176	中國	Guangzhou Automobile Group Co Ltd	廣汽集團，整車與智駕		埃安；ADiGO 智駕
+cn_177	中國	Guangzhou Quwan Network Technology Co	趣丸網絡（TT 語音）		
+cn_178	中國	Guangzhou Sanqi Jimeng Network Technology	三七互娛相關		
+cn_179	中國	Guangzhou Sanqi Jiyao Network Technology	三七互娛相關		
+cn_18	中國	AVIC UAV (中航無人機)	中航工業旗下，大型軍民兩用無人機		翼龍系列無人機
+cn_180	中國	Guangzhou Shirui Electronics Co Ltd	視源股份（CVTE）		希沃
+cn_181	中國	Guangzhou Shiyuan Cvte Artificial Intelligence	視源股份（CVTE）AI 研究院		希沃教育大模型
+cn_182	中國	Guangzhou XAG Technology Co Ltd	極飛科技，農業無人機與機器人	極飛科技，賣農業無人機、農機自動駕駛和農田物聯網設備，客戶是農戶和農服組織。	P 系列農業無人機
+cn_183	中國	Guangzhou Xiaopeng Autonomous Driving	小鵬汽車自動駕駛業務		XNGP 智駕
+cn_184	中國	Guanzhou Radio Express Group Co Ltd	廣電運通，金融設備		
+cn_185	中國	Guizhou Wujiang Hydropower Dev Co Ltd	烏江水電		
+cn_186	中國	H3C Artificial Intelligence Technology	新華三 AI 業務		百業靈犀大模型
+cn_187	中國	Hai Robotics HAIPICK (海柔HAIPICK)	海柔創新，箱式倉儲機器人		HaiPick 系統
+cn_188	中國	Haier Smart Home Co Ltd	海爾智家，家電與智能家居	海爾智家，賣冰箱、洗衣機等家電，海外收入佔比高。	HomeGPT；卡奧斯工業互聯網
+cn_189	中國	Hangcha Group Co Ltd	杭叉集團，叉車，含無人叉車		智能叉車
+cn_19	中國	Axera Semiconductor Co Ltd	愛芯元智，端側 AI 視覺芯片		AX 系列 AI 芯片
+cn_190	中國	Hangzhou Arcvideo Tech Co Ltd	當虹科技，視頻編碼		
+cn_192	中國	Hangzhou Linx Robot Intelligent Technology	靈西機器人，3D 視覺		
+cn_195	中國	Haomo.ai (毫末智行)	長城汽車孵化的智駕公司		HPilot 智駕
+cn_196	中國	HBIS Group Co Ltd	河鋼集團，鋼鐵央企		智能煉鋼
+cn_2	中國	51WORLD (五一視界)	數字孿生與仿真平台，用於城市、工業和自動駕駛仿真		51Sim 仿真平台；AES 數字孿生引擎
+cn_20	中國	Baichuan Robotics (百川智能機器人)	王小川創辦的百川智能，大模型公司，聚焦醫療		Baichuan 系列模型；百小應
+cn_200	中國	Hisense Group	海信集團，家電與顯示		星海大模型
+cn_201	中國	Hiwing Aviation Gen Equip Co Ltd	航天科工無人機		
+cn_202	中國	Honor	榮耀，智能手機		YOYO 智能體；MagicOS AI
+cn_203	中國	Horizon Robotics	地平線，智駕芯片與算法	向車企賣智駕芯片（征程系列）和配套算法，按芯片出貨和授權收費，也在推高階智駕整體方案 HSD。	征程系列芯片；HSD 智駕
+cn_204	中國	Huadian Electric Power Res Institute	華電電科院		
+cn_205	中國	Huawei	華為，通信與終端巨頭，全棧 AI	三大業務是通信設備、手機等消費終端和汽車智能化方案；AI 上提供昇騰芯片與盤古模型，主要賣給政企和運營商。	盤古大模型；昇騰芯片；乾崑智駕
+cn_207	中國	Humanoid Robot Shanghai Co Ltd	國地共建人形機器人創新中心		青龍人形機器人
+cn_208	中國	Hunan Exceed Robot (湖南超能機器人)	機器人企業		
+cn_21	中國	Baidu Inc	搜索與 AI 巨頭，自研文心大模型，佈局自動駕駛	核心收入仍是搜索廣告，AI 新業務包括文心大模型（通過百度智能雲賣給企業）、蘿蔔快跑 Robotaxi 和崑崙芯芯片。	文心大模型 ERNIE；蘿蔔快跑 Robotaxi；崑崙芯
+cn_210	中國	Hunan Shibite Robot Co Ltd	視比特，3D 視覺機器人		
+cn_211	中國	Idriverplus (智行者)	低速無人駕駛與環衛機器人		蝸小白無人清掃車
+cn_212	中國	iFLYTEK Co Ltd	科大訊飛，語音與大模型	收入來自教育（學習機、智慧課堂）、醫療、政務和車載語音等行業方案；自研星火大模型，重點做國產算力適配。	訊飛星火大模型；翻譯機
+cn_213	中國	Inceptio Technology	嬴徹科技，幹線物流自動駕駛重卡		軒轅自動駕駛系統
+cn_214	中國	Industrial and Commercial Bank of China	工商銀行，全球最大銀行之一，自研金融大模型		工銀智湧大模型
+cn_215	中國	INF Technology Shanghai Co Ltd	無限光年，金融大模型		
+cn_217	中國	Inspur Group	浪潮集團，服務器與雲	浪潮，賣服務器（國內 AI 服務器龍頭）與雲和企業軟件。	源大模型；AI 服務器
+cn_218	中國	INTELLIFUSION	雲天勵飛，視覺芯片與城市 AI		天書大模型；DeepEdge 芯片
+cn_22	中國	Bairongzhixin Beijing Technology Co Ltd	百融雲創，金融風控與營銷		風控模型
+cn_220	中國	iSoftStone	軟通動力，IT 服務		天璇 AI 平台
+cn_221	中國	Jack Technology Inc	傑克科技，縫紉設備與智能製造		智能縫製設備
+cn_222	中國	JAKA Robotics (節卡機器人)	協作機器人		JAKA Zu 系列
+cn_223	中國	JD Logistics Robotics (京東物流機器人)	京東物流的倉儲與配送機器人		無人倉；配送車
+cn_224	中國	JD.COM	京東，電商與零售，自研言犀大模型	京東，自營電商與物流，AI 用於客服、營銷和倉儲自動化。	言犀（JoyAI）大模型
+cn_227	中國	Jingdong Technology Information Technology	京東科技		
+cn_23	中國	Banma Network Technology Co Ltd	斑馬智行，阿里與上汽合資的智能座艙系統		斑馬智行車機系統
+cn_230	中國	KEENON Robotics (擎朗智能)	商用服務機器人		送餐機器人
+cn_231	中國	Kepler Robotics (開普勒機器人)	人形機器人		先行者 K2
+cn_232	中國	Kimi (Moonshot AI)	月之暗面，長文本與智能體大模型	研發長上下文與智能體大模型，面向個人提供 Kimi 助手，面向開發者按 token 收費提供 API，旗艦模型開放權重。	Kimi 助手；Kimi K2 開放權重模型
+cn_233	中國	Kling AI	快手旗下視頻生成	快手旗下視頻生成產品，向個人按會員、向企業按 API 收費，是國內收入最高的視頻生成產品之一。	可靈（Kling）視頻模型
+cn_234	中國	Kuaishou Technology	快手，短視頻平台，自研可靈與快意模型	快手，短視頻與直播平台，收入來自廣告、直播打賞和電商；可靈視頻生成也單獨收費。	可靈；快意大模型
+cn_235	中國	Leju Robotics (樂聚機器人)	人形機器人		夸父（KUAVO）
+cn_236	中國	Lenovo	聯想，PC 與服務器，推 AI PC		AI PC；天禧智能體
+cn_237	中國	Li Auto	理想汽車，新能源車企，自研 VLA 智駕	理想汽車，賣增程與純電 SUV，自研智駕（VLA 模型）和座艙系統。	理想 i 系列；MindVLA
+cn_238	中國	LimX Dynamics (靈犀機器人)	逐際動力，足式與人形機器人	逐際動力，研發足式與人形機器人及運動控制算法，主要賣給科研與開發者。	TRON 1；Oli 人形
+cn_239	中國	MagicLab	人形機器人		MagicBot
+cn_24	中國	Baoshan Iron Steel Co Ltd	寶鋼股份，鋼鐵央企，AI 用於煉鋼與質檢		鋼鐵工業大模型應用
+cn_240	中國	Maxvision Technology Co Ltd	智能安防		
+cn_241	中國	MCC Jingcheng Digital Technology Beijing	中冶京誠數字科技		
+cn_242	中國	Mech-Mind Robotics (梅卡曼德機器人)	3D 視覺與機器人智能	賣 3D 視覺相機和機器人視覺軟件，讓工業機械臂能識別和抓取物體。	Mech-Eye 相機
+cn_243	中國	MEGVII (曠視)	曠視科技，計算機視覺	計算機視覺公司，收入來自城市物聯網（安防）和供應鏈物聯網（倉儲自動化），近年收縮並轉向物流與消費電子視覺。	Face++；物流與城市物聯網方案
+cn_244	中國	Meitu Inc	美圖，影像軟件與 AI 生成		美圖秀秀；MiracleVision 奇想大模型
+cn_245	中國	Meituan	美團，本地生活平台，自研 LongCat 大模型	美團，外賣與到店本地生活平台，AI 用於配送調度，並研發無人機和無人車配送。	LongCat 模型；無人機與無人車配送
+cn_246	中國	Metallurgical Automation Res Design Institute	冶金自動化研究設計院		
+cn_247	中國	MicroPort MedBot (微創醫療機器人)	手術機器人		圖邁腔鏡手術機器人
+cn_248	中國	Midea Group	美的集團，家電與機器人（控股庫卡）	美的，全球最大家電企業之一，控股德國庫卡工業機器人，推進智能工廠。	美的大模型；庫卡工業機器人
+cn_251	中國	MINIEYE (小覓智能)	佑駕創新，ADAS 與智駕		iPilot 智駕
+cn_252	中國	MiniMax	多模態大模型	自研文本、語音、視頻多模態模型，收入主要來自海外 C 端應用（Talkie 陪伴、海螺視頻）和開放平台 API。	MiniMax-M 系列；海螺視頻；Talkie
+cn_253	中國	Mobvoi	出門問問，語音交互與 AIGC		魔音工坊；TicWatch
+cn_254	中國	Momenta	智駕算法公司，與多家車企量產合作	為車企提供智駕軟件方案（高速和城市 NOA），按搭載量收費，同時在做 Robotaxi。	Mpilot；Robotaxi
+cn_256	中國	Nanjing Silicon Intelligence Technology	硅基智能，數字人		
+cn_261	中國	Narwal Robotics (雲鯨智能)	掃拖機器人		雲鯨 J 系列
+cn_262	中國	Neolix (新石器)	L4 無人配送車		新石器無人車
+cn_263	中國	NetEase	網易，遊戲與互聯網		網易有道子曰大模型；伏羲 AI
+cn_264	中國	NEURA Robotics China	德國 NEURA Robotics 中國業務		認知機器人
+cn_265	中國	Neusoft Medical Systems Co Ltd	東軟醫療，醫學影像設備		CT、MR 設備
+cn_268	中國	NIO	蔚來汽車，新能源車企，自研智駕芯片	蔚來，賣高端電動車並運營換電網絡，自研智駕芯片神璣。	神璣芯片；NOP+ 智駕
+cn_269	中國	Noetix Robotics (納米智能)	松延動力，小型人形機器人		N2 人形機器人
+cn_27	中國	Beijing Chehejia Automobile Technology	理想汽車的運營主體，新能源車企		理想 L 系列；自研智駕
+cn_270	中國	NSFOCUS Technology Group Co Ltd	綠盟科技，網絡安全		風雲衛安全大模型
+cn_271	中國	Nuclear Power Operation Res Shanghai Co	核電運行研究院		
+cn_272	中國	Nuctech Co Ltd	同方威視，安檢設備		安檢 CT
+cn_273	中國	Oceanalpha (雲洲智能)	無人船		無人艇
+cn_274	中國	OPPO	智能手機		AndesGPT；ColorOS AI
+cn_275	中國	Orbbec	奧比中光，3D 視覺傳感器	奧比中光，賣 3D 視覺傳感器給機器人、支付和消費電子廠商。	3D 相機
+cn_276	中國	Origin Quantum Computing Technology Co	本源量子		悟空量子計算機
+cn_277	中國	Pci Technology Group Co Ltd	佳都科技，城市交通 AI		
+cn_279	中國	Petrochina Co Ltd	中國石油股份		
+cn_28	中國	Beijing DP Technology Co Ltd	深勢科技，AI for Science，做分子模擬與藥物、材料研發	深勢科技，提供分子模擬與 AI for Science 平台，客戶是藥企、材料和電池企業。	Hermite 藥物平台；Uni-Mol；Bohrium
+cn_280	中國	Ping An	中國平安，保險與金融科技	中國平安，保險與銀行綜合金融集團，AI 用於理賠、客服和互聯網醫療。	平安 AI 客服；醫療 AI
+cn_281	中國	Powerchina Zhongnan Eng Corp Ltd	中國電建中南院		
+cn_282	中國	PSBC Consumer Finance Co Ltd	郵儲消費金融		
+cn_283	中國	Pudu Robotics (普渡科技)	商用服務機器人	賣餐廳送餐機器人和商用清潔機器人，海外收入佔比高。	送餐與清潔機器人
+cn_284	中國	QCraft (輕舟智航)	城市 NOA 智駕方案		乘用車智駕
+cn_285	中國	Qi An Xin Technology Group Inc	奇安信，網絡安全		安全大模型 Q-GPT
+cn_286	中國	Qihoo 360	360 集團，網絡安全與互聯網	360 集團，收入來自互聯網廣告、網絡安全和智能硬件，AI 上推 360 智腦與納米 AI 搜索。	360 智腦；納米 AI 搜索
+cn_289	中國	Qiyuan Lab	啟元實驗室		
+cn_290	中國	Rainbow UAV Technology Co Ltd	彩虹無人機科技		彩虹系列
+cn_291	中國	Reeman (銳曼智能)	服務機器人與底盤		配送機器人
+cn_292	中國	Richfit Information Technology Co Ltd	中油瑞飛，中石油 IT		
+cn_293	中國	Robint Technology (北京鋼鐵俠科技)	鋼鐵俠科技，人形機器人		ARTROBOT 人形
+cn_294	中國	Roborock (石頭科技)	掃地機器人	賣掃地機器人，海外市場佔比高，也在擴展洗衣機等品類。	石頭掃地機器人
+cn_295	中國	RoboSense (速騰聚創)	車載激光雷達龍頭	賣車載激光雷達給車企，也賣給機器人公司，出貨量全球領先。	M 系列激光雷達
+cn_296	中國	ROBOTERA (星動紀元)	清華背景人形機器人		星動 L7；靈巧手
+cn_297	中國	RockAI (矗石科技)	非 Transformer 架構大模型		Yan 模型
+cn_298	中國	ROKAE (珞石機器人)	工業與協作機器人		xMate 協作機器人
+cn_299	中國	Roobo / Unisound (儒博/雲知聲)	語音 AI 與醫療 AI		山海大模型
+cn_3	中國	AgiBot Data (智元數據)	智元機器人旗下，做具身智能數據採集與數據集	智元機器人旗下，採集真實機器人操作數據並構建開源數據集，用於訓練具身智能模型。	AgiBot World 數據集
+cn_30	中國	Beijing ESWIN Computing Technology Co	奕斯偉，半導體與 AI 芯片		RISC-V AI 芯片
+cn_301	中國	SAIC GM Wuling Automobile Co Ltd	上汽通用五菱		五菱電動車
+cn_302	中國	Sangfor Technology Co Ltd	深信服，網絡安全與雲		安全 GPT
+cn_304	中國	SenseTime (商湯科技)	計算機視覺與大模型	從人臉識別起家，現在主要收入來自生成式 AI（大模型訓練與推理的算力服務），另有智能汽車業務絕影。	日日新（SenseNova）大模型；絕影智駕
+cn_305	中國	SF Technology	順豐科技，物流 AI		智慧物流系統
+cn_306	中國	Shanghai Aerospace Computer Technology Research	航天科技集團計算機研究所		
+cn_307	中國	Shanghai Bilibili Technology Co Ltd	嗶哩嗶哩，視頻社區		Index 大模型
+cn_308	中國	Shanghai Constr No 4 Group Co Ltd	上海建工四建		
+cn_309	中國	Shanghai Electric Group Co Ltd	上海電氣，裝備製造		工業智能裝備
+cn_31	中國	Beijing Eyecool Technology Co Ltd	眼神科技，多模態生物識別		虹膜、指紋、人臉識別
+cn_310	中國	Shanghai Fourier Intelligence Co Ltd	傅利葉，康復與人形機器人	傅利葉，原本做康復機器人賣給醫院，後延伸到通用人形機器人 GR 系列。	GR-1/GR-2 人形機器人
+cn_311	中國	Shanghai Icekredit Information Technology	冰鑑科技，金融風控		風控模型
+cn_312	中國	Shanghai Intsig Information Co Ltd	合合信息，文字識別		掃描全能王；名片全能王
+cn_319	中國	Shanghai Suiyuan Technology Co Ltd	燧原科技，雲端 AI 訓練與推理芯片		邃思芯片
+cn_320	中國	Shanghai Tunnel Eng Co Ltd	上海隧道股份		
+cn_321	中國	Shanghai Wuwen Xinqiong Intelligent Technology	無問芯穹，異構算力調度與推理優化		Infini-AI 平台
+cn_326	中國	Shannon AI	香儂科技，NLP 與金融 AI		金融信息抽取
+cn_328	中國	Shenlan Automobile Technology Co Ltd	深藍汽車，長安旗下		深藍 SL03
+cn_33	中國	Beijing Hisign Technology Co Ltd	海鑫科技，公安刑偵生物識別		指紋、人像比對系統
+cn_331	中國	Shenzhen Guochuang Embodied Artificial	國家地方共建具身智能機器人創新中心		
+cn_333	中國	Shenzhen LUSTER Technology Co Ltd	凌雲光，機器視覺		
+cn_335	中國	Shenzhen Oritek Semiconductor Co Ltd	芯片設計		
+cn_336	中國	Shenzhen Power Supply Co Ltd	深圳供電局（南方電網）		
+cn_337	中國	Shenzhen Qianhai Webank Co Ltd	微眾銀行，數字銀行，聯邦學習		FATE 聯邦學習框架
+cn_338	中國	Shenzhen Reexen Technology Co Ltd	存算一體芯片		
+cn_341	中國	Shenzhen Topstar Robot (深圳拓斯達)	拓斯達，工業機器人與自動化		多關節機器人
+cn_342	中國	Shenzhen Ugreen Group Ltd	綠聯，消費電子配件		NAS
+cn_343	中國	Shenzhen UnitX Technology Co Ltd	工業 AI 視覺質檢		
+cn_344	中國	Shenzhen Urban Transport Planning Design	深圳交通規劃設計院		
+cn_345	中國	Shenzhen Xgrids Innovation Technology Co	其域創新，三維空間掃描		
+cn_346	中國	Shenzhen Zhuoyu Technology Co Ltd	卓馭科技，原大疆車載，智駕方案		成行平台
+cn_347	中國	Shukun Technology Co Ltd	數坤科技，醫學影像 AI		數字人體 CT 分析
+cn_348	中國	Sichuan Changhong Electronic Holding Group	長虹，家電與電子		
+cn_349	中國	SmartMore (思謀科技)	工業 AI 視覺		SMore ViMo
+cn_350	中國	Stardust Intelligent (星塵智能)	AI 家務機器人		Astribot S1
+cn_351	中國	StepFun	階躍星辰，多模態大模型	階躍星辰，研發多模態大模型，主要通過開放平台 API 和與手機、汽車廠商的合作落地。	Step 系列模型
+cn_352	中國	Supcon Technology Co Ltd	中控技術，流程工業自動化		TPT 工業大模型
+cn_356	中國	Syrius Robotics (炬星科技)	倉儲 AMR		揀貨機器人
+cn_357	中國	TAL Education Group	好未來，教育科技		九章大模型；學習機
+cn_358	中國	TCL	家電與顯示		TCL AI 電視
+cn_359	中國	Tencent	騰訊，社交與遊戲巨頭，自研混元大模型	收入來自遊戲、社交廣告和金融科技與企業服務；AI 上自研混元模型，嵌入微信、元寶和騰訊雲。	混元（Hunyuan）；元寶
+cn_36	中國	Beijing Iluvatar Corex Semiconductor	天數智芯，國產通用 GPU		天垓、智鎧 GPGPU
+cn_360	中國	Terminus Group (特斯聯)	智慧城市與 AIoT		城市大模型
+cn_361	中國	Tiangong AI	崑崙萬維天工 AI		天工 AI 助手；Skywork 模型
+cn_363	中國	Tianjin Jinhang Computing Technology Research	航天科工計算技術研究所		
+cn_364	中國	Tongfang Knowledge Network Digital Publishing	中國知網		知網 AI
+cn_365	中國	Topxgun Nanjing Robotics Co Ltd	拓攻，農業無人機飛控		
+cn_366	中國	Transwarp	星環科技，大數據與 AI 平台		無涯大模型
+cn_367	中國	Trip.com Group	攜程，在線旅遊		問道旅行大模型
+cn_369	中國	Trunk.Tech (主線科技)	自動駕駛卡車		港口與幹線自動駕駛
+cn_370	中國	UBTECH Robotics	優必選，人形與教育機器人	優必選，賣人形機器人（Walker S 進入車廠實訓）、教育機器人和服務機器人，長期虧損但營收增長。	Walker S 人形機器人
+cn_371	中國	UISEE (馭勢科技)	L4 無人駕駛，機場與廠區物流		無人物流車
+cn_372	中國	ULS Robotics (傲鯊智能)	工業外骨骼		外骨骼
+cn_374	中國	United Imaging Healthcare	聯影醫療，醫學影像設備	聯影醫療，賣 CT、MR、PET 等醫學影像設備，AI 用於成像加速和輔助診斷。	uAI 智能影像平台
+cn_375	中國	Unitree Robotics	宇樹科技，四足與人形機器人	宇樹科技，賣四足機器狗和人形機器人給科研機構、企業和消費者，以低價高性能著稱，是國內出貨量最大的足式機器人公司之一。	Go2、B2 四足；G1、H2 人形
+cn_376	中國	Verisilicon Microelectronics Shanghai Co	芯原股份，芯片設計服務與 IP		NPU IP
+cn_377	中國	Vita Dynamics (維塔動力)	具身機器人初創		
+cn_378	中國	vivo	智能手機		藍心大模型
+cn_379	中國	WAYTOUS (慧拓智能)	礦區無人駕駛		礦卡無人駕駛
+cn_38	中國	Beijing Jingwei Hirain Technology Co Ltd	經緯恆潤，汽車電子與智能駕駛		ADAS 控制器；測試系統
+cn_380	中國	Weilan Robotics (蔚藍智能)	消費級四足機器人		阿爾法機器狗
+cn_381	中國	WeRide	文遠知行，L4 自動駕駛	文遠知行，在中國、中東、歐洲運營 Robotaxi、無人小巴和無人環衛車，收入來自車輛銷售與運營服務。	Robotaxi；Robobus
+cn_382	中國	Westwell Lab	西井科技，港口自動駕駛		Q-Truck
+cn_383	中國	Whale Wave Technology Inc	名稱不明確		
+cn_384	中國	White Rhino (白犀牛)	無人配送車		城市無人配送
+cn_385	中國	Wind Information	萬得，金融數據終端	萬得，賣金融數據終端訂閱給機構投資者，推出 AI 投研助理。	Wind 終端；Alice 智能助理
+cn_386	中國	Winning Health Technology Group Co Ltd	衛寧健康，醫療信息化		WiNGPT
+cn_387	中國	WizardQuant	九坤投資，量化私募		量化交易模型
+cn_388	中國	Wonders Information Co Ltd	萬達信息，政務醫療信息		
+cn_389	中國	Wondershare Technology Hunan Co Ltd	萬興科技，創意軟件		天幕大模型；Filmora
+cn_390	中國	Wuhan Kingsoft Office Software Co Ltd	金山辦公		WPS AI
+cn_391	中國	Wuhan Landing Intelligence Medical Co	蘭丁智能醫學，病理 AI		
+cn_392	中國	Wuhu Automobile Prospective Technology	奇瑞前瞻技術研究		
+cn_393	中國	Wuhu Xiongshi Automobile Technology Co	奇瑞雄獅智能座艙		
+cn_394	中國	Wuxi Xishang Bank Co Ltd	錫商銀行，民營數字銀行		
+cn_395	中國	X Square Robot (叉方科技)	自變量機器人，通用具身大模型		WALL-A 模型
+cn_396	中國	Xiamen Chanjing Technology Co Ltd	蟬鏡，數字人視頻		
+cn_4	中國	AISpeech Co Ltd	對話式語音 AI，面向車載、家居和企業		DUI 平台；DFM 大模型
+cn_402	中國	xiaobing.ai	小冰公司（微軟分拆），AI 伴侶與數字人		小冰
+cn_403	中國	Xiaoduo Intelligent Technology Shanghai	曉多科技，電商客服 AI		
+cn_404	中國	Xiaohongshu	小紅書，生活方式社區		dots 系列開源模型
+cn_405	中國	Xiao-i	小i機器人，對話式 AI		華藏大模型
+cn_406	中國	Xiaomi Technology	小米，手機與汽車	收入來自手機、IoT 家電和互聯網服務，2024 年起賣小米 SU7 等電動車；AI 上自研 MiMo 模型。	MiMo 大模型；小米 SU7；Xiaomi HAD
+cn_407	中國	XPENG	小鵬汽車，智駕與飛行汽車	小鵬汽車，賣電動車，自研智駕芯片與算法，另佈局飛行汽車和人形機器人。	XNGP；圖靈芯片；IRON 人形機器人
+cn_408	中國	XtalPi Inc	晶泰科技，AI+機器人藥物與材料研發	晶泰科技，用 AI 預測加自動化實驗室為藥企做藥物與材料研發外包，按項目和里程碑收費。	藥物發現平台
+cn_409	中國	Xuzhou Xcmg Mining Machinery Co Ltd	徐工礦機，礦用機械		無人駕駛礦卡
+cn_41	中國	Beijing Kunlun Tech Co Ltd	崑崙萬維，互聯網與 AI，自研天工大模型		天工 AI；Skywork 開源模型；Mureka 音樂
+cn_410	中國	Yidu Tech	醫渡科技，醫療大數據	醫渡科技，為醫院和藥企提供醫療數據治理、臨床研究和保險數據服務。	YiduCore
+cn_411	中國	Yisa Technology Co Ltd	視頻結構化		
+cn_412	中國	YITUTech	依圖科技，計算機視覺與醫療 AI		醫療影像；視覺芯片
+cn_413	中國	Yonyou Network Technology	用友，企業軟件		YonGPT
+cn_415	中國	Yrobot (英漢思動力)	外骨骼/具身機器人		
+cn_416	中國	Yuanfudao	猿輔導，在線教育		小猿學練機
+cn_418	中國	Yunnan Baiyao Group Co Ltd	雲南白藥		
+cn_419	中國	Z.ai	智譜 AI 的國際品牌	智譜的國際品牌，面向海外開發者提供 GLM 模型 API 與編程訂閱。	GLM 系列
+cn_42	中國	Beijing LinkerBot (北京靈感機器人)	靈心巧手，機器人靈巧手		靈巧手
+cn_420	中國	Zelos Robotics (之了智能)	具身機器人初創		
+cn_421	中國	Zero Zero Robotics Inc	零零科技，消費級無人機		HoverAir
+cn_422	中國	ZeroTech (零智科技)	零度智控，無人機		
+cn_423	中國	Zhejiang Dahua Technology Co Ltd	大華股份，視頻監控		星漢大模型
+cn_426	中國	Zhejiang Tonghuashun Intelligent Technology	同花順，金融信息	同花順，賣股票行情軟件與增值服務給散戶，並提供問財 AI 投顧。	問財 HithinkGPT
+cn_427	中國	Zhejiang Uniview Technologies Co Ltd	宇視科技，視頻監控		梧桐大模型
+cn_428	中國	Zhejiang Youlu Robot Technology Co Ltd	有鹿機器人，清潔機器人		
+cn_43	中國	Beijing Luchen Technology Co Ltd	潞晨科技，大模型訓練加速		Colossal-AI
+cn_432	中國	Zhuiyi Technology	追一科技，企業對話 AI		博文大模型
+cn_434	中國	Ziyan UAV (紫燕無人機)	無人機		
+cn_435	中國	Zkteco Co Ltd	熵基科技，生物識別		門禁與考勤
+cn_436	中國	Zoomlion Heavy Ind Sci Technology	中聯重科，工程機械		智能工程機械
+cn_437	中國	ZTE Corp	中興通訊，通信設備		星雲大模型
+cn_44	中國	Beijing Lynxi Technologies Co Ltd	靈汐科技，類腦計算芯片		KA200 類腦芯片
+cn_46	中國	Beijing NavInfo Co Ltd	四維圖新，高精地圖與智駕		高精地圖；智駕解決方案
+cn_48	中國	Beijing Pimchip Technology Co Ltd	存算一體芯片		
+cn_5	中國	Alibaba Group	電商與雲計算巨頭，自研通義大模型並大規模開源	電商（淘寶天貓）、雲計算（阿里雲）和本地生活為三大收入來源；AI 上自研通義千問並大量開源，通過阿里雲賣算力與模型服務變現。	通義千問（Qwen）系列；阿里雲百鍊
+cn_50	中國	Beijing RealAI Technology Co Ltd	瑞萊智慧，清華背景，AI 安全與可信 AI		RealSafe 平台；深度偽造檢測
+cn_51	中國	Beijing Samsung Telecom R&D Center	三星北京通信研究院		
+cn_52	中國	Beijing Shengshu Technology Co Ltd	生數科技，清華背景，視頻生成模型		Vidu 視頻生成
+cn_55	中國	Beijing SinoVoice Technology Co Ltd	捷通華聲，語音與語言技術		靈雲 AI 平台
+cn_56	中國	Beijing SoundAI Technology Co Ltd	聲智科技，遠場語音交互		聲學前端算法
+cn_57	中國	Beijing SuperMap Software Co Ltd	超圖軟件，地理信息系統（GIS）		SuperMap GIS
+cn_58	中國	Beijing Tianrongxin Software Co Ltd	天融信，網絡安全		防火牆；安全大模型
+cn_59	中國	Beijing Tsing Micro Intelligent Technology Co Ltd	清微智能，可重構計算芯片		
+cn_6	中國	Aluminum Corp of China Ltd	中鋁集團，鋁業央企，AI 用於冶煉生產優化		冶煉智能控制
+cn_61	中國	Beijing Volcano Engine Technology Co Ltd	火山引擎，字節跳動的雲與 AI 服務	字節跳動的雲業務，對企業賣雲計算、豆包大模型 API 和數據產品，按調用量或資源收費。	豆包大模型 API；火山方舟
+cn_62	中國	Beijing Voyager Technology Co Ltd	北科天繪/Voyager，激光雷達相關技術		激光雷達
+cn_64	中國	Beijing Wanji Technology Co Ltd	萬集科技，交通感知與車路協同		激光雷達；ETC 設備
+cn_66	中國	Beijing Xiaoyu Intelligent Mfg Technology Co Ltd	小雨智造，具身機器人		柔性裝配機器人
+cn_7	中國	Anhui Efort Robot (安徽埃夫特)	國產工業機器人本體制造商		多關節工業機器人；噴塗機器人
+cn_70	中國	Beijing Yunji Technology Co Ltd	雲跡科技，酒店服務機器人		
+cn_72	中國	Beijing Zhipu Huazhang Technology Co Ltd	智譜 AI，清華背景，基礎大模型	智譜，研發 GLM 系列大模型，主要收入來自政企私有化部署項目，其次是 API 與智譜清言 C 端產品。	GLM 系列；智譜清言；CodeGeeX
+cn_73	中國	Beijing Zhongguancun Kejin Technology Co	中關村科金，企業對話與金融 AI		得助大模型平台
+cn_74	中國	BGI Shenzhen Co Ltd	華大基因，基因測序與生命科學 AI		基因組學分析
+cn_75	中國	BionicDL (仿生動力)	仿生動力，具身機器人相關企業		
+cn_76	中國	Black Sesame Technologies (黑芝麻智能)	自動駕駛計算芯片	為車企提供自動駕駛計算芯片和配套軟件，客戶以國內車企為主。	華山、武當系列芯片
+cn_77	中國	Bosch China Robotics (博世中國機器人)	博世在華機器人與自動化業務		工業自動化方案
+cn_78	中國	BYD	比亞迪，新能源汽車與電池巨頭，自研智駕	全球最大新能源車企之一，收入來自整車銷售與動力電池；自研天神之眼智駕並全系標配。	天神之眼智駕；刀片電池
+cn_79	中國	ByteDance Seed	字節跳動大模型研究團隊	字節跳動的大模型研究團隊，研發豆包系列模型，供抖音等內部產品使用，並通過火山引擎對外售賣 API。	豆包（Doubao）大模型；Seedream、Seedance
+cn_8	中國	Anhui Guoqi Technology Co Ltd	國汽智控，智能網聯汽車		智能駕駛操作系統
+cn_80	中國	CAERI Intelligent Connected Technology	中國汽研旗下，智能網聯汽車測試與研發		智能網聯測試服務
+cn_81	中國	Camsense (歡創科技)	機器人視覺與激光雷達傳感器		三角測距激光雷達
+cn_82	中國	CASC Rainbow / CH Series (彩虹無人機)	航天科技集團旗下，軍用及工業無人機		彩虹系列無人機
+cn_83	中國	CASIC Intelligent Technology Res Inst Co	航天科工智能研究院		
+cn_85	中國	CATL Robotics (寧德時代機器人)	寧德時代內部機器人與智能製造		電池產線機器人
+cn_86	中國	CCCC (China Communications Construction Co) Ltd	中國交建，基建央企		
+cn_88	中國	CCTEG Xian Res Inst Group Co Ltd	中煤科工西安研究院		
+cn_89	中國	Changjiang Spatial Information Technology	長江空間信息		
+cn_90	中國	Changsha Mining Metallurgy Institute	長沙礦冶研究院，礦冶科研機構		智能選礦
+cn_92	中國	Cheetah Mobile	獵豹移動，從工具軟件轉向服務機器人與 AI		獵戶星空服務機器人
+cn_95	中國	Chengdu Sobey Digital Technology Co Ltd	索貝，廣電媒體技術		
+cn_96	中國	Chery New Energy Automobile Co Ltd	奇瑞新能源，整車製造		新能源車型
+cn_97	中國	China Academy of Railway Sciences	中國鐵道科學研究院		鐵路智能運維
+cn_98	中國	China Building Materials Academy	中國建材總院		
+cn_99	中國	China CITIC Bank	中信銀行		
+us_1	美國	3DiVi Inc	人臉識別		
+us_10	美國	Adobe	創意軟件，自研生成模型	賣創意軟件訂閱（Photoshop 等），自研 Firefly 生成模型並聲稱訓練數據可商用。	Firefly 生成模型；Photoshop
+us_100	美國	BostonGene	腫瘤分子分析		
+us_101	美國	Brain Corp	商用自主清潔機器人軟件		BrainOS
+us_103	美國	Brave	隱私瀏覽器		Leo AI
+us_104	美國	Bridgewater Associates	全球最大對沖基金，AI 投研		AIA 實驗室
+us_105	美國	Burro	農業協作機器人		
+us_106	美國	Cambridge Mobile Telematics	駕駛行為分析		
+us_107	美國	Canary Speech	語音健康檢測		
+us_11	美國	Advanced Space	航天任務設計		CAPSTONE
+us_111	美國	Capital One	銀行，重投 AI		Eno 助手
+us_112	美國	Carbon Robotics	激光除草農業機器人		LaserWeeder
+us_113	美國	Carnegie Robotics	機器人傳感器		
+us_114	美國	Cartesia	狀態空間模型（SSM）語音生成		Sonic 語音模型
+us_115	美國	Cartken	配送與工業自主機器人		
+us_116	美國	Cartwheel	3D 動畫生成		
+us_120	美國	Cerebras	晶圓級 AI 芯片	賣晶圓級 AI 芯片和系統，並提供高速推理雲服務。	WSE-3；推理雲
+us_122	美國	Cerence AI	車載語音助手		CaLLM
+us_124	美國	CFD Research Corp	國防仿真研究		
+us_127	美國	Chan Zuckerberg Initiative	扎克伯格夫婦的慈善機構，做生物 AI		虛擬細胞模型
+us_128	美國	Charles River Analytics	國防 AI 研究		
+us_129	美國	Chegg Inc	學習平台		
+us_13	美國	Aeolus Robotics Inc	養老與家用服務機器人		Aeo 機器人
+us_130	美國	Chewy	寵物電商		
+us_131	美國	Cisco	網絡設備巨頭		Foundation-sec 安全模型
+us_133	美國	Clarifai	計算機視覺與 AI 平台		Clarifai 平台
+us_135	美國	Clone Robotics	仿生肌肉人形機器人		Clone Alpha
+us_137	美國	Cobalt Speech & Language	定製語音技術		
+us_138	美國	Coco Robotics	配送機器人		
+us_139	美國	Cognex Corp	機器視覺		In-Sight 視覺系統
+us_14	美國	Aescape	AI 機器人按摩		Aescape 按摩機器人
+us_140	美國	Cognichip	AI 芯片設計		
+us_141	美國	Cognizant Technology Solutions	IT 服務		企業 AI 服務
+us_142	美國	ColdQuanta	量子計算（Infleqtion）		
+us_143	美國	comma.ai	開源駕駛輔助		openpilot；comma 3X
+us_147	美國	Contextual AI	企業 RAG		
+us_149	美國	Core4ce	國防 IT		
+us_15	美國	AEye	車載激光雷達		4Sight 激光雷達
+us_151	美國	Corteva Agriscience	農業種子與作物保護		育種 AI
+us_152	美國	Covariant	機器人基礎模型		RFM-1
+us_154	美國	CQG Inc	期貨交易平台		
+us_155	美國	Cruise	通用汽車旗下 Robotaxi		
+us_156	美國	Curai Health	AI 初級診療		
+us_158	美國	Cursor	Anysphere 的 AI 編程編輯器	Anysphere 公司的 AI 編程編輯器，按訂閱收費，是增長最快的開發者工具之一。	Cursor；Composer 模型
+us_159	美國	Cybral	網絡安全		
+us_16	美國	Affectiva	情感識別 AI，MIT 媒體實驗室孵化		車內情緒監測
+us_160	美國	Cycorp Inc	常識知識庫與符號推理		Cyc
+us_161	美國	Cyngn	工業自動駕駛車輛		
+us_164	美國	Databricks	數據與 AI 平台	賣數據湖倉平台訂閱，幫企業管理數據並訓練、部署 AI 模型。	Mosaic AI；DBRX
+us_165	美國	Datadog	雲監控		Bits AI；Toto 時序模型
+us_166	美國	Dataminr	實時事件風險情報		Dataminr Pulse
+us_168	美國	Dedrone	反無人機		
+us_17	美國	AGCO Corp	農業機械，精準農業 AI		Fendt 等拖拉機；PTx 精準農業
+us_170	美國	Deep Instinct	深度學習防病毒		
+us_171	美國	Deep Origin	計算生物學		
+us_172	美國	Deepcell	AI 單細胞形態學		REM-I
+us_174	美國	Deepgram	語音識別 API		Nova 模型
+us_175	美國	DeepHealth	RadNet 旗下影像 AI		
+us_176	美國	DeepScribe	病歷記錄 AI		
+us_177	美國	DeepSig Inc	AI 無線信號處理		
+us_178	美國	DeepTempo	網絡安全		
+us_18	美國	Agility Robotics	雙足人形物流機器人	賣雙足人形機器人 Digit 給物流倉庫，以機器人即服務方式按月收費。	Digit
+us_181	美國	Dexai Robotics	廚房機器人		Alfred
+us_182	美國	Dexterity Inc	物流機器人		Mech 雙臂機器人
+us_183	美國	Diagnocat	牙科影像 AI		
+us_184	美國	Dialpad	AI 通話平台		
+us_185	美國	Diffbot	網頁知識圖譜		
+us_186	美國	Digital Diagnostics	自主 AI 診斷		LumineticsCore
+us_187	美國	Digital Global Systems Inc	頻譜分析		
+us_188	美國	Diligent Robotics	醫院服務機器人		Moxi
+us_189	美國	DOCOMO Innovations Inc	NTT Docomo 美國		
+us_190	美國	Dolby Lab Licensing Corp	音頻技術		
+us_191	美國	Doma	產權保險 AI		
+us_192	美國	Dorabot	藍胖子，物流機器人		
+us_194	美國	Dreamfold	生成式 AI 初創		
+us_196	美國	DRW	自營交易公司		
+us_198	美國	Dyno Therapeutics	AI 設計基因治療載體		CapsidMap
+us_199	美國	Eagleview	航拍影像分析		
+us_202	美國	Ekso Bionics	外骨骼		
+us_203	美國	Elbit Systems of America	以色列埃爾比特美國分部		
+us_204	美國	Elemental Cognition	神經符號推理 AI		Cogent
+us_206	美國	Elicit	AI 科研文獻助手		Elicit
+us_207	美國	Ellipsis Health	語音心理健康評估		
+us_208	美國	ELSA Corp	英語發音 AI		
+us_209	美國	Elucidata	生物數據平台		Polly
+us_210	美國	Embodied	陪伴機器人		Moxie
+us_211	美國	EMOTIV	腦電設備		
+us_212	美國	EnsoData	睡眠診斷 AI		
+us_214	美國	Entrust	身份認證與安全		
+us_215	美國	Enveda	天然產物 AI 藥物發現		
+us_216	美國	Epsilon Systems Solutions Inc	國防工程服務		
+us_217	美國	Equilibrium Energy	儲能與電力交易		
+us_218	美國	Eudia	法律 AI		
+us_22	美國	Aigen	太陽能除草機器人		
+us_220	美國	EvenUp	人身傷害法律 AI		
+us_221	美國	EvolutionaryScale	蛋白質語言模型		ESM3
+us_223	美國	EXL Service Holdings Inc	數據分析服務		
+us_224	美國	Expedition Technology	國防信號處理 AI		
+us_226	美國	EY-Parthenon	安永戰略諮詢		
+us_227	美國	FANUC America	發那科美國，工業機器人		工業機器人
+us_228	美國	FarmWise (acquired by Taylor Farms)	除草機器人		
+us_231	美國	FICO	信用評分與決策分析		FICO Score；FICO 平台
+us_232	美國	FieldAI	野外機器人基礎模型		
+us_233	美國	Figure	通用人形機器人	研發通用人形機器人，與寶馬等工廠合作試點，並自研 Helix 視覺語言動作模型。	Figure 02/03；Helix 模型
+us_236	美國	Fireworks AI	推理即服務		推理平台
+us_239	美國	Flagship Pioneering	生物科技孵化器		
+us_24	美國	Aimesoft	多模態 AI		
+us_240	美國	Flexiv Robotics	力控自適應機器人		Rizon
+us_241	美國	Flock	車牌識別攝像頭		Flock Safety
+us_242	美國	FMR LLC	富達投資		
+us_243	美國	Forterra	軍用自主車輛（原 RRAI）		
+us_245	美國	Fractal	AI 分析服務		
+us_249	美國	Galois Inc	形式化驗證與安全		
+us_251	美國	Gametime	票務平台		
+us_253	美國	Gatik	中短途自動駕駛貨運		B2B 自動駕駛卡車
+us_255	美國	GEICO	伯克希爾旗下車險		
+us_257	美國	Geminus	工業流程 AI		
+us_258	美國	General Atomics	國防與能源，無人機		MQ-9 死神無人機
+us_259	美國	General Dynamics Mission Systems	通用動力任務系統		
+us_260	美國	General Electric	工業巨頭（航空）		航空發動機智能運維
+us_261	美國	Generate:Biomedicines	生成式蛋白藥物		Chroma 模型
+us_262	美國	Genesis Molecular AI	分子 AI 藥物發現		GEMS
+us_264	美國	Ghost Autonomy	自動駕駛（已關閉）		
+us_265	美國	Ghost Robotics	軍用四足機器人		Vision 60
+us_266	美國	Giant.AI	通用機器人（已關閉）		
+us_267	美國	Ginkgo Bioworks Inc	合成生物學平台		蛋白模型
+us_268	美國	GITAI	太空機器人		
+us_271	美國	Grammarly	寫作助手	寫作輔助工具，向個人和企業訂閱收費。	Grammarly；Superhuman
+us_273	美國	Gray Swan	AI 安全與紅隊		Cygnet
+us_274	美國	GreenSight	無人機遙感		
+us_275	美國	GreyOrange	倉儲機器人與調度軟件		GreyMatter
+us_276	美國	Gridmatic	電力市場 AI 交易		
+us_277	美國	Gridspace	語音分析		
+us_278	美國	Groundlight AI	視覺問答式監測		
+us_28	美國	AKASA	醫院收入週期 AI		
+us_282	美國	H2O.ai	開源機器學習平台		H2O Driverless AI
+us_283	美國	Halodi Robotics	人形機器人（現 1X）		EVE；NEO
+us_284	美國	Harvest CROO Robotics	草莓採摘機器人		
+us_285	美國	Hayden AI	公交車道執法視覺 AI		
+us_287	美國	Helm.ai	無監督學習自動駕駛軟件		Helm.ai Driver
+us_288	美國	Higgsfield AI	視頻生成		
+us_289	美國	Hippocratic AI	醫療護理智能體	研發醫療語音智能體，替醫院做隨訪、術前提醒等非診斷類溝通。	醫療 AI 護士
+us_290	美國	Hive	內容審核與深度偽造檢測		Hive 模型
+us_291	美國	Hologic Inc	女性健康與影像設備		Genius AI
+us_292	美國	Holonic	機器人初創		
+us_293	美國	Honda Research Institute USA Inc	本田研究院		
+us_294	美國	Honeywell	工業自動化		Forge 工業 AI
+us_297	美國	HRL Laboratories LLC	波音與通用合資研究所		
+us_298	美國	Hugging Face	開源模型社區與平台	開源模型託管社區，收入來自企業版、推理端點和算力服務。	Hub；Transformers 庫
+us_299	美國	Hume AI	情感語音 AI		EVI 語音接口
+us_3	美國	Abacus.AI	企業 AI 平台與智能體		ChatLLM；Smaug 模型
+us_30	美國	Alphabet Inc	谷歌母公司，含 DeepMind 與 Waymo	谷歌母公司，收入來自搜索和 YouTube 廣告、谷歌雲；AI 上有 Gemini 模型、DeepMind 研究和 Waymo 自動駕駛。	Gemini；Gemma；Waymo
+us_301	美國	Huntington Ingalls (HII)	軍艦製造與無人艇		
+us_302	美國	Hyperplane (acquired by Nubank)	金融基礎模型，被 Nubank 收購		
+us_303	美國	Iambic Therapeutics	AI 藥物發現		NeuralPLexer
+us_304	美國	IBM	企業 IT 與 AI	收入來自混合雲軟件和諮詢服務；AI 上推 watsonx 平台和開源 Granite 模型。	watsonx；Granite 模型
+us_306	美國	ID R&D	生物識別活體檢測		
+us_308	美國	Illumina	基因測序		測序儀
+us_309	美國	Imagen Technologies	醫學影像 AI		
+us_31	美國	Amazon	電商與雲巨頭，自研模型與芯片	收入來自電商、AWS 雲和廣告；AI 上通過 Bedrock 賣多家模型，自研 Nova 模型與 Trainium 芯片。	Nova 模型；Bedrock；Trainium 芯片；倉儲機器人
+us_310	美國	Imagry | Autonomous Driving	無高精地圖自動駕駛		
+us_311	美國	Imbue	推理與編程智能體		Sculptor
+us_312	美國	Immunai	單細胞免疫圖譜 AI		AMICA
+us_313	美國	Impulse Space	在軌運輸		
+us_314	美國	Imubit	流程工業閉環 AI		
+us_315	美國	Inceptive	RNA 設計 AI，Transformer 作者之一創辦		mRNA 設計
+us_317	美國	Inflection AI	對話 AI，後轉企業服務		Pi
+us_318	美國	Infrrd	文檔抽取		
+us_32	美國	Ambi Robotics	包裹分揀機器人		AmbiSort
+us_320	美國	insitro	機器學習藥物發現		ML 藥物平台
+us_321	美國	Insmed Incorporated	罕見病藥企		
+us_323	美國	Insulet Corp	胰島素泵		Omnipod
+us_324	美國	Intel Corp	芯片巨頭	賣 PC 與服務器 CPU，做晶圓代工，AI 加速器進展落後。	Gaudi 加速器；Core Ultra
+us_325	美國	Intelligent Security Systems (ISS)	視頻安防		
+us_326	美國	Intercom	客服智能體		Fin
+us_327	美國	InterDigital Inc	無線與視頻專利		
+us_329	美國	Intuitive Surgical Operations Inc	手術機器人龍頭	賣達芬奇手術機器人及耗材和維保服務，耗材是主要持續收入。	達芬奇手術機器人
+us_33	美國	Ambient.ai	視頻安防 AI		智能監控平台
+us_330	美國	inVia Robotics	倉儲機器人		
+us_331	美國	Inworld AI	遊戲 NPC AI		
+us_332	美國	Iris Automation Inc	無人機避障		Casia
+us_333	美國	iRobot	掃地機器人		Roomba
+us_334	美國	Iron Ox	室內農場機器人		
+us_336	美國	Isuzu North America	五十鈴北美		
+us_338	美國	Jibo	社交機器人（已停運）		
+us_339	美國	Joby Aviation	電動垂直起降飛行器	研發電動垂直起降飛行器，計劃運營空中出租車服務。	S4 eVTOL
+us_34	美國	AMD	芯片巨頭，AI 加速器	賣 CPU、GPU 和數據中心 AI 加速器（Instinct 系列），與英偉達競爭。	Instinct MI 系列 GPU
+us_340	美國	John Deere	農業機械，自動駕駛拖拉機	賣農機，推進自動駕駛拖拉機和精準噴灑 See & Spray，並收取軟件訂閱。	See & Spray；自動駕駛拖拉機
+us_341	美國	John Snow Labs	醫療 NLP		Spark NLP
+us_343	美國	Kasisto AI	銀行對話 AI		KAI
+us_345	美國	Kensho Technologies	標普旗下金融 AI		Kensho NLP
+us_346	美國	Kernel	非侵入式腦成像		Kernel Flow
+us_347	美國	Kintsugi	語音抑鬱檢測		
+us_348	美國	Kitware Inc	開源科學可視化與計算機視覺		VTK；CMake
+us_349	美國	Kiwibot	校園配送機器人		
+us_35	美國	American GNC Corp	導航與制導系統		
+us_350	美國	Kneron	邊緣 AI 芯片		KL 系列
+us_351	美國	Knexus	國防 AI 研究		
+us_352	美國	Kodiak	自動駕駛卡車		Kodiak Driver
+us_353	美國	Koidra	溫室自主控制		
+us_354	美國	Kumo	關係型深度學習		
+us_355	美國	Lambda	GPU 雲		GPU 雲服務
+us_356	美國	Lamini	企業大模型微調平台		記憶微調
+us_358	美國	Latitude AI	福特旗下輔助駕駛		
+us_36	美國	Amira Learning	閱讀輔導 AI		
+us_362	美國	Lightelligence	光子計算		
+us_366	美國	Lila Sciences	Flagship 孵化，AI 科學自動化		
+us_367	美國	LILT AI	企業翻譯 AI		
+us_369	美國	Liquid AI	MIT 背景，液態神經網絡基礎模型		LFM 模型
+us_370	美國	Lirio	行為科學 AI		
+us_371	美國	Little Place Labs	在軌衛星 AI		
+us_372	美國	LiveIntent (Zeta Global Co)	郵件廣告		
+us_373	美國	Lockheed Martin	國防巨頭		自主系統
+us_374	美國	Locomation	卡車編隊（已關閉）		
+us_375	美國	LocusBotics Origin	Locus Robotics 倉儲 AMR		
+us_378	美國	Lucent Technologies Bell Labs innovations	貝爾實驗室（諾基亞旗下）		
+us_379	美國	Luma AI	3D 與視頻生成		Dream Machine；Ray 模型
+us_38	美國	ANDRO Computational Solutions LLC	國防通信 AI		
+us_380	美國	Luminar Technologies	車載激光雷達	賣車載激光雷達給車企，客戶包括沃爾沃。	Iris 激光雷達
+us_381	美國	Magic	超長上下文編程模型		LTM 模型
+us_382	美國	Magic Unicorn	遊戲 AI 初創		
+us_386	美國	Mastercard Insights & Intelligence	萬事達數據分析		Decision Intelligence
+us_387	美國	Matic Robots	家用清潔機器人		
+us_388	美國	Matroid	視頻計算機視覺平台		
+us_39	美國	Anduril Industries	國防科技，自主武器系統	國防科技公司，向美軍及盟國賣自主無人機、反無人機系統、監視塔和指揮軟件 Lattice。	Lattice 平台；Fury 無人機；Ghost
+us_390	美國	May Mobility	自動駕駛接駁		Robotaxi
+us_394	美國	MeetKai Inc	語音助手		
+us_395	美國	Megagon Labs	Recruit 旗下 NLP 研究		
+us_396	美國	Merlin Labs	飛機自主駕駛		
+us_397	美國	Meta	社交巨頭，開源大模型	收入幾乎全部來自 Facebook、Instagram 的廣告；AI 上開源 Llama 模型，並大規模投入算力。	Llama 系列；Meta AI
+us_399	美國	Metron Aviation	空管流量管理		
+us_4	美國	Abridge	醫生問診語音轉病歷	把醫生問診錄音自動生成病歷，按醫生數向醫療系統收費。	Abridge 臨床文檔
+us_40	美國	Anki	消費機器人（已關閉）		Vector；Cozmo
+us_400	美國	Metron Inc	國防建模與分析		
+us_401	美國	Microblink	證件掃描		
+us_402	美國	Microsoft	軟件巨頭	收入來自 Azure 雲、Office 和 Windows；AI 上投資 OpenAI 並推出 Copilot 系列產品。	Copilot；Phi 模型；MAI
+us_403	美國	Midjourney	圖像生成	圖像生成服務，完全靠用戶訂閱收費，未融資。	Midjourney
+us_404	美國	Mirage	生成式視頻/遊戲（名稱不明確）		
+us_405	美國	Miso Robotics	廚房機器人		Flippy
+us_406	美國	Mitsubishi Electric (US)	三菱電機美國研究實驗室		
+us_409	美國	Modulate	遊戲語音反騷擾		ToxMod
+us_41	美國	Anthropic	AI 安全與前沿大模型	研發 Claude 系列模型，收入主要來自企業和開發者的 API 調用，以及 Claude 訂閱與 Claude Code。	Claude 系列模型；Claude Code
+us_410	美國	Moises	音軌分離		
+us_412	美國	Moloco	廣告機器學習		
+us_413	美國	Monarch Tractor	電動智能拖拉機		MK-V
+us_414	美國	MongoDB	文檔數據庫		Atlas 向量搜索
+us_416	美國	Mosaic	名稱指向不明確，可能為 MosaicML（已被 Databricks 收購）		
+us_417	美國	Motional	現代與 Aptiv 合資 Robotaxi		Ioniq 5 Robotaxi
+us_418	美國	Moveo.AI	客服 AI		
+us_42	美國	Anumana Inc	心電圖 AI		
+us_420	美國	Mytra	三維倉儲系統		
+us_421	美國	Nanonets	文檔智能		
+us_422	美國	Nanotronics	AI 工業檢測顯微鏡		
+us_423	美國	NantHealth	醫療信息		
+us_424	美國	Natera	基因檢測		
+us_425	美國	Nauticus Robotics	水下機器人		Aquanaut
+us_426	美國	Near Earth Autonomy	航空自主系統		
+us_427	美國	NEC Corp America	NEC 美國		
+us_428	美國	Neo Cybernetica	機器人初創		
+us_429	美國	Netflix	流媒體		推薦系統
+us_43	美國	Apple	消費電子，自研端側與雲端模型	收入來自 iPhone 等硬件和服務；AI 以端側模型為主，推 Apple Intelligence。	Apple Intelligence
+us_431	美國	Neurable	腦電耳機		
+us_432	美國	Neurala	工業視覺 AI		
+us_433	美國	Neuralink	腦機接口		N1 植入物
+us_437	美國	New England Biolabs	分子生物學試劑		
+us_438	美國	Nexa AI	端側小模型		Octopus 模型
+us_439	美國	NextRoll	廣告重定向		
+us_44	美國	Applied Intuition	自動駕駛仿真與車輛軟件	賣自動駕駛仿真工具鏈和車輛操作系統給車企與國防客戶。	仿真工具鏈；車載 OS
+us_440	美國	Neya Systems	國防自主地面車輛		
+us_441	美國	Niantic Spatial Inc	Niantic 分拆，地理空間 AI		大地理模型
+us_442	美國	NielsenIQ	消費數據		
+us_443	美國	Nike	運動品牌		
+us_444	美國	Nimble Robotics	自主倉儲履約		
+us_445	美國	Nissan North America Inc	日產北美		
+us_446	美國	Nixtla	時序預測		TimeGPT
+us_449	美國	Norm Ai	合規智能體		
+us_45	美國	AppTek.ai	語音識別與翻譯		
+us_450	美國	Normal Computing	熱力學計算芯片		
+us_451	美國	Northrop Grumman Space	諾斯羅普·格魯曼航天業務		衛星系統
+us_452	美國	Nous Research	開源大模型研究		Hermes 模型
+us_455	美國	NTT Research	NTT 基礎研究		
+us_456	美國	Numenta	類腦計算		千腦理論
+us_457	美國	Nuro	自動駕駛與配送		Nuro Driver
+us_458	美國	NV5 Geospatial	地理空間分析		
+us_459	美國	NVIDIA	GPU 與 AI 計算龍頭	賣數據中心 GPU 與整機系統，是 AI 訓練算力的主要供應商，另有遊戲顯卡和汽車芯片。	GPU；CUDA；Nemotron；Cosmos
+us_46	美國	Apptronik	人形機器人	研發人形機器人 Apollo，面向製造和物流，與梅賽德斯、谷歌 DeepMind 合作。	Apollo
+us_461	美國	OATI	電網軟件		
+us_463	美國	ObjectVideo	視頻分析		
+us_465	美國	Oceaneering	海洋工程與水下機器人		ROV
+us_466	美國	Oceanit	科技研發		
+us_468	美國	Odyssey	世界模型與 3D 生成		
+us_47	美國	Arcee AI	小型語言模型與模型合併		SuperNova；MergeKit
+us_472	美國	Onward Robotics	倉儲機器人		
+us_474	美國	OpenAI	前沿大模型	研發 GPT 系列模型，收入來自 ChatGPT 訂閱（個人與企業）和 API 調用，微軟是最大合作方。	GPT 系列；ChatGPT；Sora
+us_476	美國	Optimus Ride	自動駕駛接駁（已被收購）		
+us_477	美國	Orbital	名稱不明確		
+us_478	美國	Orfium	音樂版權 AI		
+us_479	美國	OSARO	機器人揀選		
+us_48	美國	Archer Aviation	電動垂直起降飛行器（eVTOL）		Midnight
+us_480	美國	Otter.ai	會議轉寫		
+us_482	美國	Ottonomy Inc	配送機器人		
+us_483	美國	Ouster	激光雷達		數字激光雷達
+us_484	美國	Outrider	物流園區自動駕駛		
+us_485	美國	Overjet	牙科影像 AI		Overjet
+us_486	美國	Palladyne AI	原 Sarcos，機器人 AI 軟件		Palladyne IQ
+us_487	美國	Palo Alto Res Cent Inc	PARC，施樂研究中心（現 SRI 旗下）		
+us_49	美國	Archetype AI	物理世界傳感器基礎模型		Newton 模型
+us_490	美國	Pano AI	山火監測		
+us_493	美國	PassiveLogic	建築自主控制		
+us_494	美國	Path Robotics	焊接機器人		
+us_495	美國	PathAI	病理 AI	為藥企和病理實驗室提供 AI 病理診斷工具。	AISight
+us_497	美國	Pensa Systems	零售貨架識別		
+us_498	美國	Peraton Labs	國防研究（原 Bell Labs 分支）		
+us_5	美國	Absci	AI 抗體與蛋白藥物設計		生成式抗體平台
+us_500	美國	Perceptive Automata	行人意圖預測（已關閉）		
+us_501	美國	Permion	國防 AI		
+us_502	美國	Perplexity	AI 搜索引擎	AI 搜索引擎，收入來自 Pro 訂閱、企業版和廣告，並推出 Comet 瀏覽器。	Perplexity；Comet 瀏覽器
+us_503	美國	Perrone Robotics	自動駕駛套件		
+us_504	美國	Phantom AI	ADAS 視覺		PhantomDrive
+us_505	美國	Picarro Inc	氣體檢測儀器		
+us_506	美國	Pickle Robot Co	卸貨機器人		
+us_507	美國	PickNik Robotics	機器人運動軟件		MoveIt Pro
+us_508	美國	PicnicHealth	病歷數據		
+us_509	美國	Picsart	圖片編輯		
+us_51	美國	Argo AI	自動駕駛（已關閉）		
+us_512	美國	Pindrop	語音反欺詐		深度偽造檢測
+us_513	美國	Pinterest	圖片社交		推薦模型
+us_515	美國	PlayAI	語音生成		
+us_517	美國	Plus One Robotics	視覺引導揀選		
+us_518	美國	PlusAI	自動駕駛卡車		SuperDrive
+us_519	美國	Poly	會議設備（惠普旗下）		
+us_520	美國	Polygraf AI	AI 內容檢測		
+us_521	美國	Pony.ai	小馬智行，Robotaxi	小馬智行，運營 Robotaxi 和自動駕駛卡車，收入來自出行服務、車隊運營和對車企的技術授權。	Robotaxi
+us_522	美國	PRENAV	無人機檢測		
+us_523	美國	Primer.ai	國防情報 NLP		Primer Command
+us_524	美國	Pronto AI	礦區自動駕駛		
+us_525	美國	Proscia	數字病理		Concentriq
+us_53	美國	ArteraAI	前列腺癌預後 AI		
+us_530	美國	Qualcomm	移動芯片，端側 AI	賣手機芯片和授權專利，推動手機與 PC 端側 AI。	驍龍 NPU
+us_531	美國	Qualtrics	體驗管理		
+us_532	美國	Rad AI	放射科報告 AI		
+us_533	美國	Radiance Technologies	國防工程		
+us_535	美國	Radiology Partners	放射科醫生集團		
+us_536	美國	RAIC Labs	衛星圖像 AI		
+us_537	美國	Rain Neuromorphics Inc	類腦芯片		
+us_540	美國	Raven Industries (CNH)	CNH 旗下精準農業		自主農機
+us_541	美國	Raytheon	國防巨頭（RTX）		導彈與雷達
+us_542	美國	RE2 Robotics	軍用雙臂機器人（被 Sarcos 收購）		
+us_543	美國	RealNetworks	流媒體與視覺 AI		SAFR 人臉識別
+us_544	美國	Realtime Robotics Inc	機器人運動規劃		
+us_545	美國	Reconstruct Inc	建築進度可視化		
+us_546	美國	Recursion	AI 藥物發現	用細胞影像和機器學習大規模篩藥，自己推進管線，也與羅氏等大藥企合作。	Recursion OS
+us_548	美國	Reducto	文檔解析		
+us_549	美國	Refraction AI	配送機器人		
+us_550	美國	Reka AI	多模態模型		Reka Core
+us_551	美國	RelationalAI	知識圖譜數據庫		
+us_552	美國	Replika	AI 伴侶		
+us_553	美國	Replit	在線編程與編程智能體		Replit Agent
+us_554	美國	Resemble AI	語音克隆		
+us_557	美國	Rev	轉寫服務		
+us_558	美國	Reve	圖像生成		Reve Image
+us_56	美國	Arzeda	蛋白與酶設計		
+us_560	美國	Rhombus Power Inc	國防預測 AI		Guardian
+us_561	美國	Richtech Robotics	服務機器人		
+us_562	美國	RightHand Robotics Inc	揀選機器人		
+us_563	美國	Rime	語音合成		
+us_565	美國	Riverain Technologies	胸片 AI		ClearRead
+us_566	美國	Rivian	電動車企		R1、R2
+us_568	美國	Roadzen	車險科技		
+us_569	美國	Roblox	遊戲平台		Cube 3D 模型
+us_57	美國	ASAPP	客服 AI		
+us_570	美國	Robotic Research (RE2)	軍用與商用自主車輛		
+us_571	美國	Robust AI	倉儲協作機器人		Carter
+us_575	美國	ROS (Open Robotics)	機器人操作系統 ROS 維護方		ROS 2
+us_576	美國	Runway	視頻生成	視頻生成與編輯工具，向創作者和影視公司訂閱收費。	Gen-4
+us_577	美國	Sagence AI	模擬存內計算		
+us_578	美國	Salesforce	CRM 軟件	賣 CRM 軟件訂閱，推出 Agentforce 智能體平台。	Agentforce
+us_579	美國	SambaNova	AI 芯片與推理		SN40L
+us_580	美國	SandboxAQ	谷歌分拆，AI+量子		LQM 模型
+us_581	美國	Sarcos Guardian	外骨骼與遠程操控機器人		Guardian XT
+us_582	美國	Saronic Technologies	自主水面艦艇		Corsair 無人艇
+us_583	美國	Satellogic	地球觀測衛星		
+us_584	美國	Scale AI	數據標註與評測	為 AI 公司和美國政府提供數據標註、模型評測服務，2025 年 Meta 入股 49%。	數據引擎
+us_585	美國	Scientific Systems	國防自主系統研發		
+us_587	美國	Seegrid	自主移動機器人		
+us_588	美國	Segmind	生成式 AI 推理平台		
+us_589	美國	Sensagrate	交通安全 AI		
+us_59	美國	AssemblyAI	語音識別 API		Universal 語音模型
+us_590	美國	Sensory Inc	端側語音		
+us_591	美國	Serve Robotics	Uber 分拆，人行道配送機器人		
+us_592	美國	ServiceNow	企業工作流		Now Assist
+us_593	美國	SES AI	鋰金屬電池，AI 材料發現		Molecular Universe
+us_594	美國	Shield AI	國防自主飛行	研發無人機自主飛行軟件 Hivemind 和垂直起降無人機 V-BAT，客戶是美國軍方。	Hivemind；V-BAT
+us_595	美國	Silicon Storage Technology Inc	微芯科技旗下存儲 IP		
+us_596	美國	Simbe	超市盤點機器人		Tally
+us_598	美國	Simulations Plus Inc	藥物研發建模軟件		GastroPlus
+us_600	美國	Skydio	自主無人機	賣自主飛行無人機給軍方、公共安全和能源巡檢客戶。	X10
+us_603	美國	Skylark Labs	安防視覺 AI		
+us_605	美國	Skyryse	飛行自動化		SkyOS
+us_606	美國	Slamdunk.ai	視覺 AI		
+us_607	美國	SLB	油服巨頭（斯倫貝謝）		Lumi 平台
+us_608	美國	Slingshot Aerospace	太空態勢感知		
+us_61	美國	Asylon Robotics	安防無人機與機器狗		
+us_610	美國	Snap Inc	社交相機		Snapchat AI；Spectacles
+us_611	美國	Snowflake	數據雲		Cortex AI；Arctic 模型
+us_612	美國	Softmax	多智能體對齊研究		
+us_615	美國	Sony Corp America	索尼美國		
+us_616	美國	Sorenson Communications	手語與聽障通訊		
+us_617	美國	Soroco	工作流挖掘		
+us_618	美國	Sound Hound Ai Ip LLC	SoundHound 語音 AI 專利實體		Houndify
+us_619	美國	SpaceX (Starship)	航天		星艦
+us_62	美國	AT&T Mobility II LLC	AT&T 無線業務		網絡 AI
+us_621	美國	Stack AV	軟銀支持的自動駕駛卡車		
+us_623	美國	Standard Bots (cobot)	協作機器人		RO1
+us_624	美國	Starkey Hearing	AI 助聽器		
+us_625	美國	Starship Technologies	人行道配送機器人	在大學校園和城市運營人行道配送機器人。	配送機器人
+us_626	美國	Stealth Robotics Startup	隱名機器人初創		
+us_627	美國	STR	國防研發		
+us_630	美國	Stripe	支付		支付基礎模型
+us_631	美國	Subtle Medical	醫學影像增強		
+us_632	美國	SuitX (US Bionics)	外骨骼		
+us_634	美國	Suno	AI 音樂生成		Suno
+us_635	美國	Superagent	智能體		
+us_636	美國	Superb AI Inc	數據標註平台		
+us_638	美國	Sword	數字理療		Phoenix
+us_639	美國	Symbio Robotics	汽車裝配機器人		
+us_640	美國	Symbolica AI	範疇論驅動的新架構		
+us_642	美國	Syntiant Corp	端側 AI 芯片		NDP 系列
+us_643	美國	TAE Technologies Inc	核聚變		
+us_644	美國	Tagup	工業設備 AI		
+us_645	美國	Talkspace	在線心理治療		
+us_646	美國	Tavus	數字人視頻		
+us_649	美國	Teledyne FLIR (ground)	熱成像與地面無人車		
+us_65	美國	Atomwise	AI 小分子藥物發現		AtomNet
+us_650	美國	Telepathy Labs	對話 AI		
+us_651	美國	Tempus	同 Tempus AI		
+us_652	美國	Tempus AI	腫瘤基因與臨床數據 AI	提供腫瘤基因檢測，積累臨床與基因數據後授權給藥企做研發。	Tempus 平台
+us_653	美國	Tensor Auto	個人自動駕駛汽車		
+us_655	美國	TensorOpera AI	分佈式 AI 平台（原 FedML）		Fox 模型
+us_656	美國	Terrafuse AI	氣候風險 AI		
+us_657	美國	Terray Therapeutics	AI 小分子藥物發現		tNova
+us_658	美國	Tesla	電動車、自動駕駛與人形機器人	賣電動車和儲能產品；AI 上研發 FSD 自動駕駛、Robotaxi 和人形機器人 Optimus。	FSD；Optimus；Robotaxi
+us_659	美國	Tetramem Inc	存內計算芯片		
+us_66	美國	Aurora	自動駕駛卡車	研發自動駕駛卡車系統，與卡車廠商合作，按里程向貨運公司收費。	Aurora Driver
+us_660	美國	Textio	招聘寫作 AI		
+us_662	美國	Think Surgical	骨科手術機器人		TMINI
+us_663	美國	Thinking Machines Lab	前 OpenAI CTO Mira Murati 創辦		Tinker 微調平台
+us_664	美國	Third Wave Automation	自主叉車		
+us_665	美國	ThorDrive	自動駕駛物流		
+us_666	美國	TikTok	短視頻平台		推薦算法
+us_667	美國	Together AI	開源模型雲	開源模型推理與訓練雲，按用量收費。	推理與訓練平台
+us_668	美國	Tomorrow.io	天氣情報		
+us_669	美國	Topaz Labs	圖像視頻增強		
+us_67	美國	Auterion	無人機操作系統		AuterionOS
+us_670	美國	Torc Robotics	戴姆勒旗下自動駕駛卡車		自動駕駛卡車
+us_671	美國	Tortuga AgTech	採摘機器人		
+us_672	美國	Tracer	品牌保護 AI		
+us_673	美國	Tractian	工業設備預測性維護		
+us_674	美國	Trail of Bits	安全研究		
+us_675	美國	Traversaal.ai	企業搜索 AI		
+us_676	美國	Trepp Inc	商業地產數據		
+us_678	美國	TRM Labs	區塊鏈情報		
+us_679	美國	Trunk Tools	建築項目 AI		
+us_68	美國	AuthenticID	證件認證		
+us_680	美國	TruU Inc	身份認證		
+us_681	美國	Truveta	醫療數據與模型		Truveta 平台
+us_682	美國	TuSimple	自動駕駛卡車（已轉型）		
+us_683	美國	Tutor Intelligence	倉儲機器人		
+us_684	美國	TwelveLabs	視頻理解模型		Marengo；Pegasus
+us_685	美國	UiPath	RPA 與智能體		UiPath 平台
+us_686	美國	Ultralytics	YOLO 目標檢測		YOLO 系列
+us_688	美國	Umbo Computer Vision	視頻安防 AI		
+us_689	美國	Unbabel	AI 翻譯		
+us_69	美國	Autodesk	設計與工程軟件		Autodesk AI；Fusion
+us_690	美國	Uniphore	對話 AI		
+us_692	美國	Unity	遊戲引擎		Unity AI
+us_693	美國	Unlearn.AI	臨床試驗數字孿生		
+us_694	美國	Upstream Tech	水資源遙感		
+us_695	美國	UST	IT 服務		
+us_696	美國	UT Battelle LLC	橡樹嶺國家實驗室運營方		
+us_697	美國	UtopiaCompression Corp	國防感知與自主		
+us_699	美國	Vecna Robotics	倉儲自主叉車		
+us_70	美國	Automation Anywhere	RPA 與企業智能體		Automation 360
+us_700	美國	Vectara	檢索增強平台		
+us_701	美國	Veo Robotics	人機協作安全		
+us_702	美國	Veradigm	原 Allscripts，醫療信息		
+us_703	美國	Verdant Robotics	農業精準噴灑機器人		
+us_704	美國	Verseon	AI 藥物發現		
+us_707	美國	VIAVI Solutions	網絡測試		
+us_709	美國	Vigilant Solutions	車牌識別		
+us_71	美國	Autonomous Solutions	農礦自主車輛		
+us_711	美國	Virtual Traffic Lights	車聯網信號		
+us_712	美國	Virtue AI	AI 安全		
+us_713	美國	Visa Int Service Association	支付網絡		風控 AI
+us_715	美國	Voicegain	語音識別		
+us_717	美國	Volkswagen Group of America Innovation and Engineering Center California (IECC)	大眾美國創新中心		
+us_718	美國	Walmart	零售巨頭		購物助手；供應鏈 AI
+us_719	美國	Walt Disney Co	娛樂傳媒		迪士尼研究院
+us_72	美國	Ava Robotics	遠程臨場機器人		
+us_720	美國	Waypoint Robotics	移動機器人		
+us_721	美國	webAI	端側分佈式 AI		
+us_722	美國	Welldoc	慢病數字療法		BlueStar
+us_723	美國	Westinghouse Electric Co	核電		
+us_724	美國	Willow Garage	機器人研究機構（已關閉），ROS 發源地		PR2；ROS
+us_725	美國	WindBorne Systems	氣象氣球與天氣 AI		WeatherMesh
+us_726	美國	Wolfram	計算知識引擎		Wolfram|Alpha；Mathematica
+us_727	美國	Workato	集成自動化		
+us_728	美國	WRITER	企業生成式 AI 平台		Palmyra 模型
+us_729	美國	Wyze	智能攝像頭		
+us_73	美國	Avaamo	企業對話 AI		
+us_730	美國	xAI	馬斯克創辦的大模型公司	馬斯克創辦，研發 Grok 模型，嵌入 X 平台並對外賣 API，已與 X 合併。	Grok 系列
+us_731	美國	Xaira Therapeutics	AI 藥物研發		蛋白設計
+us_733	美國	You.com	AI 搜索		You.com
+us_735	美國	Zapata AI	量子與工業 AI（已停業）		
+us_736	美國	ZeroFox	外部威脅情報		
+us_738	美國	Zillow	房產平台		估價模型
+us_739	美國	Zipline	無人機配送	無人機即時配送，為醫院、零售商送貨，按配送次數收費。	P2 Zip
+us_74	美國	Avature	招聘軟件		
+us_740	美國	Zoom	視頻會議		AI Companion
+us_76	美國	Avride	自動駕駛與配送機器人（原 Yandex 自動駕駛）		Robotaxi；配送機器人
+us_79	美國	BAE Systems (US autonomy)	BAE 美國自主系統		
+us_8	美國	Adeia Guides Inc	原 TiVo/Xperi 專利與推薦		
+us_80	美國	Barrett Technology	機械臂與康復機器人		WAM
+us_81	美國	Bear Robotics	餐飲送餐機器人		Servi
+us_83	美國	Berkshire Grey	倉儲自動化機器人		揀選系統
+us_84	美國	Bevilacqua Research Corp	國防研究		
+us_9	美國	Adept	智能體與動作模型		ACT-1
+us_90	美國	Blink Technologies Inc	眼動/虹膜		
+us_91	美國	Bloomberg	金融數據		BloombergGPT；終端 AI
+us_94	美國	Boeing (autonomous systems)	波音自主系統		MQ-28 無人僚機
+us_95	美國	Bonsai Robotics	果園自主車輛		
+us_96	美國	Booz Allen Hamilton	政府諮詢與國防 AI		國防 AI 服務
+us_97	美國	Boson AI	李沐等創辦，語音與角色大模型		Higgs 系列模型
+us_98	美國	Boston Dynamics	足式與人形機器人，現代汽車旗下	現代汽車旗下，賣四足機器狗 Spot 用於工業巡檢、倉庫卸貨機器人 Stretch，並研發新版 Atlas 人形。	Spot；Atlas；Stretch
+us_99	美國	Boston Scientific	醫療器械		

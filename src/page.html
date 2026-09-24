@@ -254,28 +254,9 @@ const GCAT=new Set();
 ['us','cn'].forEach(c=>D.firms[c].forEach(x=>{if(FIRMTAGS[x[2]])GCAT.add(x[1])}));
 const PEER_MAX=8;
 function peerBlock(id){
+ // 同業與供應鏈交給關係圖呈現，卡片只保留業務標籤這一行
  const ks=FIRMTAGS[id];if(!ks||!ks.length)return '';
- const me=idx[id];
- const row=(lab,ids)=>{const l=ids.filter(x=>x!==id&&idx[x]);if(!l.length)return '';
-  const show=l.slice(0,PEER_MAX).map(x=>`<button class="pl" data-go="${x}">${esc(idx[x].name)}</button>`).join('、');
-  return `<div class="pr"><span class="k">${lab}</span>${show}${l.length>PEER_MAX?`<span class="k"> 等 ${l.length} 家</span>`:''}</div>`};
- const k0=ks[0],same=TMEM[k0]||[];
- let h=`<div class="peer"><div class="pg">業務標籤：${ks.map(k=>esc(TAG[k].label)).join('・')}</div>`;
- h+=row(me.country==='us'?'中國同業：':'美國同業：',same.filter(x=>idx[x].country!==me.country));
- h+=row(me.country==='us'?'美國同業：':'中國同業：',same.filter(x=>idx[x].country===me.country));
- // 已經是同業的不再列進供應鏈：一家公司可能同時帶著鏈條兩端的標籤
- const kin=new Set();ks.forEach(k=>(TMEM[k]||[]).forEach(x=>kin.add(x)));
- const up=[],down=[];
- ks.forEach(k=>(TREL[k]||[]).forEach(r=>{if(r.type!=='supply')return;
-  (r.dir==='out'?down:up).push(...(TMEM[r.o]||[]).filter(x=>!kin.has(x)))}));
- const scene=[];
- ks.forEach(k=>(TREL[k]||[]).forEach(r=>{if(r.type==='scene')
-  scene.push(...(TMEM[r.o]||[]).filter(x=>!kin.has(x)))}));
- h+=row('供應給：',[...new Set(down)]);
- h+=row('上游供應商：',[...new Set(up)]);
- h+=row('同場景不同解法：',[...new Set(scene)]);
- h+=`</div>`;
- return h;
+ return `<div class="peer"><div class="pg">業務標籤：${ks.map(k=>esc(TAG[k].label)).join('・')}</div></div>`;
 }
 function showCard(b){
  closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
