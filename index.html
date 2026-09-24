@@ -294,6 +294,38 @@ function showCard(b){
  _cards++;
  T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
 }
+function tagCardAt(key,cx,cy){
+ const t=TAG[key];if(!t)return;
+ closePop();
+ pop.style.setProperty('--c','var(--ink)');
+ const mem=(TMEM[key]||[]).filter(x=>idx[x]);
+ const us=mem.filter(x=>idx[x].country==='us'),cn=mem.filter(x=>idx[x].country!=='us');
+ const list=a=>a.map(x=>`<button class="pl" data-card="${x}">${esc(idx[x].name)}</button>`).join('、');
+ let h=`<h4>${esc(t.label)}</h4><div class="m">業務標籤${t.domain?' · '+esc(t.domain):''} · 美國 ${us.length} 家 · 中國 ${cn.length} 家</div>`;
+ if(t.scope)h+=`<p class="bio">${esc(t.scope)}</p>`;
+ h+=`<div class="peer">`;
+ h+=us.length?`<div class="pr"><span class="k">美國：</span>${list(us)}</div>`
+             :`<div class="pr"><span class="k">美國：</span><span class="k">名單中沒有</span></div>`;
+ h+=cn.length?`<div class="pr"><span class="k">中國：</span>${list(cn)}</div>`
+             :`<div class="pr"><span class="k">中國：</span><span class="k">名單中沒有</span></div>`;
+ const rels=TREL[key]||[];
+ if(rels.length){
+  h+=`<div class="pg" style="margin-top:7px">與其他業務的關係</div>`;
+  for(const r of rels){
+   const o=TAG[r.o];if(!o)continue;
+   const lab=r.type==='supply'?(r.dir==='out'?'供應給':'上游是'):'同場景不同解法';
+   h+=`<div class="pr"><span class="k">${lab} </span><button class="pl" data-tag="${r.o}">${esc(o.label)}</button>`
+     +(r.why?`<span class="pdx">${esc(r.why)}</span>`:'')+`</div>`;
+  }
+ }
+ h+=`</div>`;
+ pop.classList.add('onmap');
+ pop.innerHTML=h;pop.hidden=false;
+ const w=pop.offsetWidth,ph=pop.offsetHeight;
+ pop.style.left=Math.max(10,Math.min(cx+14,innerWidth-w-10))+'px';
+ pop.style.top=Math.max(10,Math.min(cy+14,innerHeight-ph-10))+'px';
+ T('graph_tag',{tag:t.label,us:String(us.length),cn:String(cn.length)});
+}
 function showCardAt(id,cx,cy){
  const f=idx[id];
  closePop();
@@ -483,9 +515,9 @@ gsvg.addEventListener('pointerup',e=>{
   gPin=i;gSel=i;draw();
   showCardAt(n.id,e.clientX,e.clientY);
   T('graph_node',{node:n.name,kind:'firm',industry:document.getElementById('gvt').textContent})}
- else{                                      // 標籤：沒有卡片，點擊＝釘住高亮
-  gPin=gPin===i?null:i;gSel=gPin;draw();
-  if(gPin!=null)T('graph_node',{node:n.name,kind:'tag',industry:document.getElementById('gvt').textContent})}});
+ else{                                      // 標籤：釘住高亮並打開標籤卡片
+  gPin=i;gSel=i;draw();
+  tagCardAt(n.key.slice(2),e.clientX,e.clientY)}});
 gsvg.addEventListener('wheel',e=>{
  e.preventDefault();
  const r=gsvg.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;
@@ -506,7 +538,12 @@ document.getElementById('list').addEventListener('click',e=>{
  const g=e.target.closest('button[data-graph]');if(!g)return;
  e.stopPropagation();openGraph(g.dataset.graph);
  T('graph_open',{industry:D.cats[g.dataset.graph]})});
-pop.addEventListener('click',e=>{const L=e.target.closest('button[data-list]');
+pop.addEventListener('click',e=>{
+ const C=e.target.closest('button[data-card]');
+ if(C){e.stopPropagation();const r=C.getBoundingClientRect();showCardAt(C.dataset.card,r.left,r.top);return}
+ const G=e.target.closest('button[data-tag]');
+ if(G){e.stopPropagation();const r=G.getBoundingClientRect();tagCardAt(G.dataset.tag,r.left,r.top);return}
+ const L=e.target.closest('button[data-list]');
  if(L){e.stopPropagation();closeGraph();jumpTo(L.dataset.list);return}
  const g=e.target.closest('button[data-ego]');
  if(g){e.stopPropagation();openEgo(g.dataset.ego);return}
