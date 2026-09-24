@@ -116,8 +116,9 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 #gsvg{width:100%;height:100%;display:block;touch-action:none}
 #gsvg line{stroke:var(--line)}
 #gsvg circle{cursor:pointer;stroke:var(--panel);stroke-width:1.5}
-#gsvg text.tg{font-size:11.5px;font-weight:700}
-#gsvg text{font-size:10.5px;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
+#gsvg text.tg{font-size:14px;font-weight:700}
+#gsvg text{font-size:13px;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:3.5px;stroke-linejoin:round}
+.pop.onmap{position:fixed;z-index:60}
 #gsvg .dim{opacity:.12}
 .gv-f{padding:9px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .gv-f i{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:-1px;margin-right:4px}
@@ -143,7 +144,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
  <div class="gv-h"><h3 id="gvt"></h3><span class="k" id="gvk"></span><button class="gv-x" id="gvx">關閉　Esc</button></div>
  <div class="gv-b"><svg id="gsvg"></svg></div>
  <div class="gv-f"><span><i style="background:var(--us)"></i>美國</span><span><i style="background:var(--cn)"></i>中國</span>
-  <span><i style="background:var(--ink)"></i>業務標籤</span><span style="color:var(--us)">⇢ 上下游</span><span style="color:var(--cn)">⋯ 同場景</span><span>點節點看關聯，雙擊公司看卡片，可拖曳</span></div>
+  <span><i style="background:var(--ink)"></i>業務標籤</span><span style="color:var(--us)">⇢ 上下游</span><span style="color:var(--cn)">⋯ 同場景</span><span>滑過看關聯 · 點公司看卡片 · 可拖曳重排</span></div>
 </div>
 
 <p class="note"><b>資料出處：</b>Jon Schmid、Prateek Puri、Vitor Melo、Anthony Hakim，<a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener"><i>AI Development in the United States and China: Evidence from a New Dataset of AI Developer Firms</i></a>，RAND Corporation，RR-A5043-1，2026 年 8 月 17 日。本頁僅整理其附件名單，報告全文與分析請見 RAND 官方頁面。</p>
@@ -284,6 +285,7 @@ function showCard(b){
  h+=finBlock(id);
  h+=peerBlock(id);
  if((FIRMTAGS[id]||[]).some(k=>TAG[k]))h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">以這家為中心看關係圖 →</button></div>`;
+ pop.classList.remove('onmap');
  pop.innerHTML=h;pop.hidden=false;
  const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));
@@ -292,6 +294,24 @@ function showCard(b){
  b.setAttribute('aria-expanded','true');openBtn=b;
  _cards++;
  T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
+}
+function showCardAt(id,cx,cy){
+ const f=idx[id],p=PROF[id];
+ closePop();
+ pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
+ let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
+ if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}${p.pd?`<span class="pdx">${esc(p.pd)}</span>`:''}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
+ else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
+ h+=finBlock(id);
+ if((FIRMTAGS[id]||[]).some(k=>TAG[k]))h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">以這家為中心重畫 →</button><button class="egobtn" data-list="${id}" style="margin-left:14px">在清單中查看 →</button></div>`;
+ pop.classList.add('onmap');
+ pop.innerHTML=h;pop.hidden=false;
+ const w=pop.offsetWidth,ph=pop.offsetHeight;
+ let left=Math.max(10,Math.min(cx+14,innerWidth-w-10));
+ let top=Math.max(10,Math.min(cy+14,innerHeight-ph-10));
+ pop.style.left=left+'px';pop.style.top=top+'px';
+ _cards++;
+ T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:'graph'});
 }
 function jumpTo(id){
  const from=openBtn&&idx[openBtn.dataset.id]?idx[openBtn.dataset.id].name:'';
@@ -305,7 +325,7 @@ function jumpTo(id){
 }
 /* ===== 關係圖：節點＝公司與標籤樞紐，連線＝隸屬、上下游、同場景 ===== */
 const gv=document.getElementById('gv'),gsvg=document.getElementById('gsvg');
-let gRAF=0,gNodes=[],gLinks=[],gSel=null;
+let gRAF=0,gNodes=[],gLinks=[],gSel=null,gPin=null;
 function openGraph(cat){
  const firms=[...D.firms.us,...D.firms.cn].filter(x=>x[1]===cat&&FIRMTAGS[x[2]]).map(x=>x[2]);
  if(!firms.length)return;
@@ -331,7 +351,7 @@ function openGraph(cat){
  document.getElementById('gvk').textContent=
   `${firms.length} 家 · 美國 ${nu} · 中國 ${firms.length-nu} · ${seed.size} 個業務標籤`
   +(ext.size?` · 延伸到其他行業的 ${ext.size} 個標籤`:'');
- gv.hidden=false;closePop();gSel=null;sim(W,H);
+ gv.hidden=false;closePop();gSel=null;gPin=null;sim(W,H);
 }
 function openEgo(id){
  const own=(FIRMTAGS[id]||[]).filter(k=>TAG[k]);
@@ -361,7 +381,7 @@ function openEgo(id){
   `${firms.size} 家 · 美國 ${nu} · 中國 ${firms.size-nu} · `
   +`自身業務 ${own.map(k=>TAG[k].label).join('、')}`
   +(tags.size>own.length?` · 相鄰業務 ${tags.size-own.length} 項`:'');
- gv.hidden=false;closePop();gSel=null;sim(W,H);
+ gv.hidden=false;closePop();gSel=null;gPin=null;sim(W,H);
  T('graph_ego',{company:idx[id].name});
 }
 function sim(W,H){
@@ -422,13 +442,23 @@ function draw(){
   else
    p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="var(--${n.c})"${n.center?' stroke="var(--ink)" stroke-width="2.5"':''} data-i="${i}"${cls}/>`);
  });
- gNodes.forEach((n,i)=>{
-  if(!on(i))return;
-  if(n.kind!=='tag'&&gSel==null&&!n.center)return;
-  const below=n.kind==='tag'&&n.y<gsvg.clientHeight*0.42;
-  const ty=below?(n.y+rad(n)+11):(n.y-rad(n)-4);
-  p.push(`<text x="${n.x.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle"${n.kind==='tag'?' class="tg"':''}>${esc(n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18))}</text>`);
- });
+ // 標籤一律嘗試顯示，依優先序貪婪擺放，與已擺放者重疊就略過
+ const box=[],H2=gsvg.clientHeight;
+ const cand=gNodes.map((n,i)=>({n:n,i:i})).filter(c=>on(c.i));
+ cand.sort((a,b)=>{
+  const pr=x=>x.n.center?0:x.n.kind==='tag'?1:(nb.has(x.i)?2:3);
+  return pr(a)-pr(b)||b.n.deg-a.n.deg});
+ for(const c of cand){
+  const n=c.n,fs=n.kind==='tag'?14:13;
+  const txt=n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18);
+  let w=0;for(const ch of txt)w+=/[\u4e00-\u9fff\uff00-\uffef]/.test(ch)?fs:fs*0.56;
+  const below=n.kind==='tag'&&n.y<H2*0.42;
+  const ty=below?(n.y+rad(n)+fs):(n.y-rad(n)-5);
+  const bx={x0:n.x-w/2-3,x1:n.x+w/2+3,y0:ty-fs,y1:ty+4};
+  if(box.some(o=>bx.x1>o.x0&&bx.x0<o.x1&&bx.y1>o.y0&&bx.y0<o.y1))continue;
+  box.push(bx);
+  p.push(`<text x="${n.x.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle"${n.kind==='tag'?' class="tg"':''}>${esc(txt)}</text>`);
+ }
  gsvg.innerHTML='<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--us)"/></marker></defs>'+p.join('');
 }
 let drag=null;
@@ -441,21 +471,31 @@ gsvg.addEventListener('pointermove',e=>{
  gNodes[drag.i].x=e.clientX-r.left;gNodes[drag.i].y=e.clientY-r.top;
  drag.moved=true;draw()});
 gsvg.addEventListener('pointerup',e=>{
- if(!drag)return;const n=gNodes[drag.i];n.fix=false;
- if(!drag.moved){gSel=gSel===drag.i?null:drag.i;draw();
-  if(gSel!=null)T('graph_node',{node:n.name,kind:n.kind,industry:document.getElementById('gvt').textContent})}
- drag=null});
-gsvg.addEventListener('dblclick',e=>{
- const c=e.target.closest('circle');if(!c)return;
- const n=gNodes[+c.dataset.i];if(n.kind!=='firm')return;
- closeGraph();jumpTo(n.id)});
-function closeGraph(){cancelAnimationFrame(gRAF);gv.hidden=true;gSel=null}
+ if(!drag)return;const n=gNodes[drag.i],i=drag.i;const moved=drag.moved;drag=null;
+ n.fix=false;if(moved)return;
+ if(n.kind==='firm'){                       // 公司：直接出卡片，疊在圖上
+  gPin=i;gSel=i;draw();
+  showCardAt(n.id,e.clientX,e.clientY);
+  T('graph_node',{node:n.name,kind:'firm',industry:document.getElementById('gvt').textContent})}
+ else{                                      // 標籤：沒有卡片，點擊＝釘住高亮
+  gPin=gPin===i?null:i;gSel=gPin;draw();
+  if(gPin!=null)T('graph_node',{node:n.name,kind:'tag',industry:document.getElementById('gvt').textContent})}});
+gsvg.addEventListener('click',e=>{if(e.target.closest('circle'))e.stopPropagation()});
+gsvg.addEventListener('pointerover',e=>{
+ if(drag)return;const c=e.target.closest('circle');if(!c)return;
+ const i=+c.dataset.i;if(i===gSel)return;gSel=i;draw()});
+gsvg.addEventListener('pointerout',e=>{
+ if(drag)return;const c=e.target.closest('circle');if(!c)return;
+ if(gSel!==gPin){gSel=gPin;draw()}});
+function closeGraph(){cancelAnimationFrame(gRAF);gv.hidden=true;gSel=null;gPin=null;closePop()}
 document.getElementById('gvx').onclick=closeGraph;
 document.getElementById('list').addEventListener('click',e=>{
  const g=e.target.closest('button[data-graph]');if(!g)return;
  e.stopPropagation();openGraph(g.dataset.graph);
  T('graph_open',{industry:D.cats[g.dataset.graph]})});
-pop.addEventListener('click',e=>{const g=e.target.closest('button[data-ego]');
+pop.addEventListener('click',e=>{const L=e.target.closest('button[data-list]');
+ if(L){e.stopPropagation();closeGraph();jumpTo(L.dataset.list);return}
+ const g=e.target.closest('button[data-ego]');
  if(g){e.stopPropagation();openEgo(g.dataset.ego);return}
  const t=e.target.closest('button[data-go]');if(!t)return;e.stopPropagation();jumpTo(t.dataset.go)});
 document.getElementById('list').addEventListener('click',e=>{
