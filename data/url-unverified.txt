@@ -1,2 +1,3 @@
 cn_180	https://www.cvte.com	cvte.com 是母公司 CVTE 的網址，視睿為其子公司
 cn_62	https://www.isurestar.com	isurestar.com 回 403，無法驗證內容歸屬
+us_277	https://www.gridspace.com	頁面與詳述皆未提及 Gridspace
