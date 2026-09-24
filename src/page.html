@@ -112,6 +112,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 #gsvg{width:100%;height:100%;display:block;touch-action:none}
 #gsvg line{stroke:var(--line)}
 #gsvg circle{cursor:pointer;stroke:var(--panel);stroke-width:1.5}
+#gsvg text.tg{font-size:11.5px;font-weight:700}
 #gsvg text{font-size:10.5px;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
 #gsvg .dim{opacity:.12}
 .gv-f{padding:9px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
@@ -138,7 +139,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
  <div class="gv-h"><h3 id="gvt"></h3><span class="k" id="gvk"></span><button class="gv-x" id="gvx">關閉　Esc</button></div>
  <div class="gv-b"><svg id="gsvg"></svg></div>
  <div class="gv-f"><span><i style="background:var(--us)"></i>美國</span><span><i style="background:var(--cn)"></i>中國</span>
-  <span>連線＝主營業務相似，越粗越像</span><span>點節點看公司卡片，可拖曳</span></div>
+  <span><i style="background:var(--ink)"></i>業務標籤</span><span style="color:var(--us)">⇢ 上下游</span><span style="color:var(--cn)">⋯ 同場景</span><span>點節點看關聯，雙擊公司看卡片，可拖曳</span></div>
 </div>
 
 <p class="note"><b>資料出處：</b>Jon Schmid、Prateek Puri、Vitor Melo、Anthony Hakim，<a href="https://www.rand.org/pubs/research_reports/RRA5043-1.html" target="_blank" rel="noopener"><i>AI Development in the United States and China: Evidence from a New Dataset of AI Developer Firms</i></a>，RAND Corporation，RR-A5043-1，2026 年 8 月 17 日。本頁僅整理其附件名單，報告全文與分析請見 RAND 官方頁面。</p>
@@ -201,7 +202,7 @@ function render(){
   const n=(shownU?u.length:0)+(shownC?c.length:0);if(!n)return;total+=n;
   const au=D.firms.us.filter(x=>x[1]===k).length,ac=D.firms.cn.filter(x=>x[1]===k).length;
   const pu=au/743*100,pc=ac/438*100;
-  h+=`<section class="cat"><h2>${D.cats[k]}<span class="nums">美國 <b class="u">${au}</b> 家（${pu.toFixed(1)}%）· 中國 <b class="c">${ac}</b> 家（${pc.toFixed(1)}%）</span>${EDGES[k]?`<button class="gbtn" data-graph="${k}">關係圖</button>`:''}</h2>`;
+  h+=`<section class="cat"><h2>${D.cats[k]}<span class="nums">美國 <b class="u">${au}</b> 家（${pu.toFixed(1)}%）· 中國 <b class="c">${ac}</b> 家（${pc.toFixed(1)}%）</span>${GCAT.has(k)?`<button class="gbtn" data-graph="${k}">關係圖</button>`:''}</h2>`;
   h+=`<div class="cols ${country==='all'?'':'one'}">`;
   const col=(lab,arr,v)=>`<div class="col ${arr.length?'':'empty'}" style="--c:var(--${v})"><h3>${lab} · ${arr.length}</h3><ul>${arr.length?arr.map(x=>{const p=PROF[x[2]];const meta=p?[p.w,p.l,p.y].filter(Boolean).join(' · '):'';const mk=MKT[x[2]];return `<li><button data-id="${x[2]}" class="${p?'':'none'}"><span class="nm">${hl(x[0])}${mk?`<span class="tk">${esc(mk.t)}</span>`:''}</span>${meta?`<span class="ds">${hl2(meta)}</span>`:''}</button></li>`}).join(''):'<li>無匹配</li>'}</ul></div>`;
   if(shownU)h+=col('美國',u,'us');if(shownC)h+=col('中國',c,'cn');
@@ -235,21 +236,41 @@ function finBlock(id){
 const idx={};['us','cn'].forEach(k=>D.firms[k].forEach(x=>idx[x[2]]={name:x[0],cat:x[1],country:k}));
 const pop=document.getElementById('pop');let openBtn=null;
 function closePop(){pop.hidden=true;if(openBtn){openBtn.setAttribute('aria-expanded','false');openBtn=null}}
-const GROUPS=__DATA_GROUPS__,PEERS=__DATA_PEERS__;
-const GMAP={};GROUPS.forEach(g=>GMAP[g.key]={label:g.label,us:[],cn:[]});
-Object.keys(PEERS).forEach(id=>{const g=GMAP[PEERS[id]];if(g&&idx[id])g[idx[id].country].push(id)});
+const TAGS=__DATA_TAGS__,FIRMTAGS=__DATA_FIRMTAGS__,TAGRELS=__DATA_TAGRELS__;
+const TAG={};TAGS.forEach(t=>TAG[t.key]=t);
+const TMEM={};TAGS.forEach(t=>TMEM[t.key]=[]);
+Object.keys(FIRMTAGS).forEach(id=>FIRMTAGS[id].forEach(k=>{if(TMEM[k]&&idx[id])TMEM[k].push(id)}));
+const TREL={};TAGS.forEach(t=>TREL[t.key]=[]);
+TAGRELS.forEach(r=>{if(TREL[r.from]&&TREL[r.to]){
+ TREL[r.from].push({o:r.to,type:r.type,dir:'out',why:r.why});
+ TREL[r.to].push({o:r.from,type:r.type,dir:'in',why:r.why})}});
+const GCAT=new Set();
+['us','cn'].forEach(c=>D.firms[c].forEach(x=>{if(FIRMTAGS[x[2]])GCAT.add(x[1])}));
 const PEER_MAX=8;
 function peerBlock(id){
- const gk=PEERS[id],g=GMAP[gk];if(!g||gk==='other')return '';
+ const ks=FIRMTAGS[id];if(!ks||!ks.length)return '';
  const me=idx[id];
- const line=(lab,ids)=>{const list=ids.filter(x=>x!==id);if(!list.length)return '';
-  const show=list.slice(0,PEER_MAX).map(x=>`<button class="pl" data-go="${x}">${esc(idx[x].name)}</button>`).join('、');
-  const more=list.length>PEER_MAX?`<span class="k"> 等 ${list.length} 家</span>`:'';
-  return `<div class="pr"><span class="k">${lab}</span>${show}${more}</div>`};
- const cross=me.country==='us'?line('中國對標：',g.cn):line('美國對標：',g.us);
- const same=line(me.country==='us'?'同類美國公司：':'同類中國公司：',me.country==='us'?g.us:g.cn);
- if(!cross&&!same)return '';
- return `<div class="peer"><div class="pg">${esc(g.label)}</div>${cross}${same}</div>`}
+ const row=(lab,ids)=>{const l=ids.filter(x=>x!==id&&idx[x]);if(!l.length)return '';
+  const show=l.slice(0,PEER_MAX).map(x=>`<button class="pl" data-go="${x}">${esc(idx[x].name)}</button>`).join('、');
+  return `<div class="pr"><span class="k">${lab}</span>${show}${l.length>PEER_MAX?`<span class="k"> 等 ${l.length} 家</span>`:''}</div>`};
+ const k0=ks[0],same=TMEM[k0]||[];
+ let h=`<div class="peer"><div class="pg">業務標籤：${ks.map(k=>esc(TAG[k].label)).join('・')}</div>`;
+ h+=row(me.country==='us'?'中國同業：':'美國同業：',same.filter(x=>idx[x].country!==me.country));
+ h+=row(me.country==='us'?'美國同業：':'中國同業：',same.filter(x=>idx[x].country===me.country));
+ // 已經是同業的不再列進供應鏈：一家公司可能同時帶著鏈條兩端的標籤
+ const kin=new Set();ks.forEach(k=>(TMEM[k]||[]).forEach(x=>kin.add(x)));
+ const up=[],down=[];
+ ks.forEach(k=>(TREL[k]||[]).forEach(r=>{if(r.type!=='supply')return;
+  (r.dir==='out'?down:up).push(...(TMEM[r.o]||[]).filter(x=>!kin.has(x)))}));
+ const scene=[];
+ ks.forEach(k=>(TREL[k]||[]).forEach(r=>{if(r.type==='scene')
+  scene.push(...(TMEM[r.o]||[]).filter(x=>!kin.has(x)))}));
+ h+=row('供應給：',[...new Set(down)]);
+ h+=row('上游供應商：',[...new Set(up)]);
+ h+=row('同場景不同解法：',[...new Set(scene)]);
+ h+=`</div>`;
+ return h;
+}
 function showCard(b){
  closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
  pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
@@ -277,30 +298,35 @@ function jumpTo(id){
  b.scrollIntoView({block:'center',behavior:'smooth'});showCard(b);
  T('peer_jump',{from:from,to:idx[id].name});
 }
-const EDGES=__DATA_EDGES__;
-/* ===== 關係圖：力導向佈局，節點＝公司，連線＝主營業務相似度 ===== */
+/* ===== 關係圖：節點＝公司與標籤樞紐，連線＝隸屬、上下游、同場景 ===== */
 const gv=document.getElementById('gv'),gsvg=document.getElementById('gsvg');
-let gRAF=0,gNodes=[],gLinks=[],gSel=null,gTop=new Set();
-
+let gRAF=0,gNodes=[],gLinks=[],gSel=null;
 function openGraph(cat){
- const raw=EDGES[cat]||[];if(!raw.length)return;
- const ids=[...new Set(raw.flatMap(e=>[e[0],e[1]]))].filter(i=>idx[i]);
- const pos={};ids.forEach((id,i)=>pos[id]=i);
- const W=gsvg.clientWidth||innerWidth,H=gsvg.clientHeight||innerHeight-160;
- const R=Math.min(W,H)*0.38;
- gNodes=ids.map((id,i)=>{const a=i/ids.length*Math.PI*2;
-  return {id:id,name:idx[id].name,c:idx[id].country,deg:0,
-          x:W/2+Math.cos(a)*R,y:H/2+Math.sin(a)*R,vx:0,vy:0}});
- gLinks=raw.filter(e=>pos[e[0]]!=null&&pos[e[1]]!=null)
-           .map(e=>({s:pos[e[0]],t:pos[e[1]],w:e[2]}));
+ const firms=[...D.firms.us,...D.firms.cn].filter(x=>x[1]===cat&&FIRMTAGS[x[2]]).map(x=>x[2]);
+ if(!firms.length)return;
+ const seed=new Set();firms.forEach(i=>FIRMTAGS[i].forEach(k=>{if(TAG[k])seed.add(k)}));
+ const ext=new Set();
+ seed.forEach(k=>(TREL[k]||[]).forEach(r=>{if(!seed.has(r.o))ext.add(r.o)}));
+ const keys=[...seed,...ext],pos={};
+ const W=gsvg.clientWidth||innerWidth,H=gsvg.clientHeight||innerHeight-160,R=Math.min(W,H)*0.38;
+ gNodes=[];
+ const add=n=>{pos[n.key]=gNodes.length;gNodes.push(n)};
+ keys.forEach(k=>add({key:'t:'+k,kind:'tag',ext:ext.has(k),name:TAG[k].label,deg:0}));
+ firms.forEach(i=>add({key:'f:'+i,kind:'firm',id:i,c:idx[i].country,name:idx[i].name,deg:0}));
+ gNodes.forEach((n,i)=>{const a=i/gNodes.length*Math.PI*2;
+  n.x=W/2+Math.cos(a)*R;n.y=H/2+Math.sin(a)*R;n.vx=0;n.vy=0});
+ gLinks=[];
+ firms.forEach(i=>FIRMTAGS[i].forEach(k=>{
+  if(pos['t:'+k]!=null)gLinks.push({s:pos['f:'+i],t:pos['t:'+k],kind:'member'})}));
+ TAGRELS.forEach(r=>{const a=pos['t:'+r.from],b=pos['t:'+r.to];
+  if(a!=null&&b!=null)gLinks.push({s:a,t:b,kind:r.type,why:r.why})});
  gLinks.forEach(l=>{gNodes[l.s].deg++;gNodes[l.t].deg++});
- gTop=new Set(gNodes.map((n,i)=>[n.deg,i]).sort((a,b)=>b[0]-a[0]).slice(0,14).map(x=>x[1]));
-
  document.getElementById('gvt').textContent=D.cats[cat];
- const nu=gNodes.filter(n=>n.c==='us').length;
- document.getElementById('gvk').textContent=`${gNodes.length} 家 · 美國 ${nu} · 中國 ${gNodes.length-nu} · ${gLinks.length} 條關係`;
- gv.hidden=false;closePop();
- sim(W,H);
+ const nu=firms.filter(i=>idx[i].country==='us').length;
+ document.getElementById('gvk').textContent=
+  `${firms.length} 家 · 美國 ${nu} · 中國 ${firms.length-nu} · ${seed.size} 個業務標籤`
+  +(ext.size?` · 延伸到其他行業的 ${ext.size} 個標籤`:'');
+ gv.hidden=false;closePop();gSel=null;sim(W,H);
 }
 function sim(W,H){
  let alpha=1;
@@ -310,44 +336,56 @@ function sim(W,H){
     let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy||0.01;
     if(d2>160000)continue;
     const d=Math.sqrt(d2);
-    let f=4200/d2;
-    const minD=rad(a)+rad(b)+14;          // 防重疊：貼太近時額外推開
-    if(d<minD)f+=(minD-d)*0.9;
+    // 斥力依種類分級：標籤有文字要大力推開，公司可以靠近
+    const tt=(a.kind==='tag')+(b.kind==='tag');
+    let f=(tt===2?30000:tt===1?5200:1800)/d2;
+    const minD=tt===2?118:(rad(a)+rad(b)+14);
+    if(d<minD)f+=(minD-d)*(tt===2?1.6:0.8);
     const fx=dx/d*f,fy=dy/d*f;
     a.vx-=fx;a.vy-=fy;b.vx+=fx;b.vy+=fy}}
   for(const l of gLinks){const a=gNodes[l.s],b=gNodes[l.t];
    let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||0.01;
-   const L=62+(1-l.w)*120,f=(d-L)*0.03*(0.4+l.w);
-   const fx=dx/d*f,fy=dy/d*f;
+   const LL=l.kind==='member'?44:190,k=l.kind==='member'?0.075:0.018;
+   const f=(d-LL)*k,fx=dx/d*f,fy=dy/d*f;
    a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy}
   for(const n of gNodes){
    n.vx+=(W/2-n.x)*0.0022;n.vy+=(H/2-n.y)*0.0022;
    if(n.fix){n.vx=n.vy=0;continue}
-   n.vx*=0.82;n.vy*=0.82;
-   n.x+=n.vx*alpha;n.y+=n.vy*alpha;
-   n.x=Math.max(30,Math.min(W-30,n.x));n.y=Math.max(20,Math.min(H-20,n.y))}
-  draw();
-  alpha*=0.985;
+   n.vx*=0.82;n.vy*=0.82;n.x+=n.vx*alpha;n.y+=n.vy*alpha;
+   const m=n.kind==='tag'?70:24;
+   n.x=Math.max(m,Math.min(W-m,n.x));n.y=Math.max(n.kind==='tag'?28:18,Math.min(H-(n.kind==='tag'?26:16),n.y))}
+  draw();alpha*=0.985;
   if(alpha>0.02&&!gv.hidden)gRAF=requestAnimationFrame(step)};
  cancelAnimationFrame(gRAF);step();
 }
-function rad(n){return 3.5+Math.min(7,Math.sqrt(n.deg)*1.9)}
+function rad(n){return n.kind==='tag'?(5+Math.min(8,Math.sqrt(n.deg)*1.6)):3.6}
 function draw(){
- const parts=[];
- for(const l of gLinks){const a=gNodes[l.s],b=gNodes[l.t];
-  const on=gSel==null||gSel===l.s||gSel===l.t;
-  parts.push(`<line x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke-width="${(l.w*3.2).toFixed(2)}"${on?'':' class="dim"'}/>`)}
  const nb=new Set();
  if(gSel!=null){nb.add(gSel);for(const l of gLinks){if(l.s===gSel)nb.add(l.t);if(l.t===gSel)nb.add(l.s)}}
+ const on=i=>gSel==null||nb.has(i);
+ const p=[];
+ for(const l of gLinks){
+  const a=gNodes[l.s],b=gNodes[l.t],lit=gSel==null||gSel===l.s||gSel===l.t;
+  const st=l.kind==='member'?'stroke="var(--line)" stroke-width="0.8"'
+   :l.kind==='supply'?'stroke="var(--us)" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#ar)"'
+   :'stroke="var(--cn)" stroke-width="1.4" stroke-dasharray="1.5 3.5"';
+  p.push(`<line x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" ${st}${lit?'':' class="dim"'}/>`);
+ }
  gNodes.forEach((n,i)=>{
-  const on=gSel==null||nb.has(i);
-  parts.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="var(--${n.c})" data-i="${i}"${on?'':' class="dim"'}/>`)});
+  const cls=on(i)?'':' class="dim"';
+  if(n.kind==='tag')
+   p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="${n.ext?'var(--bg)':'var(--ink)'}" stroke="var(--ink)" stroke-width="1.6" data-i="${i}"${cls}/>`);
+  else
+   p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="var(--${n.c})" data-i="${i}"${cls}/>`);
+ });
  gNodes.forEach((n,i)=>{
-  const on=gSel==null||nb.has(i);
-  if(!on)return;
-  if(gSel==null&&!gTop.has(i))return;
-  parts.push(`<text x="${n.x.toFixed(1)}" y="${(n.y-rad(n)-3).toFixed(1)}" text-anchor="middle">${esc(n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18))}</text>`)});
- gsvg.innerHTML=parts.join('');
+  if(!on(i))return;
+  if(n.kind!=='tag'&&gSel==null)return;
+  const below=n.kind==='tag'&&n.y<gsvg.clientHeight*0.42;
+  const ty=below?(n.y+rad(n)+11):(n.y-rad(n)-4);
+  p.push(`<text x="${n.x.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle"${n.kind==='tag'?' class="tg"':''}>${esc(n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18))}</text>`);
+ });
+ gsvg.innerHTML='<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--us)"/></marker></defs>'+p.join('');
 }
 let drag=null;
 gsvg.addEventListener('pointerdown',e=>{
@@ -361,11 +399,12 @@ gsvg.addEventListener('pointermove',e=>{
 gsvg.addEventListener('pointerup',e=>{
  if(!drag)return;const n=gNodes[drag.i];n.fix=false;
  if(!drag.moved){gSel=gSel===drag.i?null:drag.i;draw();
-  if(gSel!=null)T('graph_node',{company:n.name,industry:document.getElementById('gvt').textContent})}
+  if(gSel!=null)T('graph_node',{node:n.name,kind:n.kind,industry:document.getElementById('gvt').textContent})}
  drag=null});
 gsvg.addEventListener('dblclick',e=>{
  const c=e.target.closest('circle');if(!c)return;
- closeGraph();jumpTo(gNodes[+c.dataset.i].id)});
+ const n=gNodes[+c.dataset.i];if(n.kind!=='firm')return;
+ closeGraph();jumpTo(n.id)});
 function closeGraph(){cancelAnimationFrame(gRAF);gv.hidden=true;gSel=null}
 document.getElementById('gvx').onclick=closeGraph;
 document.getElementById('list').addEventListener('click',e=>{
