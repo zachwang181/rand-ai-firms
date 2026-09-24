@@ -120,6 +120,7 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 #gsvg text{font-size:13px;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--bg);stroke-width:3.5px;stroke-linejoin:round}
 .pop.onmap{position:fixed;z-index:60}
 #gsvg .dim{opacity:.12}
+#gsvg text.tdim{opacity:.26}
 .gv-f{padding:9px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .gv-f i{display:inline-block;width:9px;height:9px;border-radius:50%;vertical-align:-1px;margin-right:4px}
 .note a{color:var(--us)}
@@ -394,14 +395,14 @@ function sim(W,H){
     const d=Math.sqrt(d2);
     // 斥力依種類分級：標籤有文字要大力推開，公司可以靠近
     const tt=(a.kind==='tag')+(b.kind==='tag');
-    let f=(tt===2?30000:tt===1?5200:1800)/d2;
-    const minD=tt===2?118:(rad(a)+rad(b)+14);
+    let f=(tt===2?30000:tt===1?5200:4200)/d2;
+    const minD=tt===2?118:tt===1?40:(rad(a)+rad(b)+46);
     if(d<minD)f+=(minD-d)*(tt===2?1.6:0.8);
     const fx=dx/d*f,fy=dy/d*f;
     a.vx-=fx;a.vy-=fy;b.vx+=fx;b.vy+=fy}}
   for(const l of gLinks){const a=gNodes[l.s],b=gNodes[l.t];
    let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||0.01;
-   const LL=l.kind==='member'?44:190,k=l.kind==='member'?0.075:0.018;
+   const LL=l.kind==='member'?72:190,k=l.kind==='member'?0.06:0.018;
    const f=(d-LL)*k,fx=dx/d*f,fy=dy/d*f;
    a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy}
   for(const n of gNodes){
@@ -444,20 +445,27 @@ function draw(){
  });
  // 標籤一律嘗試顯示，依優先序貪婪擺放，與已擺放者重疊就略過
  const box=[],H2=gsvg.clientHeight;
- const cand=gNodes.map((n,i)=>({n:n,i:i})).filter(c=>on(c.i));
+ const cand=gNodes.map((n,i)=>({n:n,i:i}));
  cand.sort((a,b)=>{
-  const pr=x=>x.n.center?0:x.n.kind==='tag'?1:(nb.has(x.i)?2:3);
+  const pr=x=>x.n.center?0:(gSel!=null&&!on(x.i))?4:x.n.kind==='tag'?1:(nb.has(x.i)?2:3);
   return pr(a)-pr(b)||b.n.deg-a.n.deg});
  for(const c of cand){
-  const n=c.n,fs=n.kind==='tag'?14:13;
+  const n=c.n,fs=n.kind==='tag'?14:13,r=rad(n);
   const txt=n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18);
   let w=0;for(const ch of txt)w+=/[\u4e00-\u9fff\uff00-\uffef]/.test(ch)?fs:fs*0.56;
-  const below=n.kind==='tag'&&n.y<H2*0.42;
-  const ty=below?(n.y+rad(n)+fs):(n.y-rad(n)-5);
-  const bx={x0:n.x-w/2-3,x1:n.x+w/2+3,y0:ty-fs,y1:ty+4};
-  if(box.some(o=>bx.x1>o.x0&&bx.x0<o.x1&&bx.y1>o.y0&&bx.y0<o.y1))continue;
-  box.push(bx);
-  p.push(`<text x="${n.x.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle"${n.kind==='tag'?' class="tg"':''}>${esc(txt)}</text>`);
+  // 四個候選位置：上、下、右、左；靠近畫面頂端的先試下方
+  let pos=[{x:n.x,y:n.y-r-5,a:'middle'},{x:n.x,y:n.y+r+fs,a:'middle'},
+           {x:n.x+r+5,y:n.y+fs*0.34,a:'start'},{x:n.x-r-5,y:n.y+fs*0.34,a:'end'}];
+  if(n.y<H2*0.22)pos=[pos[1],pos[0],pos[2],pos[3]];
+  const mkbox=o=>{const x0=o.a==='middle'?o.x-w/2:o.a==='start'?o.x:o.x-w;
+                  return {x0:x0-3,x1:x0+w+3,y0:o.y-fs,y1:o.y+4}};
+  const hit=b=>box.some(o=>b.x1>o.x0&&b.x0<o.x1&&b.y1>o.y0&&b.y0<o.y1);
+  let put=null;
+  for(const o of pos){const b=mkbox(o);if(!hit(b)){put={o:o,b:b};break}}
+  if(!put)put={o:pos[0],b:mkbox(pos[0])};   // 四個位置都擠不下就容許重疊，不藏起來
+  box.push(put.b);
+  const kl=(n.kind==='tag'?'tg ':'')+(on(c.i)?'':'tdim');
+  p.push(`<text x="${put.o.x.toFixed(1)}" y="${put.o.y.toFixed(1)}" text-anchor="${put.o.a}"${kl.trim()?` class="${kl.trim()}"`:''}>${esc(txt)}</text>`);
  }
  gsvg.innerHTML='<defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="var(--us)"/></marker></defs>'+p.join('');
 }
