@@ -1,22 +1,2 @@
-cn_107
-cn_111
-cn_169
-cn_180
-cn_184
-cn_22
-cn_253
-cn_27
-cn_319
-cn_328
-cn_346
-cn_350
-cn_360
-cn_364
-cn_402
-cn_419
-cn_426
-cn_6
-cn_62
-cn_73
-cn_90
-cn_98
+cn_180	https://www.cvte.com	cvte.com 是母公司 CVTE 的網址，視睿為其子公司
+cn_62	https://www.isurestar.com	isurestar.com 回 403，無法驗證內容歸屬
