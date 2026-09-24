@@ -94,6 +94,8 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 .peer{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:12.5px}
 .pg{font-size:11px;color:var(--mute);margin-bottom:3px}
 .pdx{display:block;color:var(--mute);font-size:12px;line-height:1.5;margin-top:1px}
+.pop .site{color:var(--us);white-space:nowrap}
+.pop .bio{margin:4px 0 6px;line-height:1.6;color:var(--ink)}
 .pr{margin-bottom:2px;line-height:1.7}
 .pl{all:unset;cursor:pointer;color:var(--us);border-bottom:1px dotted currentColor}
 .pl:hover{border-bottom-style:solid}
@@ -258,17 +260,32 @@ function peerBlock(id){
  const ks=FIRMTAGS[id];if(!ks||!ks.length)return '';
  return `<div class="peer"><div class="pg">業務標籤：${ks.map(k=>esc(TAG[k].label)).join('・')}</div></div>`;
 }
-function showCard(b){
- closePop();const id=b.dataset.id,f=idx[id],p=PROF[id];
- pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
- let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
- if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}${p.pd?`<span class="pdx">${esc(p.pd)}</span>`:''}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
- else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
+function cardBody(id,onMap){
+ const f=idx[id],p=PROF[id];
+ const meta=[f.country==='us'?'美國':'中國'].concat([p&&p.l,p&&p.y].filter(Boolean));
+ if(!p||!p.l&&!p.y)meta.push(D.cats[f.cat]);
+ let h=`<h4>${esc(f.name)}</h4><div class="m">${meta.map(esc).join(' · ')}`;
+ if(p&&p.url)h+=` · <a class="site" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">官方網站 ↗</a>`;
+ h+=`</div>`;
+ if(p){
+  if(p.w)h+=`<p><span class="k">主營業務：</span>${esc(p.w)}</p>`;
+  if(p.b)h+=`<p class="bio">${esc(p.b)}</p>`;
+  if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}${p.pd?`<span class="pdx">${esc(p.pd)}</span>`:''}</p>`;
+  if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`;
+ } else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
  h+=finBlock(id);
  h+=peerBlock(id);
- if((FIRMTAGS[id]||[]).some(k=>TAG[k]))h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">以這家為中心看關係圖 →</button></div>`;
+ if((FIRMTAGS[id]||[]).some(k=>TAG[k]))
+  h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">${onMap?'以這家為中心重畫 →':'以這家為中心看關係圖 →'}</button>`
+    +(onMap?`<button class="egobtn" data-list="${id}" style="margin-left:14px">在清單中查看 →</button>`:'')+`</div>`;
+ return h;
+}
+function showCard(b){
+ const id=b.dataset.id,f=idx[id];
+ closePop();
+ pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
  pop.classList.remove('onmap');
- pop.innerHTML=h;pop.hidden=false;
+ pop.innerHTML=cardBody(id,false);pop.hidden=false;
  const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));
  let top=r.bottom+window.scrollY+6;if(r.bottom+ph+12>window.innerHeight&&r.top-ph-6>0)top=r.top+window.scrollY-ph-6;
@@ -278,16 +295,11 @@ function showCard(b){
  T('company_open',{company:f.name,country:f.country,industry:D.cats[f.cat],from_search:q?'yes':'no'});
 }
 function showCardAt(id,cx,cy){
- const f=idx[id],p=PROF[id];
+ const f=idx[id];
  closePop();
  pop.style.setProperty('--c',f.country==='us'?'var(--us)':'var(--cn)');
- let h=`<h4>${esc(f.name)}</h4><div class="m">${f.country==='us'?'美國':'中國'} · ${esc([p&&p.l,p&&p.y].filter(Boolean).join(' · ')||D.cats[f.cat])}</div>`;
- if(p){h+=`<p><span class="k">主營業務：</span>${esc(p.b||p.w)}</p>`;if(p.p)h+=`<p><span class="k">產品：</span>${esc(p.p)}${p.pd?`<span class="pdx">${esc(p.pd)}</span>`:''}</p>`;if(p.g)h+=`<p><span class="k">進展：</span>${esc(p.g)}</p>`}
- else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
- h+=finBlock(id);
- if((FIRMTAGS[id]||[]).some(k=>TAG[k]))h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">以這家為中心重畫 →</button><button class="egobtn" data-list="${id}" style="margin-left:14px">在清單中查看 →</button></div>`;
  pop.classList.add('onmap');
- pop.innerHTML=h;pop.hidden=false;
+ pop.innerHTML=cardBody(id,true);pop.hidden=false;
  const w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=Math.max(10,Math.min(cx+14,innerWidth-w-10));
  let top=Math.max(10,Math.min(cy+14,innerHeight-ph-10));
