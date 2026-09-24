@@ -101,6 +101,10 @@ dialog::backdrop{background:rgba(10,16,22,.55)}
 .gbtn{all:unset;cursor:pointer;font-size:12px;padding:2px 9px;border:1.5px solid var(--line);border-radius:3px;color:var(--mute);background:var(--panel)}
 .gbtn:hover{border-color:var(--us);color:var(--us)}
 .gbtn:focus-visible{outline:2px solid var(--us)}
+.egoline{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
+.egobtn{all:unset;cursor:pointer;font-size:12.5px;color:var(--us);border-bottom:1px dotted currentColor}
+.egobtn:hover{border-bottom-style:solid}
+.egobtn:focus-visible{outline:2px solid var(--us)}
 #gv{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column}
 #gv[hidden]{display:none}
 .gv-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--line)}
@@ -279,6 +283,7 @@ function showCard(b){
  else h+=`<p class="k">公開資訊太少，未寫簡介。</p>`;
  h+=finBlock(id);
  h+=peerBlock(id);
+ if((FIRMTAGS[id]||[]).some(k=>TAG[k]))h+=`<div class="egoline"><button class="egobtn" data-ego="${id}">以這家為中心看關係圖 →</button></div>`;
  pop.innerHTML=h;pop.hidden=false;
  const r=b.getBoundingClientRect(),w=pop.offsetWidth,ph=pop.offsetHeight;
  let left=r.left+window.scrollX;left=Math.max(12+window.scrollX,Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12));
@@ -328,6 +333,37 @@ function openGraph(cat){
   +(ext.size?` · 延伸到其他行業的 ${ext.size} 個標籤`:'');
  gv.hidden=false;closePop();gSel=null;sim(W,H);
 }
+function openEgo(id){
+ const own=(FIRMTAGS[id]||[]).filter(k=>TAG[k]);
+ if(!own.length)return;
+ const ownSet=new Set(own);
+ const firms=new Set([id]);
+ own.forEach(k=>TMEM[k].forEach(f=>firms.add(f)));
+ const tags=new Set(own);
+ firms.forEach(f=>(FIRMTAGS[f]||[]).forEach(k=>{if(TAG[k])tags.add(k)}));   // 同儕的其他業務
+ own.forEach(k=>TREL[k].forEach(r=>{if(TAG[r.o])tags.add(r.o)}));          // 上下游／同場景
+ const W=gsvg.clientWidth||innerWidth,H=gsvg.clientHeight||innerHeight-160,R=Math.min(W,H)*0.38;
+ const pos={};gNodes=[];
+ const add=n=>{pos[n.key]=gNodes.length;gNodes.push(n)};
+ [...tags].forEach(k=>add({key:'t:'+k,kind:'tag',ext:!ownSet.has(k),name:TAG[k].label,deg:0}));
+ [...firms].forEach(f=>add({key:'f:'+f,kind:'firm',id:f,c:idx[f].country,name:idx[f].name,center:f===id,deg:0}));
+ gNodes.forEach((n,i)=>{const a=i/gNodes.length*Math.PI*2;
+  n.x=W/2+Math.cos(a)*R;n.y=H/2+Math.sin(a)*R;n.vx=0;n.vy=0});
+ gLinks=[];
+ firms.forEach(f=>(FIRMTAGS[f]||[]).forEach(k=>{
+  if(pos['t:'+k]!=null)gLinks.push({s:pos['f:'+f],t:pos['t:'+k],kind:'member'})}));
+ TAGRELS.forEach(r=>{const a=pos['t:'+r.from],b=pos['t:'+r.to];
+  if(a!=null&&b!=null)gLinks.push({s:a,t:b,kind:r.type,why:r.why})});
+ gLinks.forEach(l=>{gNodes[l.s].deg++;gNodes[l.t].deg++});
+ const nu=[...firms].filter(f=>idx[f].country==='us').length;
+ document.getElementById('gvt').textContent='以 '+idx[id].name+' 為中心';
+ document.getElementById('gvk').textContent=
+  `${firms.size} 家 · 美國 ${nu} · 中國 ${firms.size-nu} · `
+  +`自身業務 ${own.map(k=>TAG[k].label).join('、')}`
+  +(tags.size>own.length?` · 相鄰業務 ${tags.size-own.length} 項`:'');
+ gv.hidden=false;closePop();gSel=null;sim(W,H);
+ T('graph_ego',{company:idx[id].name});
+}
 function sim(W,H){
  let alpha=1;
  const step=()=>{
@@ -355,10 +391,18 @@ function sim(W,H){
    const m=n.kind==='tag'?70:24;
    n.x=Math.max(m,Math.min(W-m,n.x));n.y=Math.max(n.kind==='tag'?28:18,Math.min(H-(n.kind==='tag'?26:16),n.y))}
   draw();alpha*=0.985;
-  if(alpha>0.02&&!gv.hidden)gRAF=requestAnimationFrame(step)};
+  if(alpha>0.02&&!gv.hidden)gRAF=requestAnimationFrame(step);
+  else if(!gv.hidden){fit(W,H);draw()}};
  cancelAnimationFrame(gRAF);step();
 }
-function rad(n){return n.kind==='tag'?(5+Math.min(8,Math.sqrt(n.deg)*1.6)):3.6}
+function fit(W,H){
+ const pad=54;let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+ for(const n of gNodes){x0=Math.min(x0,n.x);x1=Math.max(x1,n.x);y0=Math.min(y0,n.y);y1=Math.max(y1,n.y)}
+ const w=x1-x0||1,h=y1-y0||1,k=Math.min((W-pad*2)/w,(H-pad*2)/h,1.7);
+ const cx=(x0+x1)/2,cy=(y0+y1)/2;
+ for(const n of gNodes){n.x=(n.x-cx)*k+W/2;n.y=(n.y-cy)*k+H/2}
+}
+function rad(n){return n.kind==='tag'?(5+Math.min(8,Math.sqrt(n.deg)*1.6)):(n.center?7:3.6)}
 function draw(){
  const nb=new Set();
  if(gSel!=null){nb.add(gSel);for(const l of gLinks){if(l.s===gSel)nb.add(l.t);if(l.t===gSel)nb.add(l.s)}}
@@ -376,11 +420,11 @@ function draw(){
   if(n.kind==='tag')
    p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="${n.ext?'var(--bg)':'var(--ink)'}" stroke="var(--ink)" stroke-width="1.6" data-i="${i}"${cls}/>`);
   else
-   p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="var(--${n.c})" data-i="${i}"${cls}/>`);
+   p.push(`<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${rad(n).toFixed(1)}" fill="var(--${n.c})"${n.center?' stroke="var(--ink)" stroke-width="2.5"':''} data-i="${i}"${cls}/>`);
  });
  gNodes.forEach((n,i)=>{
   if(!on(i))return;
-  if(n.kind!=='tag'&&gSel==null)return;
+  if(n.kind!=='tag'&&gSel==null&&!n.center)return;
   const below=n.kind==='tag'&&n.y<gsvg.clientHeight*0.42;
   const ty=below?(n.y+rad(n)+11):(n.y-rad(n)-4);
   p.push(`<text x="${n.x.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle"${n.kind==='tag'?' class="tg"':''}>${esc(n.name.replace(/\s*\(.*?\)\s*/g,'').slice(0,18))}</text>`);
@@ -411,7 +455,9 @@ document.getElementById('list').addEventListener('click',e=>{
  const g=e.target.closest('button[data-graph]');if(!g)return;
  e.stopPropagation();openGraph(g.dataset.graph);
  T('graph_open',{industry:D.cats[g.dataset.graph]})});
-pop.addEventListener('click',e=>{const t=e.target.closest('button[data-go]');if(!t)return;e.stopPropagation();jumpTo(t.dataset.go)});
+pop.addEventListener('click',e=>{const g=e.target.closest('button[data-ego]');
+ if(g){e.stopPropagation();openEgo(g.dataset.ego);return}
+ const t=e.target.closest('button[data-go]');if(!t)return;e.stopPropagation();jumpTo(t.dataset.go)});
 document.getElementById('list').addEventListener('click',e=>{
  const b=e.target.closest('button[data-id]');if(!b)return;e.stopPropagation();
  if(openBtn===b){closePop();return}
